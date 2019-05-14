@@ -8,6 +8,7 @@ target 'BarPass' do
 
   # Pods for BarPass
     pod 'SDWebImage'
+    pod 'GoogleSignIn'
     pod 'Alamofire'
     pod 'IQKeyboardManagerSwift'
     pod 'FacebookCore'

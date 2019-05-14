@@ -14,6 +14,19 @@ PODS:
     - FBSDKCoreKit/Basics
   - FBSDKLoginKit (5.0.0):
     - FBSDKCoreKit (= 5.0.0)
+  - GoogleSignIn (4.4.0):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.2.0):
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+  - GoogleToolboxForMac/Defines (2.2.0)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.0)":
+    - GoogleToolboxForMac/DebugUtils (= 2.2.0)
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.0)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.2.0)"
+  - GTMSessionFetcher/Core (1.2.1)
   - iCarousel (1.8.3)
   - IQKeyboardManagerSwift (6.3.0)
   - Realm (3.15.0):
@@ -31,6 +44,7 @@ DEPENDENCIES:
   - Alamofire
   - FacebookCore
   - FacebookLogin
+  - GoogleSignIn
   - iCarousel
   - IQKeyboardManagerSwift
   - RealmSwift
@@ -45,6 +59,9 @@ SPEC REPOS:
     - FacebookLogin
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
     - iCarousel
     - IQKeyboardManagerSwift
     - Realm
@@ -59,6 +76,9 @@ SPEC CHECKSUMS:
   FacebookLogin: 94cdad6850e86a2b04704dedfe7674a7af8148eb
   FBSDKCoreKit: ba361d4a9d4dc29ff218822b849b22d4f869c7bb
   FBSDKLoginKit: c6d0dc187bd076e370dffa10f7fc8a3562a6892c
+  GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
+  GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
+  GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   Realm: 9b834e1be6062f544805252c812348872dc5d4ed
@@ -67,6 +87,6 @@ SPEC CHECKSUMS:
   Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: d0d7381b1e4a01aca15bd7f46f881bdb408b3ec3
+PODFILE CHECKSUM: 8ae6900992c359a4250e09a5db8a62032f932d92
 
 COCOAPODS: 1.6.1
