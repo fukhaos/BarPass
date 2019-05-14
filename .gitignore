@@ -25,6 +25,7 @@ TMOVE.xcworkspace/xcuserdata/brunomello.xcuserdatad/UserInterfaceState.xcusersta
 *.moved-aside
 *.xcuserstate
 *.xcuserst
+UserInterfaceState.xcuserst
 
 ## Obj-C/Swift specific
 *.hmap
