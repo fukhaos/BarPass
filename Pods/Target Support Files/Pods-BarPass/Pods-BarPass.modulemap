@@ -1,0 +1,6 @@
+framework module Pods_BarPass {
+  umbrella header "Pods-BarPass-umbrella.h"
+
+  export *
+  module * { export * }
+}
