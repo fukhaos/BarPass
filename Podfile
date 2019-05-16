@@ -17,5 +17,6 @@ target 'BarPass' do
     pod 'iCarousel'
     pod 'RealmSwift'
     pod 'Spring'
+    pod 'SkeletonView'
 
 end

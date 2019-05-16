@@ -37,6 +37,7 @@ PODS:
   - SDWebImage (5.0.2):
     - SDWebImage/Core (= 5.0.2)
   - SDWebImage/Core (5.0.2)
+  - SkeletonView (1.5)
   - Spring (1.0.5)
   - SVProgressHUD (2.2.5)
 
@@ -49,6 +50,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - RealmSwift
   - SDWebImage
+  - SkeletonView
   - Spring
   - SVProgressHUD
 
@@ -67,6 +69,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - SDWebImage
+    - SkeletonView
     - Spring
     - SVProgressHUD
 
@@ -84,9 +87,10 @@ SPEC CHECKSUMS:
   Realm: 9b834e1be6062f544805252c812348872dc5d4ed
   RealmSwift: 8a41886f8ab6efef9eb8df97de2f2bb911561a79
   SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
+  SkeletonView: 6cbb80f82f8bdee3f9093e2fa03b84819b4bd826
   Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 8ae6900992c359a4250e09a5db8a62032f932d92
+PODFILE CHECKSUM: 9269f6d462d5154b561fb6aa0d9fa5a43a920f69
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.6.2
