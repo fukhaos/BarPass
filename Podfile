@@ -11,8 +11,6 @@ target 'BarPass' do
     pod 'GoogleSignIn'
     pod 'Alamofire'
     pod 'IQKeyboardManagerSwift'
-    pod 'FacebookCore'
-    pod 'FacebookLogin'
     pod 'SVProgressHUD'
     pod 'iCarousel'
     pod 'RealmSwift'

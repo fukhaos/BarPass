@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E087BF942D005C00304B8FCC4F7DDA1A"
+               BlueprintIdentifier = "DEE5B53A3751AFDE666727961D5A9BCD"
                BuildableName = "Pods_BarPass.framework"
                BlueprintName = "Pods-BarPass"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E087BF942D005C00304B8FCC4F7DDA1A"
+            BlueprintIdentifier = "DEE5B53A3751AFDE666727961D5A9BCD"
             BuildableName = "Pods_BarPass.framework"
             BlueprintName = "Pods-BarPass"
             ReferencedContainer = "container:Pods.xcodeproj">
