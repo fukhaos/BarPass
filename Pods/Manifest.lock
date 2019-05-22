@@ -29,6 +29,7 @@ PODS:
   - GTMSessionFetcher/Core (1.2.1)
   - iCarousel (1.8.3)
   - IQKeyboardManagerSwift (6.3.0)
+  - OneSignal (2.10.0)
   - Realm (3.15.0):
     - Realm/Headers (= 3.15.0)
   - Realm/Headers (3.15.0)
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - iCarousel
   - IQKeyboardManagerSwift
+  - OneSignal (< 3.0, >= 2.6.2)
   - RealmSwift
   - SDWebImage
   - SkeletonView
@@ -66,6 +68,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - iCarousel
     - IQKeyboardManagerSwift
+    - OneSignal
     - Realm
     - RealmSwift
     - SDWebImage
@@ -84,6 +87,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  OneSignal: 0f5ff711d9f25da54885e4ab06ef0abc221a46ef
   Realm: 9b834e1be6062f544805252c812348872dc5d4ed
   RealmSwift: 8a41886f8ab6efef9eb8df97de2f2bb911561a79
   SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
@@ -91,6 +95,6 @@ SPEC CHECKSUMS:
   Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 9269f6d462d5154b561fb6aa0d9fa5a43a920f69
+PODFILE CHECKSUM: c5184630a695259e983f9df933fe732723b6957d
 
 COCOAPODS: 1.6.2

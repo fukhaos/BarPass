@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		082CD49104A78C6F34E55E5E /* Pods_BarPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CA98659D4C46758E0A69D0 /* Pods_BarPass.framework */; };
+		BE57F22B2295C25B00B3E692 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57F22A2295C25B00B3E692 /* NotificationService.swift */; };
+		BE57F22F2295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BEA24238228B1A5900D641C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24237228B1A5900D641C9 /* AppDelegate.swift */; };
 		BEA2423A228B1A5900D641C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24239228B1A5900D641C9 /* ViewController.swift */; };
 		BEA2423D228B1A5900D641C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA2423B228B1A5900D641C9 /* Main.storyboard */; };
@@ -40,11 +42,43 @@
 		BEA24280228B1BFC00D641C9 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24265228B1BFC00D641C9 /* UINavigationController.swift */; };
 		BEA24281228B1BFC00D641C9 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24266228B1BFC00D641C9 /* UIView.swift */; };
 		BEA24282228B1BFC00D641C9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24267228B1BFC00D641C9 /* UIViewController.swift */; };
+		D0395774878C956BF8253AD7 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66069568C3440D2F0F386101 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE57F22D2295C25B00B3E692 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEA2422C228B1A5700D641C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE57F2272295C25B00B3E692;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BE57F2332295C25B00B3E692 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BE57F22F2295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		306BE6AF97491B289317E241 /* Pods-BarPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarPass.release.xcconfig"; path = "Target Support Files/Pods-BarPass/Pods-BarPass.release.xcconfig"; sourceTree = "<group>"; };
+		3FE1AB7B1D6940A2F9FFF284 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		66069568C3440D2F0F386101 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ABCB4D94C3F026F76E8AC74 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		98C817F77E0F5D23153A28F2 /* Pods-BarPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarPass.debug.xcconfig"; path = "Target Support Files/Pods-BarPass/Pods-BarPass.debug.xcconfig"; sourceTree = "<group>"; };
+		BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE57F22A2295C25B00B3E692 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		BE57F22C2295C25B00B3E692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE57F2342295C51B00B3E692 /* BarPass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BarPass.entitlements; sourceTree = "<group>"; };
 		BEA24234228B1A5800D641C9 /* BarPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA24237228B1A5900D641C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA24239228B1A5900D641C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +117,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BE57F2252295C25B00B3E692 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0395774878C956BF8253AD7 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEA24231228B1A5800D641C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,14 +140,25 @@
 			isa = PBXGroup;
 			children = (
 				D1CA98659D4C46758E0A69D0 /* Pods_BarPass.framework */,
+				66069568C3440D2F0F386101 /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE57F2292295C25B00B3E692 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BE57F22A2295C25B00B3E692 /* NotificationService.swift */,
+				BE57F22C2295C25B00B3E692 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 		BEA2422B228B1A5700D641C9 = {
 			isa = PBXGroup;
 			children = (
 				BEA24236228B1A5800D641C9 /* BarPass */,
+				BE57F2292295C25B00B3E692 /* OneSignalNotificationServiceExtension */,
 				BEA24235228B1A5800D641C9 /* Products */,
 				CAE7C6E1E1F4F9AB905DA41D /* Pods */,
 				44E3412FEEDAE76ADA61DA65 /* Frameworks */,
@@ -116,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				BEA24234228B1A5800D641C9 /* BarPass.app */,
+				BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +177,7 @@
 		BEA24236228B1A5800D641C9 /* BarPass */ = {
 			isa = PBXGroup;
 			children = (
+				BE57F2342295C51B00B3E692 /* BarPass.entitlements */,
 				BEA24237228B1A5900D641C9 /* AppDelegate.swift */,
 				BEA24239228B1A5900D641C9 /* ViewController.swift */,
 				BEA2423B228B1A5900D641C9 /* Main.storyboard */,
@@ -197,6 +252,8 @@
 			children = (
 				98C817F77E0F5D23153A28F2 /* Pods-BarPass.debug.xcconfig */,
 				306BE6AF97491B289317E241 /* Pods-BarPass.release.xcconfig */,
+				3FE1AB7B1D6940A2F9FFF284 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				6ABCB4D94C3F026F76E8AC74 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -204,6 +261,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BE57F2272295C25B00B3E692 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE57F2322295C25B00B3E692 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				D846B48FA4C5D4F9EB25BADC /* [CP] Check Pods Manifest.lock */,
+				BE57F2242295C25B00B3E692 /* Sources */,
+				BE57F2252295C25B00B3E692 /* Frameworks */,
+				BE57F2262295C25B00B3E692 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		BEA24233228B1A5800D641C9 /* BarPass */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEA24246228B1A5F00D641C9 /* Build configuration list for PBXNativeTarget "BarPass" */;
@@ -214,10 +289,12 @@
 				BEA24232228B1A5800D641C9 /* Resources */,
 				B26EE00A7780C580D1C7C29E /* [CP] Embed Pods Frameworks */,
 				ED320183684CBBE62D9D4DDC /* [CP] Copy Pods Resources */,
+				BE57F2332295C25B00B3E692 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BE57F22E2295C25B00B3E692 /* PBXTargetDependency */,
 			);
 			name = BarPass;
 			productName = BarPass;
@@ -230,13 +307,21 @@
 		BEA2422C228B1A5700D641C9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Bruno Lopes";
 				TargetAttributes = {
+					BE57F2272295C25B00B3E692 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 					BEA24233228B1A5800D641C9 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -254,11 +339,19 @@
 			projectRoot = "";
 			targets = (
 				BEA24233228B1A5800D641C9 /* BarPass */,
+				BE57F2272295C25B00B3E692 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BE57F2262295C25B00B3E692 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEA24232228B1A5800D641C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,6 +437,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BarPass/Pods-BarPass-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D846B48FA4C5D4F9EB25BADC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		ED320183684CBBE62D9D4DDC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,6 +484,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BE57F2242295C25B00B3E692 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE57F22B2295C25B00B3E692 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEA24230228B1A5800D641C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -407,6 +530,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BE57F22E2295C25B00B3E692 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE57F2272295C25B00B3E692 /* OneSignalNotificationServiceExtension */;
+			targetProxy = BE57F22D2295C25B00B3E692 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		BEA2423B228B1A5900D641C9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -427,6 +558,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BE57F2302295C25B00B3E692 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FE1AB7B1D6940A2F9FFF284 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JFLZRURJB2;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.megaleios.BarPassClub.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE57F2312295C25B00B3E692 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ABCB4D94C3F026F76E8AC74 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JFLZRURJB2;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.megaleios.BarPassClub.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BEA24244228B1A5F00D641C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -547,7 +720,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 98C817F77E0F5D23153A28F2 /* Pods-BarPass.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BarPass/BarPass.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JFLZRURJB2;
 				INFOPLIST_FILE = BarPass/Info.plist;
@@ -566,7 +741,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 306BE6AF97491B289317E241 /* Pods-BarPass.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BarPass/BarPass.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JFLZRURJB2;
 				INFOPLIST_FILE = BarPass/Info.plist;
@@ -584,6 +761,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BE57F2322295C25B00B3E692 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE57F2302295C25B00B3E692 /* Debug */,
+				BE57F2312295C25B00B3E692 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BEA2422F228B1A5700D641C9 /* Build configuration list for PBXProject "BarPass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

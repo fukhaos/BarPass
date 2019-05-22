@@ -18,5 +18,14 @@ target 'BarPass' do
     pod 'RealmSwift'
     pod 'Spring'
     pod 'SkeletonView'
+    pod 'OneSignal', '>= 2.6.2', '< 3.0'
 
 end
+
+target 'OneSignalNotificationServiceExtension' do
+  use_frameworks!
+  inhibit_all_warnings!
+  
+  pod 'OneSignal', '>= 2.6.2', '< 3.0'
+end
+
