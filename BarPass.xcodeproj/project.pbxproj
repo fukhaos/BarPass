@@ -42,6 +42,7 @@
 		BEA24280228B1BFC00D641C9 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24265228B1BFC00D641C9 /* UINavigationController.swift */; };
 		BEA24281228B1BFC00D641C9 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24266228B1BFC00D641C9 /* UIView.swift */; };
 		BEA24282228B1BFC00D641C9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24267228B1BFC00D641C9 /* UIViewController.swift */; };
+		BEED9AD922972D8E009FAF89 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEED9AD822972D8E009FAF89 /* Login.storyboard */; };
 		D0395774878C956BF8253AD7 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66069568C3440D2F0F386101 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		BEA24265228B1BFC00D641C9 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		BEA24266228B1BFC00D641C9 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		BEA24267228B1BFC00D641C9 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		BEED9AD822972D8E009FAF89 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D1CA98659D4C46758E0A69D0 /* Pods_BarPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 		BE45389C2297136900F1F0E0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BEED9AD822972D8E009FAF89 /* Login.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEED9AD922972D8E009FAF89 /* Login.storyboard in Resources */,
 				BEA24242228B1A5F00D641C9 /* LaunchScreen.storyboard in Resources */,
 				BEA2423F228B1A5F00D641C9 /* Assets.xcassets in Resources */,
 				BEA2423D228B1A5900D641C9 /* Main.storyboard in Resources */,
