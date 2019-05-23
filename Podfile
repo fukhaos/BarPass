@@ -22,6 +22,8 @@ target 'BarPass' do
     pod 'Bolts', '~> 1.9.0'
     pod 'FBSDKShareKit', '~> 4.40.0'
     pod 'FBSDKCoreKit', '~> 4.40.0'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
     pod 'OneSignal', '>= 2.6.2', '< 3.0'
 
 end
