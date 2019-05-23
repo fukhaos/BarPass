@@ -147,6 +147,62 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE45389C2297136900F1F0E0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BE45389D2297137700F1F0E0 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		BE45389E2297139000F1F0E0 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		BE45389F229713C300F1F0E0 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		BE4538A0229713D800F1F0E0 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		BE4538A12297141000F1F0E0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BE4538A22297145F00F1F0E0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BE4538A32297147100F1F0E0 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		BE57F2292295C25B00B3E692 /* OneSignalNotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +235,14 @@
 		BEA24236228B1A5800D641C9 /* BarPass */ = {
 			isa = PBXGroup;
 			children = (
+				BE4538A32297147100F1F0E0 /* QRCode */,
+				BE4538A22297145F00F1F0E0 /* Home */,
+				BE4538A12297141000F1F0E0 /* Profile */,
+				BE4538A0229713D800F1F0E0 /* Favorites */,
+				BE45389F229713C300F1F0E0 /* Search */,
+				BE45389E2297139000F1F0E0 /* Dashboard */,
+				BE45389D2297137700F1F0E0 /* Signup */,
+				BE45389C2297136900F1F0E0 /* Login */,
 				BE57F2342295C51B00B3E692 /* BarPass.entitlements */,
 				BEA24237228B1A5900D641C9 /* AppDelegate.swift */,
 				BEA24239228B1A5900D641C9 /* ViewController.swift */,
