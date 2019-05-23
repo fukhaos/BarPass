@@ -16,6 +16,12 @@ target 'BarPass' do
     pod 'RealmSwift'
     pod 'Spring'
     pod 'SkeletonView'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
+    pod 'Bolts', '~> 1.9.0'
+    pod 'FBSDKShareKit', '~> 4.40.0'
+    pod 'FBSDKCoreKit', '~> 4.40.0'
     pod 'OneSignal', '>= 2.6.2', '< 3.0'
 
 end
