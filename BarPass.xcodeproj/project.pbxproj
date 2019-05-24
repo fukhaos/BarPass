@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		082CD49104A78C6F34E55E5E /* Pods_BarPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CA98659D4C46758E0A69D0 /* Pods_BarPass.framework */; };
+		BE06A11B22980C9700A746CA /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06A11A22980C9700A746CA /* LoginTableViewController.swift */; };
 		BE57F22B2295C25B00B3E692 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57F22A2295C25B00B3E692 /* NotificationService.swift */; };
 		BE57F22F2295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BEA24238228B1A5900D641C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24237228B1A5900D641C9 /* AppDelegate.swift */; };
-		BEA2423A228B1A5900D641C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24239228B1A5900D641C9 /* ViewController.swift */; };
-		BEA2423D228B1A5900D641C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA2423B228B1A5900D641C9 /* Main.storyboard */; };
 		BEA2423F228B1A5F00D641C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA2423E228B1A5F00D641C9 /* Assets.xcassets */; };
 		BEA24242228B1A5F00D641C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA24240228B1A5F00D641C9 /* LaunchScreen.storyboard */; };
 		BEA24268228B1BFC00D641C9 /* ProgrammableUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA2424A228B1BFB00D641C9 /* ProgrammableUIProtocol.swift */; };
@@ -76,6 +75,7 @@
 		66069568C3440D2F0F386101 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ABCB4D94C3F026F76E8AC74 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		98C817F77E0F5D23153A28F2 /* Pods-BarPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarPass.debug.xcconfig"; path = "Target Support Files/Pods-BarPass/Pods-BarPass.debug.xcconfig"; sourceTree = "<group>"; };
+		BE06A11A22980C9700A746CA /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		BE4538922296F94400F1F0E0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE57F22A2295C25B00B3E692 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -83,8 +83,6 @@
 		BE57F2342295C51B00B3E692 /* BarPass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BarPass.entitlements; sourceTree = "<group>"; };
 		BEA24234228B1A5800D641C9 /* BarPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA24237228B1A5900D641C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BEA24239228B1A5900D641C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BEA2423C228B1A5900D641C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEA2423E228B1A5F00D641C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEA24241228B1A5F00D641C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEA24243228B1A5F00D641C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,9 +147,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE06A11722980C7200A746CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE06A11A22980C9700A746CA /* LoginTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE06A11822980C7800A746CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE06A11922980C8000A746CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		BE45389C2297136900F1F0E0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BE06A11922980C8000A746CA /* ViewModel */,
+				BE06A11822980C7800A746CA /* Model */,
+				BE06A11722980C7200A746CA /* View */,
 				BEED9AD822972D8E009FAF89 /* Login.storyboard */,
 			);
 			path = Login;
@@ -248,8 +271,6 @@
 				BE45389C2297136900F1F0E0 /* Login */,
 				BE57F2342295C51B00B3E692 /* BarPass.entitlements */,
 				BEA24237228B1A5900D641C9 /* AppDelegate.swift */,
-				BEA24239228B1A5900D641C9 /* ViewController.swift */,
-				BEA2423B228B1A5900D641C9 /* Main.storyboard */,
 				BEA2423E228B1A5F00D641C9 /* Assets.xcassets */,
 				BEA24240228B1A5F00D641C9 /* LaunchScreen.storyboard */,
 				BEA24243228B1A5F00D641C9 /* Info.plist */,
@@ -428,7 +449,6 @@
 				BEED9AD922972D8E009FAF89 /* Login.storyboard in Resources */,
 				BEA24242228B1A5F00D641C9 /* LaunchScreen.storyboard in Resources */,
 				BEA2423F228B1A5F00D641C9 /* Assets.xcassets in Resources */,
-				BEA2423D228B1A5900D641C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +552,7 @@
 				BEA2427E228B1BFC00D641C9 /* UIDeviceExtension.swift in Sources */,
 				BEA2427C228B1BFC00D641C9 /* UIApplication.swift in Sources */,
 				BEA24278228B1BFC00D641C9 /* GradientView.swift in Sources */,
-				BEA2423A228B1A5900D641C9 /* ViewController.swift in Sources */,
+				BE06A11B22980C9700A746CA /* LoginTableViewController.swift in Sources */,
 				BEA24272228B1BFC00D641C9 /* URLs.swift in Sources */,
 				BEA24238228B1A5900D641C9 /* AppDelegate.swift in Sources */,
 				BEA24280228B1BFC00D641C9 /* UINavigationController.swift in Sources */,
@@ -571,14 +591,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BEA2423B228B1A5900D641C9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BEA2423C228B1A5900D641C9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BEA24240228B1A5F00D641C9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

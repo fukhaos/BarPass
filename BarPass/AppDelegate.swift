@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        IQKeyboardManager.shared.keyboardAppearance = UIKeyboardAppearance.dark
+        IQKeyboardManager.shared.overrideKeyboardAppearance = true
         IQKeyboardManager.shared.enable = true
         
         let navController = UINavigationController()
@@ -30,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navController.setNavigationBarHidden(true, animated: false)
         navController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
-//        navController.pushViewController(GetStartedViewController.instantiate("Login"), animated: false)
+        navController.pushViewController(LoginTableViewController.instantiate("Login"), animated: false)
         
         // create a basic UIWindow and activate it
         window = UIWindow(frame: UIScreen.main.bounds)
