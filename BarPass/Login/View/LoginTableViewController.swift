@@ -44,6 +44,10 @@ class LoginTableViewController: UITableViewController, TableStoryboarded {
         
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
 
     // MARK: - Table view data source
 

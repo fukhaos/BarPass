@@ -38,10 +38,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         if #available(iOS 11.0, *) {
-            navController.navigationBar.prefersLargeTitles = true
+            navController.navigationBar.prefersLargeTitles = false
+            navController.navigationBar.setBackgroundImage(UIImage(named: "navBackGround"), for: .default)
+            
         } else {
             // Fallback on earlier versions
         }
+        
+        //set waves image under navigation bar
+//        let originX = navController.navigationBar.bounds.origin.x
+//        let originY = navController.navigationBar.frame.height
+//        let wavesView = UIView(frame: CGRect(x: 0, y: 20, width: self.window?.frame.width ?? 300.0, height: 136.4))
+//        let wavesImage = UIImage(named: "navBackGround")
+//        let imageView = UIImageView()
+//        imageView.frame = wavesView.frame
+//        imageView.contentMode = .scaleAspectFill
+//        imageView.image = wavesImage
+//
+//        wavesView.addSubview(imageView)
+//        navController.navigationBar.addSubview(wavesView)
         
         navController.pushViewController(LoginTableViewController.instantiate("Login"), animated: false)
         

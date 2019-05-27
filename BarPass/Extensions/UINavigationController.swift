@@ -23,5 +23,4 @@ extension UINavigationController {
             popToViewController(vc, animated: animated)
         }
     }
-    
 }
