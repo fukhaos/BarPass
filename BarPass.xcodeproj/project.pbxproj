@@ -16,6 +16,8 @@
 		BE5F326F229C3E05000EEA63 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F326E229C3E05000EEA63 /* UINavigationBar.swift */; };
 		BE5F3271229C572F000EEA63 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F3270229C572F000EEA63 /* UINavigationItem.swift */; };
 		BE5F3273229C68C4000EEA63 /* UserTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F3272229C68C4000EEA63 /* UserTermViewController.swift */; };
+		BE5F3276229C79C1000EEA63 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5F3275229C79C1000EEA63 /* Tutorial.storyboard */; };
+		BE5F327C229C7A7B000EEA63 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5F327B229C7A7B000EEA63 /* Dashboard.storyboard */; };
 		BEA24238228B1A5900D641C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24237228B1A5900D641C9 /* AppDelegate.swift */; };
 		BEA2423F228B1A5F00D641C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA2423E228B1A5F00D641C9 /* Assets.xcassets */; };
 		BEA24242228B1A5F00D641C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA24240228B1A5F00D641C9 /* LaunchScreen.storyboard */; };
@@ -91,6 +93,8 @@
 		BE5F326E229C3E05000EEA63 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		BE5F3270229C572F000EEA63 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
 		BE5F3272229C68C4000EEA63 /* UserTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTermViewController.swift; sourceTree = "<group>"; };
+		BE5F3275229C79C1000EEA63 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		BE5F327B229C7A7B000EEA63 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		BEA24234228B1A5800D641C9 /* BarPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA24237228B1A5900D641C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA2423E228B1A5F00D641C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -199,13 +203,6 @@
 			path = Signup;
 			sourceTree = "<group>";
 		};
-		BE45389E2297139000F1F0E0 /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Dashboard;
-			sourceTree = "<group>";
-		};
 		BE45389F229713C300F1F0E0 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +247,22 @@
 			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
+		BE5F3274229C79AA000EEA63 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F3275229C79C1000EEA63 /* Tutorial.storyboard */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		BE5F327A229C7A6D000EEA63 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F327B229C7A7B000EEA63 /* Dashboard.storyboard */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		BEA2422B228B1A5700D641C9 = {
 			isa = PBXGroup;
 			children = (
@@ -273,12 +286,13 @@
 		BEA24236228B1A5800D641C9 /* BarPass */ = {
 			isa = PBXGroup;
 			children = (
+				BE5F3274229C79AA000EEA63 /* Tutorial */,
 				BE4538A32297147100F1F0E0 /* QRCode */,
 				BE4538A22297145F00F1F0E0 /* Home */,
 				BE4538A12297141000F1F0E0 /* Profile */,
 				BE4538A0229713D800F1F0E0 /* Favorites */,
 				BE45389F229713C300F1F0E0 /* Search */,
-				BE45389E2297139000F1F0E0 /* Dashboard */,
+				BE5F327A229C7A6D000EEA63 /* Dashboard */,
 				BE45389D2297137700F1F0E0 /* Signup */,
 				BE45389C2297136900F1F0E0 /* Login */,
 				BE57F2342295C51B00B3E692 /* BarPass.entitlements */,
@@ -462,7 +476,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEED9AD922972D8E009FAF89 /* Login.storyboard in Resources */,
+				BE5F327C229C7A7B000EEA63 /* Dashboard.storyboard in Resources */,
 				BEA24242228B1A5F00D641C9 /* LaunchScreen.storyboard in Resources */,
+				BE5F3276229C79C1000EEA63 /* Tutorial.storyboard in Resources */,
 				BEA2423F228B1A5F00D641C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
