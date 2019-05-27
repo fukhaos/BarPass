@@ -38,6 +38,12 @@ class LoginTableViewController: UITableViewController, TableStoryboarded {
         
         signupButton.setAttributedTitle(attributedString, for: .normal)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 
     // MARK: - Table view data source
 

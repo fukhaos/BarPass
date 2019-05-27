@@ -49,7 +49,6 @@ class SignUpTableViewController: UITableViewController, TableStoryboarded {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     @IBAction func checkAction(_ sender: Any) {

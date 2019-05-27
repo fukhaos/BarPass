@@ -15,6 +15,7 @@
 		BE5F326D229C3DD9000EEA63 /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F326C229C3DD9000EEA63 /* CAGradientLayer.swift */; };
 		BE5F326F229C3E05000EEA63 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F326E229C3E05000EEA63 /* UINavigationBar.swift */; };
 		BE5F3271229C572F000EEA63 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F3270229C572F000EEA63 /* UINavigationItem.swift */; };
+		BE5F3273229C68C4000EEA63 /* UserTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F3272229C68C4000EEA63 /* UserTermViewController.swift */; };
 		BEA24238228B1A5900D641C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24237228B1A5900D641C9 /* AppDelegate.swift */; };
 		BEA2423F228B1A5F00D641C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA2423E228B1A5F00D641C9 /* Assets.xcassets */; };
 		BEA24242228B1A5F00D641C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA24240228B1A5F00D641C9 /* LaunchScreen.storyboard */; };
@@ -89,6 +90,7 @@
 		BE5F326C229C3DD9000EEA63 /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
 		BE5F326E229C3E05000EEA63 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		BE5F3270229C572F000EEA63 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
+		BE5F3272229C68C4000EEA63 /* UserTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTermViewController.swift; sourceTree = "<group>"; };
 		BEA24234228B1A5800D641C9 /* BarPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA24237228B1A5900D641C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA2423E228B1A5F00D641C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				BE06A11A22980C9700A746CA /* LoginTableViewController.swift */,
 				BE5F326A229C11F1000EEA63 /* SignUpTableViewController.swift */,
+				BE5F3272229C68C4000EEA63 /* UserTermViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				BE06A11B22980C9700A746CA /* LoginTableViewController.swift in Sources */,
 				BEA24272228B1BFC00D641C9 /* URLs.swift in Sources */,
 				BEA24238228B1A5900D641C9 /* AppDelegate.swift in Sources */,
+				BE5F3273229C68C4000EEA63 /* UserTermViewController.swift in Sources */,
 				BEA24280228B1BFC00D641C9 /* UINavigationController.swift in Sources */,
 				BEA24275228B1BFC00D641C9 /* Date.swift in Sources */,
 				BEA24273228B1BFC00D641C9 /* Utils.swift in Sources */,
