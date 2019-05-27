@@ -24,6 +24,7 @@ target 'BarPass' do
     pod 'FBSDKCoreKit', '~> 4.40.0'
     pod 'GoogleMaps'
     pod 'GooglePlaces'
+    pod 'SwiftyGif'
     pod 'OneSignal', '>= 2.6.2', '< 3.0'
 
 end

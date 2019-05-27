@@ -59,6 +59,7 @@ PODS:
   - SkeletonView (1.5)
   - Spring (1.0.5)
   - SVProgressHUD (2.2.5)
+  - SwiftyGif (5.1.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -79,6 +80,7 @@ DEPENDENCIES:
   - SkeletonView
   - Spring
   - SVProgressHUD
+  - SwiftyGif
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -104,6 +106,7 @@ SPEC REPOS:
     - SkeletonView
     - Spring
     - SVProgressHUD
+    - SwiftyGif
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -128,7 +131,8 @@ SPEC CHECKSUMS:
   SkeletonView: 6cbb80f82f8bdee3f9093e2fa03b84819b4bd826
   Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyGif: f7702483db93586a41f04f4927cd682852a2fa10
 
-PODFILE CHECKSUM: 6f82a99cee633f1a3a0d8ac239cc9ede5717dbb2
+PODFILE CHECKSUM: 52fb63b08ad1249b952c6bda99fb9421095ef555
 
 COCOAPODS: 1.7.0
