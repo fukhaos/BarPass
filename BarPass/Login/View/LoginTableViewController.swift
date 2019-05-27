@@ -25,6 +25,7 @@ class LoginTableViewController: UITableViewController, TableStoryboarded {
     }
     
     private func setUIElements() {
+        self.title = "Login"
         let attributedString = NSMutableAttributedString(string: "NÃO É CADASTRADO? CADASTRE-SE", attributes: [
             .font: UIFont.systemFont(ofSize: 14.0, weight: .regular),
             .foregroundColor: UIColor(red: 73.0 / 255.0, green: 81.0 / 255.0, blue: 97.0 / 255.0, alpha: 1.0),

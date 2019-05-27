@@ -11,6 +11,9 @@
 		BE06A11B22980C9700A746CA /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06A11A22980C9700A746CA /* LoginTableViewController.swift */; };
 		BE57F22B2295C25B00B3E692 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57F22A2295C25B00B3E692 /* NotificationService.swift */; };
 		BE57F22F2295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BE5F326B229C11F1000EEA63 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F326A229C11F1000EEA63 /* SignUpTableViewController.swift */; };
+		BE5F326D229C3DD9000EEA63 /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F326C229C3DD9000EEA63 /* CAGradientLayer.swift */; };
+		BE5F326F229C3E05000EEA63 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F326E229C3E05000EEA63 /* UINavigationBar.swift */; };
 		BEA24238228B1A5900D641C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24237228B1A5900D641C9 /* AppDelegate.swift */; };
 		BEA2423F228B1A5F00D641C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA2423E228B1A5F00D641C9 /* Assets.xcassets */; };
 		BEA24242228B1A5F00D641C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA24240228B1A5F00D641C9 /* LaunchScreen.storyboard */; };
@@ -81,6 +84,9 @@
 		BE57F22A2295C25B00B3E692 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		BE57F22C2295C25B00B3E692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE57F2342295C51B00B3E692 /* BarPass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BarPass.entitlements; sourceTree = "<group>"; };
+		BE5F326A229C11F1000EEA63 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		BE5F326C229C3DD9000EEA63 /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
+		BE5F326E229C3E05000EEA63 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		BEA24234228B1A5800D641C9 /* BarPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA24237228B1A5900D641C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA2423E228B1A5F00D641C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				BE06A11A22980C9700A746CA /* LoginTableViewController.swift */,
+				BE5F326A229C11F1000EEA63 /* SignUpTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,6 +340,8 @@
 				BEA24265228B1BFC00D641C9 /* UINavigationController.swift */,
 				BEA24266228B1BFC00D641C9 /* UIView.swift */,
 				BEA24267228B1BFC00D641C9 /* UIViewController.swift */,
+				BE5F326C229C3DD9000EEA63 /* CAGradientLayer.swift */,
+				BE5F326E229C3E05000EEA63 /* UINavigationBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -567,15 +576,18 @@
 				BEA24271228B1BFC00D641C9 /* PazMapDirections.swift in Sources */,
 				BEA2427D228B1BFC00D641C9 /* UIColor.swift in Sources */,
 				BEA2427B228B1BFC00D641C9 /* String.swift in Sources */,
+				BE5F326F229C3E05000EEA63 /* UINavigationBar.swift in Sources */,
 				BEA2426D228B1BFC00D641C9 /* CopyableLabel.swift in Sources */,
 				BEA24268228B1BFC00D641C9 /* ProgrammableUIProtocol.swift in Sources */,
 				BEA2426C228B1BFC00D641C9 /* AsyncOperation.swift in Sources */,
 				BEA24276228B1BFC00D641C9 /* DateFormaterExtension.swift in Sources */,
 				BEA24270228B1BFC00D641C9 /* JSONNull.swift in Sources */,
 				BEA24279228B1BFC00D641C9 /* Request.swift in Sources */,
+				BE5F326B229C11F1000EEA63 /* SignUpTableViewController.swift in Sources */,
 				BEA24281228B1BFC00D641C9 /* UIView.swift in Sources */,
 				BEA24274228B1BFC00D641C9 /* Bundle.swift in Sources */,
 				BEA2426F228B1BFC00D641C9 /* GlobalAlert.swift in Sources */,
+				BE5F326D229C3DD9000EEA63 /* CAGradientLayer.swift in Sources */,
 				BEA2427A228B1BFC00D641C9 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,7 +707,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -750,7 +762,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
