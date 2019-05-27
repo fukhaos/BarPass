@@ -37,6 +37,7 @@ class SignUpTableViewController: UITableViewController, TableStoryboarded {
         attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 14.0, weight: .bold), range: NSRange(location: 24, length: 14))
         signUpButton.setAttributedTitle(attributedString, for: .normal)
         self.title = "Cadastro"
+//        self.navigationItem.setTitle("teste", subtitle: "")
     }
     
     override func viewWillAppear(_ animated: Bool) {

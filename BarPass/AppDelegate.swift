@@ -31,6 +31,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navController.navigationBar.backgroundColor = UIColor.white
         navController.setNavigationBarHidden(true, animated: false)
         navController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        if #available(iOS 11.0, *) {
+            navController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        } else {
+            // Fallback on earlier versions
+        }
+
+        if #available(iOS 11.0, *) {
+            navController.navigationBar.prefersLargeTitles = true
+        } else {
+            // Fallback on earlier versions
+        }
         
         navController.pushViewController(LoginTableViewController.instantiate("Login"), animated: false)
         

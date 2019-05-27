@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3yZ-5C-Kg0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -201,13 +201,14 @@
                             <outlet property="delegate" destination="3yZ-5C-Kg0" id="ucs-VC-1Pg"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="ilT-DQ-pMm"/>
                     <connections>
                         <outlet property="signupButton" destination="Wju-Ym-iaL" id="0Vy-hu-p9Z"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLr-eN-LWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-126.08695652173914" y="34.821428571428569"/>
+            <point key="canvasLocation" x="784.05797101449286" y="34.821428571428569"/>
         </scene>
         <!--Sign Up Table View Controller-->
         <scene sceneID="8Ph-4a-MtQ">
@@ -393,7 +394,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBi-3U-FVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924.63768115942037" y="378.34821428571428"/>
+            <point key="canvasLocation" x="1834.7826086956522" y="378.34821428571428"/>
         </scene>
     </scenes>
     <resources>

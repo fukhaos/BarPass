@@ -14,6 +14,7 @@
 		BE5F326B229C11F1000EEA63 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F326A229C11F1000EEA63 /* SignUpTableViewController.swift */; };
 		BE5F326D229C3DD9000EEA63 /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F326C229C3DD9000EEA63 /* CAGradientLayer.swift */; };
 		BE5F326F229C3E05000EEA63 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F326E229C3E05000EEA63 /* UINavigationBar.swift */; };
+		BE5F3271229C572F000EEA63 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F3270229C572F000EEA63 /* UINavigationItem.swift */; };
 		BEA24238228B1A5900D641C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24237228B1A5900D641C9 /* AppDelegate.swift */; };
 		BEA2423F228B1A5F00D641C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA2423E228B1A5F00D641C9 /* Assets.xcassets */; };
 		BEA24242228B1A5F00D641C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA24240228B1A5F00D641C9 /* LaunchScreen.storyboard */; };
@@ -87,6 +88,7 @@
 		BE5F326A229C11F1000EEA63 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		BE5F326C229C3DD9000EEA63 /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
 		BE5F326E229C3E05000EEA63 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		BE5F3270229C572F000EEA63 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
 		BEA24234228B1A5800D641C9 /* BarPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA24237228B1A5900D641C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA2423E228B1A5F00D641C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				BEA24267228B1BFC00D641C9 /* UIViewController.swift */,
 				BE5F326C229C3DD9000EEA63 /* CAGradientLayer.swift */,
 				BE5F326E229C3E05000EEA63 /* UINavigationBar.swift */,
+				BE5F3270229C572F000EEA63 /* UINavigationItem.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				BEA2426A228B1BFC00D641C9 /* Methods.swift in Sources */,
 				BEA24271228B1BFC00D641C9 /* PazMapDirections.swift in Sources */,
 				BEA2427D228B1BFC00D641C9 /* UIColor.swift in Sources */,
+				BE5F3271229C572F000EEA63 /* UINavigationItem.swift in Sources */,
 				BEA2427B228B1BFC00D641C9 /* String.swift in Sources */,
 				BE5F326F229C3E05000EEA63 /* UINavigationBar.swift in Sources */,
 				BEA2426D228B1BFC00D641C9 /* CopyableLabel.swift in Sources */,
