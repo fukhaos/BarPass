@@ -181,7 +181,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wju-Ym-iaL">
-                                                    <rect key="frame" x="78" y="336" width="258" height="44"/>
+                                                    <rect key="frame" x="78" y="316" width="258" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="jtx-lc-yEX"/>
                                                     </constraints>
@@ -207,7 +207,7 @@
                                                 <constraint firstItem="I2F-f0-qPd" firstAttribute="centerX" secondItem="ySL-Ky-xYt" secondAttribute="centerX" id="U9B-XK-ypz"/>
                                                 <constraint firstItem="tgT-Ry-6T8" firstAttribute="leading" secondItem="K6d-r2-aj3" secondAttribute="trailing" constant="45.5" id="V2x-0z-ekR"/>
                                                 <constraint firstItem="tgT-Ry-6T8" firstAttribute="centerX" secondItem="ySL-Ky-xYt" secondAttribute="centerX" id="b8y-kh-ydn"/>
-                                                <constraint firstAttribute="bottom" secondItem="Wju-Ym-iaL" secondAttribute="bottom" id="bzJ-yq-6am"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wju-Ym-iaL" secondAttribute="bottom" constant="20" id="bzJ-yq-6am"/>
                                                 <constraint firstItem="K6d-r2-aj3" firstAttribute="leading" secondItem="ySL-Ky-xYt" secondAttribute="leading" id="vJM-Ia-gSx"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="M8V-ra-HPm" secondAttribute="trailing" constant="23" id="vOh-fT-t2A"/>
                                                 <constraint firstItem="zmb-yN-QLR" firstAttribute="top" secondItem="M8V-ra-HPm" secondAttribute="bottom" constant="50" id="w7h-Tc-V0k"/>
@@ -294,7 +294,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3B-WJ-aHt">
-                                <rect key="frame" x="42" y="811" width="331" height="51"/>
+                                <rect key="frame" x="42" y="791" width="331" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="XYd-s7-K3W"/>
                                 </constraints>
@@ -307,7 +307,7 @@
                             <constraint firstItem="9BB-r8-xrn" firstAttribute="trailing" secondItem="xsq-j1-5De" secondAttribute="trailing" id="GRU-hV-vAn"/>
                             <constraint firstItem="9BB-r8-xrn" firstAttribute="top" secondItem="xsq-j1-5De" secondAttribute="bottom" id="Hyh-rv-fRm"/>
                             <constraint firstItem="k3B-WJ-aHt" firstAttribute="leading" secondItem="MbA-FE-wBa" secondAttribute="leading" constant="42" id="J73-JS-l8H"/>
-                            <constraint firstItem="k3B-WJ-aHt" firstAttribute="bottom" secondItem="MbA-FE-wBa" secondAttribute="bottom" id="Mdk-Qw-E2h"/>
+                            <constraint firstItem="k3B-WJ-aHt" firstAttribute="bottom" secondItem="MbA-FE-wBa" secondAttribute="bottom" constant="-20" id="Mdk-Qw-E2h"/>
                             <constraint firstItem="MbA-FE-wBa" firstAttribute="trailing" secondItem="xsq-j1-5De" secondAttribute="trailing" constant="20" id="Mvh-fF-77T"/>
                             <constraint firstItem="MbA-FE-wBa" firstAttribute="trailing" secondItem="k3B-WJ-aHt" secondAttribute="trailing" constant="41" id="Rht-i6-SkR"/>
                             <constraint firstItem="pBF-dp-7D1" firstAttribute="top" secondItem="tTk-ZY-nXd" secondAttribute="bottom" constant="93" id="RlI-Jd-Gpc"/>
