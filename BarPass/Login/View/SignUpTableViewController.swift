@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class SignUpTableViewController: UITableViewController {
 
@@ -52,6 +53,7 @@ class SignUpTableViewController: UITableViewController {
     }
 
     @IBAction func checkAction(_ sender: Any) {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
         if checkButton.isSelected {
             checkButton.isSelected = false
         } else {

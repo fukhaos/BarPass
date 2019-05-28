@@ -10,6 +10,9 @@ import UIKit
 
 class LoginTableViewController: UITableViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     
     override func viewDidLoad() {
@@ -49,8 +52,12 @@ class LoginTableViewController: UITableViewController {
         super.viewDidAppear(animated)
     }
 
+    @IBAction func signIn(_ sender: Any) {
+        performSegue(withIdentifier: "segueTutorial", sender: nil)
+//        performSegue(withIdentifier: "segueDash", sender: nil)
+    }
+    
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
