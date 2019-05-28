@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpTableViewController: UITableViewController, TableStoryboarded {
+class SignUpTableViewController: UITableViewController {
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
@@ -26,6 +26,7 @@ class SignUpTableViewController: UITableViewController, TableStoryboarded {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        hideKeyboardWhenTappedAround()
         setUIElements()
     }
     

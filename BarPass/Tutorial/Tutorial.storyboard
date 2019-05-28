@@ -17,13 +17,25 @@
                     <view key="view" contentMode="scaleToFill" id="7zy-Mt-6pZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBQ-cp-MxZ" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jBQ-cp-MxZ" secondAttribute="bottom" id="1wp-mZ-L0p"/>
+                            <constraint firstItem="jBQ-cp-MxZ" firstAttribute="top" secondItem="7zy-Mt-6pZ" secondAttribute="top" id="DLU-rM-RdN"/>
+                            <constraint firstItem="jBQ-cp-MxZ" firstAttribute="leading" secondItem="FdD-ue-vmj" secondAttribute="leading" id="RFF-f6-dq8"/>
+                            <constraint firstItem="jBQ-cp-MxZ" firstAttribute="trailing" secondItem="FdD-ue-vmj" secondAttribute="trailing" id="bIc-LH-w9H"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FdD-ue-vmj"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yx2-si-b3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="229" y="193"/>
+            <point key="canvasLocation" x="228.98550724637684" y="192.85714285714286"/>
         </scene>
     </scenes>
 </document>

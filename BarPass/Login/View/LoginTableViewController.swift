@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginTableViewController: UITableViewController, TableStoryboarded {
+class LoginTableViewController: UITableViewController {
 
     @IBOutlet weak var signupButton: UIButton!
     
