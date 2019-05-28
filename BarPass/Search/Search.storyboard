@@ -26,11 +26,11 @@
             </objects>
             <point key="canvasLocation" x="1055.072463768116" y="112.5"/>
         </scene>
-        <!--Item-->
+        <!--Buscar-->
         <scene sceneID="ypS-Vd-xbU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BPs-SY-mS3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2Vm-q6-GXf"/>
+                    <tabBarItem key="tabBarItem" title="Buscar" image="tabSearchIcon" id="2Vm-q6-GXf"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="c2g-9V-ixd">
@@ -55,4 +55,7 @@
             <point key="canvasLocation" x="144.92753623188406" y="112.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabSearchIcon" width="24" height="23"/>
+    </resources>
 </document>

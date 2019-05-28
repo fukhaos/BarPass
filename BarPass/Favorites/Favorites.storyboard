@@ -38,11 +38,11 @@
             </objects>
             <point key="canvasLocation" x="1015.9420289855074" y="131.91964285714286"/>
         </scene>
-        <!--Item-->
+        <!--Favoritos-->
         <scene sceneID="30M-2y-Ful">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1at-aX-NFp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MqU-j6-qKP"/>
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="tabFavIcon" id="MqU-j6-qKP"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="vFS-15-EgJ">
@@ -67,4 +67,7 @@
             <point key="canvasLocation" x="105.79710144927537" y="131.91964285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabFavIcon" width="25" height="22"/>
+    </resources>
 </document>

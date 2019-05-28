@@ -59,11 +59,11 @@
             </objects>
             <point key="canvasLocation" x="923.1884057971015" y="45.535714285714285"/>
         </scene>
-        <!--Item-->
+        <!--Perfil-->
         <scene sceneID="Acc-cb-1Eo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pRw-2E-UAa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2xc-yU-dgG"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="tabProfileIcon" id="2xc-yU-dgG"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="42q-Fk-s5J">
@@ -88,4 +88,7 @@
             <point key="canvasLocation" x="13.043478260869566" y="45.535714285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabProfileIcon" width="23.5" height="23.5"/>
+    </resources>
 </document>

@@ -53,8 +53,8 @@ class LoginTableViewController: UITableViewController {
     }
 
     @IBAction func signIn(_ sender: Any) {
-        performSegue(withIdentifier: "segueTutorial", sender: nil)
-//        performSegue(withIdentifier: "segueDash", sender: nil)
+//        performSegue(withIdentifier: "segueTutorial", sender: nil)
+        performSegue(withIdentifier: "segueDash", sender: nil)
     }
     
     // MARK: - Table view data source
