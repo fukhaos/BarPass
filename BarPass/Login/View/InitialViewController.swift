@@ -30,6 +30,6 @@ class InitialViewController: UIViewController {
 extension InitialViewController: SwiftyGifDelegate {
     func gifDidStop(sender: UIImageView) {
         logoAnimationView.isHidden = true
-        navigationController?.pushViewController(LoginTableViewController.instantiate("Login"), animated: false)
+        self.performSegue(withIdentifier: "segueLogin", sender: nil)
     }
 }
