@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="46" y="-291"/>
         </scene>
-        <!--Barpass-->
+        <!--QRCode-->
         <scene sceneID="PaI-RA-6cn">
             <objects>
-                <viewControllerPlaceholder storyboardName="Barpass" id="c5k-60-ahm" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="QRCode" id="c5k-60-ahm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="DoJ-cP-nkB"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHJ-CY-hRs" userLabel="First Responder" sceneMemberID="firstResponder"/>

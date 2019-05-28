@@ -17,7 +17,6 @@
 		9E977D06229DB0E500E0CE52 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E977D05229DB0E400E0CE52 /* Search.storyboard */; };
 		9E977D09229DB10300E0CE52 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E977D08229DB10300E0CE52 /* Favorites.storyboard */; };
 		9E977D0F229DB3BB00E0CE52 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E977D0E229DB3BA00E0CE52 /* Profile.storyboard */; };
-		9E977D12229DB66800E0CE52 /* Barpass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E977D11229DB66800E0CE52 /* Barpass.storyboard */; };
 		BE06A11B22980C9700A746CA /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06A11A22980C9700A746CA /* LoginTableViewController.swift */; };
 		BE57F22B2295C25B00B3E692 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57F22A2295C25B00B3E692 /* NotificationService.swift */; };
 		BE57F22F2295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -103,7 +102,6 @@
 		9E977D05229DB0E400E0CE52 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		9E977D08229DB10300E0CE52 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		9E977D0E229DB3BA00E0CE52 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		9E977D11229DB66800E0CE52 /* Barpass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Barpass.storyboard; sourceTree = "<group>"; };
 		BE06A11A22980C9700A746CA /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		BE4538922296F94400F1F0E0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,14 +215,6 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		9E977D10229DB65D00E0CE52 /* Barpass */ = {
-			isa = PBXGroup;
-			children = (
-				9E977D11229DB66800E0CE52 /* Barpass.storyboard */,
-			);
-			path = Barpass;
-			sourceTree = "<group>";
-		};
 		BE06A11722980C7200A746CA /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,7 +314,6 @@
 				BE5F3274229C79AA000EEA63 /* Tutorial */,
 				9E977D0D229DB3BA00E0CE52 /* Profile */,
 				BE4538A32297147100F1F0E0 /* QRCode */,
-				9E977D10229DB65D00E0CE52 /* Barpass */,
 				BE5F327A229C7A6D000EEA63 /* Dashboard */,
 				9E977D07229DB10300E0CE52 /* Favorites */,
 				9E977D04229DB0D700E0CE52 /* Search */,
@@ -512,7 +501,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E977CFB229DAFC800E0CE52 /* Home.storyboard in Resources */,
-				9E977D12229DB66800E0CE52 /* Barpass.storyboard in Resources */,
 				9E977D0F229DB3BB00E0CE52 /* Profile.storyboard in Resources */,
 				BEED9AD922972D8E009FAF89 /* Login.storyboard in Resources */,
 				9E977D03229DB08D00E0CE52 /* QRCode.storyboard in Resources */,
