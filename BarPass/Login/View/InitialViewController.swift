@@ -10,12 +10,13 @@ import Foundation
 import UIKit
 import SwiftyGif
 
-class InitialViewController: UIViewController, Storyboarded {
+class InitialViewController: UIViewController {
 
     let logoAnimationView = LogoAnimationView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        logoAnimationView.center = view.center
         view.addSubview(logoAnimationView)
         logoAnimationView.logoGifImageView.delegate = self
     }
@@ -29,5 +30,6 @@ class InitialViewController: UIViewController, Storyboarded {
 extension InitialViewController: SwiftyGifDelegate {
     func gifDidStop(sender: UIImageView) {
         logoAnimationView.isHidden = true
+        navigationController?.pushViewController(LoginTableViewController.instantiate("Login"), animated: false)
     }
 }

@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        wavesView.addSubview(imageView)
 //        navController.navigationBar.addSubview(wavesView)
         
-        navController.pushViewController(LoginTableViewController.instantiate("Login"), animated: false)
+        navController.pushViewController(InitialViewController.instantiate("Login"), animated: false)
         
         // create a basic UIWindow and activate it
         window = UIWindow(frame: UIScreen.main.bounds)

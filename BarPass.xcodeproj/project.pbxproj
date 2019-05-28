@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		082CD49104A78C6F34E55E5E /* Pods_BarPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CA98659D4C46758E0A69D0 /* Pods_BarPass.framework */; };
+		9E977CE9229D664800E0CE52 /* logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E977CE8229D664800E0CE52 /* logo.gif */; };
 		BE06A11B22980C9700A746CA /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06A11A22980C9700A746CA /* LoginTableViewController.swift */; };
 		BE57F22B2295C25B00B3E692 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57F22A2295C25B00B3E692 /* NotificationService.swift */; };
 		BE57F22F2295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -84,6 +85,7 @@
 		66069568C3440D2F0F386101 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ABCB4D94C3F026F76E8AC74 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		98C817F77E0F5D23153A28F2 /* Pods-BarPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarPass.debug.xcconfig"; path = "Target Support Files/Pods-BarPass/Pods-BarPass.debug.xcconfig"; sourceTree = "<group>"; };
+		9E977CE8229D664800E0CE52 /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = logo.gif; path = Assets.xcassets/logo.dataset/logo.gif; sourceTree = "<group>"; };
 		BE06A11A22980C9700A746CA /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		BE4538922296F94400F1F0E0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +307,7 @@
 				BEA24237228B1A5900D641C9 /* AppDelegate.swift */,
 				BEA2423E228B1A5F00D641C9 /* Assets.xcassets */,
 				BEA24240228B1A5F00D641C9 /* LaunchScreen.storyboard */,
+				9E977CE8229D664800E0CE52 /* logo.gif */,
 				BEA24243228B1A5F00D641C9 /* Info.plist */,
 				BEA24258228B1BFC00D641C9 /* Extensions */,
 				BEA2424B228B1BFB00D641C9 /* Network */,
@@ -482,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEED9AD922972D8E009FAF89 /* Login.storyboard in Resources */,
+				9E977CE9229D664800E0CE52 /* logo.gif in Resources */,
 				BE5F327C229C7A7B000EEA63 /* Dashboard.storyboard in Resources */,
 				BEA24242228B1A5F00D641C9 /* LaunchScreen.storyboard in Resources */,
 				BE5F3276229C79C1000EEA63 /* Tutorial.storyboard in Resources */,
