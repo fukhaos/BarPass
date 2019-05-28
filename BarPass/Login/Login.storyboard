@@ -350,7 +350,7 @@
                                     <rect key="frame" x="44" y="194" width="327" height="52"/>
                                     <state key="normal" image="concludeButton"/>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VL-uL-gA5">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VL-uL-gA5" customClass="SpringButton" customModule="Spring">
                                     <rect key="frame" x="24" y="40" width="44" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="44" id="ZpU-Dr-b1i"/>
@@ -358,6 +358,10 @@
                                     </constraints>
                                     <state key="normal" image="iconCheckoff"/>
                                     <state key="selected" image="iconCheckOn"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="checkAction:" destination="feG-iT-aJG" eventType="touchUpInside" id="q3s-ht-pcH"/>
                                     </connections>
@@ -511,7 +515,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Cadastro" id="Czm-vs-04E"/>
                     <connections>
-                        <outlet property="checkButton" destination="5VL-uL-gA5" id="BHw-1F-dD9"/>
+                        <outlet property="checkButton" destination="5VL-uL-gA5" id="NWS-sl-wml"/>
                         <outlet property="confirmPassField" destination="fMu-hM-z8t" id="8Ej-F5-GC1"/>
                         <outlet property="emailField" destination="E1C-TF-zg5" id="HYB-Nn-FQr"/>
                         <outlet property="nameField" destination="vFN-7Q-YAc" id="lyH-LE-fNY"/>

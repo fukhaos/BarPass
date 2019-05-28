@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioToolbox
+import Spring
 
 class SignUpTableViewController: UITableViewController {
 
@@ -15,7 +16,7 @@ class SignUpTableViewController: UITableViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var confirmPassField: UITextField!
-    @IBOutlet weak var checkButton: UIButton!
+    @IBOutlet weak var checkButton: SpringButton!
     @IBOutlet weak var useAndTermsButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
@@ -58,6 +59,8 @@ class SignUpTableViewController: UITableViewController {
             checkButton.isSelected = false
         } else {
             checkButton.isSelected = true
+            checkButton.animation = "pop"
+            checkButton.animate()
         }
     }
     
