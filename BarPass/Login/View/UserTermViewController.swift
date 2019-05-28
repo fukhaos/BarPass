@@ -26,12 +26,6 @@ class UserTermViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        title = "Sobre o BarPass"
-        
-        if useTerm {
-            title = "Política de privacidade"
-        }
-        
         progressView = UIProgressView(progressViewStyle: .default)
         progressView.sizeToFit()
         

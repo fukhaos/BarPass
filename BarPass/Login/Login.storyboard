@@ -66,7 +66,7 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="email"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -128,6 +128,9 @@
                                                     <state key="normal" title="Esqueci minha senha">
                                                         <color key="titleColor" red="0.28627450980392155" green="0.31764705882352939" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="8Dj-Rp-pby" kind="show" identifier="segueForgotPass" id="8jb-PH-ieS"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8V-ra-HPm">
                                                     <rect key="frame" x="44" y="64" width="327" height="52"/>
@@ -223,13 +226,109 @@
                     <navigationItem key="navigationItem" id="ilT-DQ-pMm"/>
                     <connections>
                         <outlet property="signupButton" destination="Wju-Ym-iaL" id="0Vy-hu-p9Z"/>
+                        <segue destination="XsQ-zi-Rqg" kind="presentation" identifier="segueDash" id="ecn-du-zYD"/>
+                        <segue destination="K2g-tI-U6q" kind="presentation" identifier="segueTutorial" id="jKZ-Mp-orb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLr-eN-LWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1694.2028985507247" y="34.821428571428569"/>
         </scene>
-        <!--Sign Up Table View Controller-->
+        <!--Tutorial-->
+        <scene sceneID="aoq-3k-Ebf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tutorial" id="K2g-tI-U6q" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJ4-I5-SpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1470" y="450"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="4bm-mF-zpw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Dashboard" id="XsQ-zi-Rqg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHs-8H-j72" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925" y="450"/>
+        </scene>
+        <!--Esqueci senha-->
+        <scene sceneID="0rZ-Fx-ekU">
+            <objects>
+                <viewController storyboardIdentifier="ForgotPassViewController" id="8Dj-Rp-pby" customClass="ForgotPassViewController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tdR-CL-8uf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoLogin" translatesAutoresizingMaskIntoConstraints="NO" id="tTk-ZY-nXd">
+                                <rect key="frame" x="72.5" y="151" width="269" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="269" id="G3u-7v-awN"/>
+                                    <constraint firstAttribute="height" constant="77" id="Rng-8j-lbr"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9BB-r8-xrn">
+                                <rect key="frame" x="40" y="394" width="354" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="x4P-Mo-ZBg"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-MAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBF-dp-7D1">
+                                <rect key="frame" x="40" y="321" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xsq-j1-5De">
+                                <rect key="frame" x="40" y="350" width="354" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bng-UO-qbj"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirme seu e-mail de cadastro e lhe enviaremos uma nova senha." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79H-m8-yWk">
+                                <rect key="frame" x="40" y="438" width="354" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3B-WJ-aHt">
+                                <rect key="frame" x="42" y="811" width="331" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="XYd-s7-K3W"/>
+                                </constraints>
+                                <state key="normal" image="sendButton"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="79H-m8-yWk" firstAttribute="trailing" secondItem="xsq-j1-5De" secondAttribute="trailing" id="ELZ-fM-p2a"/>
+                            <constraint firstItem="9BB-r8-xrn" firstAttribute="trailing" secondItem="xsq-j1-5De" secondAttribute="trailing" id="GRU-hV-vAn"/>
+                            <constraint firstItem="9BB-r8-xrn" firstAttribute="top" secondItem="xsq-j1-5De" secondAttribute="bottom" id="Hyh-rv-fRm"/>
+                            <constraint firstItem="k3B-WJ-aHt" firstAttribute="leading" secondItem="MbA-FE-wBa" secondAttribute="leading" constant="42" id="J73-JS-l8H"/>
+                            <constraint firstItem="k3B-WJ-aHt" firstAttribute="bottom" secondItem="MbA-FE-wBa" secondAttribute="bottom" id="Mdk-Qw-E2h"/>
+                            <constraint firstItem="MbA-FE-wBa" firstAttribute="trailing" secondItem="xsq-j1-5De" secondAttribute="trailing" constant="20" id="Mvh-fF-77T"/>
+                            <constraint firstItem="MbA-FE-wBa" firstAttribute="trailing" secondItem="k3B-WJ-aHt" secondAttribute="trailing" constant="41" id="Rht-i6-SkR"/>
+                            <constraint firstItem="pBF-dp-7D1" firstAttribute="top" secondItem="tTk-ZY-nXd" secondAttribute="bottom" constant="93" id="RlI-Jd-Gpc"/>
+                            <constraint firstItem="pBF-dp-7D1" firstAttribute="leading" secondItem="MbA-FE-wBa" secondAttribute="leading" constant="40" id="hcB-La-lKe"/>
+                            <constraint firstItem="tTk-ZY-nXd" firstAttribute="centerX" secondItem="tdR-CL-8uf" secondAttribute="centerX" id="lQ8-86-1Ee"/>
+                            <constraint firstItem="xsq-j1-5De" firstAttribute="top" secondItem="pBF-dp-7D1" secondAttribute="bottom" constant="8" id="nJa-Sc-3ZH"/>
+                            <constraint firstItem="xsq-j1-5De" firstAttribute="leading" secondItem="pBF-dp-7D1" secondAttribute="leading" id="qHR-Xz-nNl"/>
+                            <constraint firstItem="79H-m8-yWk" firstAttribute="leading" secondItem="xsq-j1-5De" secondAttribute="leading" id="sGZ-Fh-w3q"/>
+                            <constraint firstItem="79H-m8-yWk" firstAttribute="top" secondItem="9BB-r8-xrn" secondAttribute="bottom" constant="43" id="umo-5l-7Uh"/>
+                            <constraint firstItem="tTk-ZY-nXd" firstAttribute="top" secondItem="MbA-FE-wBa" secondAttribute="top" constant="63" id="xeU-pG-Rvi"/>
+                            <constraint firstItem="9BB-r8-xrn" firstAttribute="leading" secondItem="xsq-j1-5De" secondAttribute="leading" id="zO7-zq-dfb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MbA-FE-wBa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Esqueci senha" id="9AU-3c-DKf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXW-kf-KRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2745" y="-318"/>
+        </scene>
+        <!--Cadastro-->
         <scene sceneID="8Ph-4a-MtQ">
             <objects>
                 <tableViewController id="feG-iT-aJG" customClass="SignUpTableViewController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
@@ -330,7 +429,7 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -354,7 +453,7 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -378,7 +477,7 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -404,6 +503,7 @@
                             <outlet property="delegate" destination="feG-iT-aJG" id="wcD-Dt-0ne"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Cadastro" id="Czm-vs-04E"/>
                     <connections>
                         <outlet property="checkButton" destination="5VL-uL-gA5" id="BHw-1F-dD9"/>
                         <outlet property="confirmPassField" destination="fMu-hM-z8t" id="8Ej-F5-GC1"/>
@@ -418,7 +518,7 @@
             </objects>
             <point key="canvasLocation" x="2744.9275362318845" y="378.34821428571428"/>
         </scene>
-        <!--User Term View Controller-->
+        <!--Termos de Uso-->
         <scene sceneID="e1x-Ws-Ghi">
             <objects>
                 <viewController storyboardIdentifier="UserTermViewController" id="qwU-tA-Er2" customClass="UserTermViewController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
@@ -428,6 +528,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rhH-Lb-meA"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Termos de Uso" id="hkh-9R-op9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gz0-7T-wPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -467,5 +568,6 @@
         <image name="loginGoogle" width="60" height="60"/>
         <image name="logoLogin" width="270" height="77.5"/>
         <image name="passwordTextFieldImage" width="375" height="100"/>
+        <image name="sendButton" width="331" height="51"/>
     </resources>
 </document>

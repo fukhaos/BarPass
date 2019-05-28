@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		082CD49104A78C6F34E55E5E /* Pods_BarPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CA98659D4C46758E0A69D0 /* Pods_BarPass.framework */; };
 		9E977CE9229D664800E0CE52 /* logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E977CE8229D664800E0CE52 /* logo.gif */; };
+		9E977CEB229D768D00E0CE52 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */; };
 		BE06A11B22980C9700A746CA /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06A11A22980C9700A746CA /* LoginTableViewController.swift */; };
 		BE57F22B2295C25B00B3E692 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57F22A2295C25B00B3E692 /* NotificationService.swift */; };
 		BE57F22F2295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -86,6 +87,7 @@
 		6ABCB4D94C3F026F76E8AC74 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		98C817F77E0F5D23153A28F2 /* Pods-BarPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarPass.debug.xcconfig"; path = "Target Support Files/Pods-BarPass/Pods-BarPass.debug.xcconfig"; sourceTree = "<group>"; };
 		9E977CE8229D664800E0CE52 /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = logo.gif; path = Assets.xcassets/logo.dataset/logo.gif; sourceTree = "<group>"; };
+		9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		BE06A11A22980C9700A746CA /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		BE4538922296F94400F1F0E0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 				BE5F3272229C68C4000EEA63 /* UserTermViewController.swift */,
 				BE5F327D229C80FB000EEA63 /* InitialViewController.swift */,
 				BE5F327F229C8141000EEA63 /* LogoAnimationView.swift */,
+				9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				BEA2426B228B1BFC00D641C9 /* UrlConstants.swift in Sources */,
 				BEA2426A228B1BFC00D641C9 /* Methods.swift in Sources */,
 				BEA24271228B1BFC00D641C9 /* PazMapDirections.swift in Sources */,
+				9E977CEB229D768D00E0CE52 /* ForgotPassViewController.swift in Sources */,
 				BEA2427D228B1BFC00D641C9 /* UIColor.swift in Sources */,
 				BE5F3271229C572F000EEA63 /* UINavigationItem.swift in Sources */,
 				BEA2427B228B1BFC00D641C9 /* String.swift in Sources */,
