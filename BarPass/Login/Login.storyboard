@@ -231,6 +231,8 @@
                         <outlet property="emailField" destination="QXa-Tb-yLY" id="47Y-nE-F43"/>
                         <outlet property="passField" destination="Bxp-7x-oWy" id="Vxk-Vq-tvu"/>
                         <outlet property="signInButton" destination="M8V-ra-HPm" id="PjH-Le-6wa"/>
+                        <outlet property="signInFaceButton" destination="X9h-1h-25T" id="kZj-VS-bOr"/>
+                        <outlet property="signInGmailButton" destination="XHl-lr-Fvj" id="iYR-eP-nyu"/>
                         <outlet property="signupButton" destination="Wju-Ym-iaL" id="0Vy-hu-p9Z"/>
                         <segue destination="XsQ-zi-Rqg" kind="presentation" identifier="segueDash" id="ecn-du-zYD"/>
                         <segue destination="K2g-tI-U6q" kind="presentation" identifier="segueTutorial" id="jKZ-Mp-orb"/>

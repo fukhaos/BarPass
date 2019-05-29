@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FacebookLogin
+import FBSDKCoreKit
+import SVProgressHUD
 
 class LoginTableViewController: UITableViewController {
 
@@ -14,15 +17,14 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var signInFaceButton: UIButton!
+    @IBOutlet weak var signInGmailButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        signInFaceButton.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
+        
         setUIElements()
         hideKeyboardWhenTappedAround()
     }
@@ -51,10 +53,41 @@ class LoginTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    
+    @objc func loginButtonClicked() {
+        let loginManager = LoginManager()
+        loginManager.logIn(readPermissions: [.publicProfile, .email, .userFriends], viewController: self) { (loginResult) in
+            switch loginResult {
+            case .failed(let error):
+                print(error)
+            case .cancelled:
+                print("User cancelled login.")
+            case .success(let grantedPermissions, _, _):
+                if grantedPermissions.contains("email") {
+                    self.getFBUserData()
+                }
+            }
+        }
+    }
 
     @IBAction func signIn(_ sender: Any) {
 //        performSegue(withIdentifier: "segueTutorial", sender: nil)
         performSegue(withIdentifier: "segueDash", sender: nil)
+    }
+    
+    private func getFBUserData(){
+        if((FBSDKAccessToken.current()) != nil){
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
+                if (error == nil){
+                    //everything works print the user data
+                    if let user = result as? [String: Any], let email = user["email"], let name = user["name"],
+                        let userName = user["first_name"], let faceID = user["id"] {
+                        
+                        
+                    }
+                }
+            })
+        }
     }
     
     // MARK: - Table view data source
