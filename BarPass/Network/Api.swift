@@ -15,6 +15,10 @@ let debugRequests = false
 let debugRequests = true
 #endif
 
+public enum CustomError {
+    case userNotLoggedIn, unknownError, exceptionError, serverError, notConnected, jsonError, configError
+}
+
 // POST /api/v1/File/Upload
 struct ResultUploadImage : Codable {
     var data : UploadImageData!
@@ -344,5 +348,83 @@ class Api {
         }
         
     }
+    
+    // TODO: Update post resquest to RequestManager method
+//    public func getToken(completed: @escaping (CustomError?, String) -> Void) {
+//        
+//        do {
+//            guard let token = self.keychain.get(self.config.accessTokenKey), let refToken = self.keychain.get(self.config.refreshTokenKey) else {
+//                print("Megaleios - Nao esta logado. Erro.")
+//                completed(CustomError.userNotLoggedIn, "")
+//                return
+//            }
+//            
+//            self.accessToken = try JSONDecoder().decode(jwt: token)
+//            self.refreshToken = try JSONDecoder().decode(jwt: refToken)
+//            
+//            let currentAccessToken = self.accessToken.string
+//            let currentRefreshToken = self.refreshToken.string
+//            
+//            if !self.accessToken.expired {
+//                //Normal
+//                print("Megaleios - token esta ok")
+//                completed(nil, currentAccessToken)
+//            } else if self.accessToken.expired {
+//                //Faz logoff
+//                print("Megaleios - token expirado. renovando...")
+//                guard let refreshUrl = self.config.refreshTokenKeyURL else {
+//                    print("Megaleios - EndPoint de refresh token nao configurada.")
+//                    self.logout()
+//                    completed(CustomError.configError, "")
+//                    return
+//                }
+//                
+//                let refreshTokenEndpoint = URL(string: refreshUrl)!
+//                
+//                let params: Parameters = [
+//                    self.config.refreshTokenParameter : currentRefreshToken
+//                ]
+//                
+//                print(refreshTokenEndpoint)
+//                print(params)
+//                
+//                Alamofire.request(refreshTokenEndpoint, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
+//                    
+//                    print("Megaleios - statusCode: \(String(describing: response.response?.statusCode))")
+//                    
+//                    if let statusCode = response.response?.statusCode {
+//                        if statusCode == 400 {
+//                            completed(CustomError.userNotLoggedIn, "")
+//                            return
+//                        }
+//                    }
+//                    
+//                    if let data = response.data {
+//                        do {
+//                            let json = try JSONDecoder().decode(MegaleiosResponse<ResultAccessToken>.self, from: data)
+//                            if let newToken = json.data?.access_token, let refreshTkn = json.data?.refresh_token {
+//                                self.setToken(accessToken: newToken, refreshToken: refreshTkn)
+//                                completed(nil, newToken)
+//                            } else {
+//                                //error
+//                                self.logout()
+//                                completed(CustomError.userNotLoggedIn, "")
+//                            }
+//                        } catch {
+//                            print("Megaleios - Exception:\(error)")
+//                            self.logout()
+//                            completed(CustomError.userNotLoggedIn, "")
+//                        }
+//                    }
+//                }
+//                
+//            }
+//            
+//        } catch {
+//            print("Megaleios - Failed to decode JWT: \(error)")
+//            completed(CustomError.unknownError, "")
+//        }
+//        
+//    }
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		082CD49104A78C6F34E55E5E /* Pods_BarPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CA98659D4C46758E0A69D0 /* Pods_BarPass.framework */; };
+		9E94A9F6229ECB8A00A302FE /* RegisterReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F5229ECB8A00A302FE /* RegisterReturn.swift */; };
+		9E94A9F8229ED26400A302FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F7229ED26400A302FE /* UserModel.swift */; };
 		9E977CE9229D664800E0CE52 /* logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E977CE8229D664800E0CE52 /* logo.gif */; };
 		9E977CEB229D768D00E0CE52 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */; };
 		9E977CEE229D78E500E0CE52 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977CED229D78E500E0CE52 /* TutorialViewController.swift */; };
@@ -93,6 +95,8 @@
 		66069568C3440D2F0F386101 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ABCB4D94C3F026F76E8AC74 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		98C817F77E0F5D23153A28F2 /* Pods-BarPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarPass.debug.xcconfig"; path = "Target Support Files/Pods-BarPass/Pods-BarPass.debug.xcconfig"; sourceTree = "<group>"; };
+		9E94A9F5229ECB8A00A302FE /* RegisterReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReturn.swift; sourceTree = "<group>"; };
+		9E94A9F7229ED26400A302FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9E977CE8229D664800E0CE52 /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = logo.gif; path = Assets.xcassets/logo.dataset/logo.gif; sourceTree = "<group>"; };
 		9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		9E977CED229D78E500E0CE52 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +187,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9E94A9F3229ECB7600A302FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9E94A9F4229ECB7E00A302FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E94A9F5229ECB8A00A302FE /* RegisterReturn.swift */,
+				9E94A9F7229ED26400A302FE /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9E977CF9229DAFBB00E0CE52 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,25 +248,11 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		BE06A11822980C7800A746CA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BE06A11922980C8000A746CA /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		BE45389C2297136900F1F0E0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				BE06A11922980C8000A746CA /* ViewModel */,
-				BE06A11822980C7800A746CA /* Model */,
+				9E94A9F3229ECB7600A302FE /* ViewModel */,
+				9E94A9F4229ECB7E00A302FE /* Model */,
 				BE06A11722980C7200A746CA /* View */,
 				BEED9AD822972D8E009FAF89 /* Login.storyboard */,
 			);
@@ -617,6 +623,7 @@
 				BEA2427C228B1BFC00D641C9 /* UIApplication.swift in Sources */,
 				BEA24278228B1BFC00D641C9 /* GradientView.swift in Sources */,
 				BE06A11B22980C9700A746CA /* LoginTableViewController.swift in Sources */,
+				9E94A9F8229ED26400A302FE /* UserModel.swift in Sources */,
 				BEA24272228B1BFC00D641C9 /* URLs.swift in Sources */,
 				BEA24238228B1A5900D641C9 /* AppDelegate.swift in Sources */,
 				9E977CEE229D78E500E0CE52 /* TutorialViewController.swift in Sources */,
@@ -638,6 +645,7 @@
 				BEA2427B228B1BFC00D641C9 /* String.swift in Sources */,
 				BE5F326F229C3E05000EEA63 /* UINavigationBar.swift in Sources */,
 				BEA2426D228B1BFC00D641C9 /* CopyableLabel.swift in Sources */,
+				9E94A9F6229ECB8A00A302FE /* RegisterReturn.swift in Sources */,
 				BEA24268228B1BFC00D641C9 /* ProgrammableUIProtocol.swift in Sources */,
 				BEA2426C228B1BFC00D641C9 /* AsyncOperation.swift in Sources */,
 				BEA24276228B1BFC00D641C9 /* DateFormaterExtension.swift in Sources */,
