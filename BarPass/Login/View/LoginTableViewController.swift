@@ -27,6 +27,7 @@ class LoginTableViewController: UITableViewController {
         
         setUIElements()
         hideKeyboardWhenTappedAround()
+        navigationController?.hidesBarsOnSwipe = true
     }
     
     private func setUIElements() {

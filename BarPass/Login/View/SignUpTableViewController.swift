@@ -32,8 +32,6 @@ class SignUpTableViewController: UITableViewController {
         viewModel = LoginViewModel()
         realm = try! Realm()
         
-        navigationController?.hidesBarsOnSwipe = true
-        
         hideKeyboardWhenTappedAround()
         setUIElements()
     }
