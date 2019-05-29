@@ -9,7 +9,7 @@
 import Foundation
 
 enum URLs {
-    static let baseUrl = "http://api.guardioes.megaleios.com"
+    static let baseUrl = "http://api.barpass.dev.megaleios.com"
     
     static var apiEndPoint : String {
         get {
@@ -20,7 +20,7 @@ enum URLs {
     
     static var uploadsEndPoint : String {
         get {
-            let value = "\(URLs.baseUrl)/content/upload"
+            let value = "\(apiEndPoint)/File/Upload"
             return value
         }
     }

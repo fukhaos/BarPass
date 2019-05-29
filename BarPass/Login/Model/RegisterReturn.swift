@@ -12,9 +12,9 @@ import Foundation
 struct RegisterReturn: Codable {
     let data: TokenModel?
     let erro: Bool?
-    let errors: JSONNull?
+    let errors: [String: String]?
     let message: String?
-    let messageEx: JSONNull?
+    let messageEx: String?
 }
 
 // MARK: - DataClass

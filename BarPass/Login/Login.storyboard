@@ -351,6 +351,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9q-yq-d0X">
                                     <rect key="frame" x="44" y="194" width="327" height="52"/>
                                     <state key="normal" image="concludeButton"/>
+                                    <connections>
+                                        <action selector="concludeSignup:" destination="feG-iT-aJG" eventType="touchUpInside" id="MsS-gO-Zah"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VL-uL-gA5" customClass="SpringButton" customModule="Spring">
                                     <rect key="frame" x="24" y="40" width="44" height="44"/>

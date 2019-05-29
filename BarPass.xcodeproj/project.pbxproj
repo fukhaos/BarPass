@@ -10,6 +10,7 @@
 		082CD49104A78C6F34E55E5E /* Pods_BarPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CA98659D4C46758E0A69D0 /* Pods_BarPass.framework */; };
 		9E94A9F6229ECB8A00A302FE /* RegisterReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F5229ECB8A00A302FE /* RegisterReturn.swift */; };
 		9E94A9F8229ED26400A302FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F7229ED26400A302FE /* UserModel.swift */; };
+		9E94A9FA229EE5EF00A302FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F9229EE5EF00A302FE /* LoginViewModel.swift */; };
 		9E977CE9229D664800E0CE52 /* logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E977CE8229D664800E0CE52 /* logo.gif */; };
 		9E977CEB229D768D00E0CE52 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */; };
 		9E977CEE229D78E500E0CE52 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977CED229D78E500E0CE52 /* TutorialViewController.swift */; };
@@ -97,6 +98,7 @@
 		98C817F77E0F5D23153A28F2 /* Pods-BarPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarPass.debug.xcconfig"; path = "Target Support Files/Pods-BarPass/Pods-BarPass.debug.xcconfig"; sourceTree = "<group>"; };
 		9E94A9F5229ECB8A00A302FE /* RegisterReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReturn.swift; sourceTree = "<group>"; };
 		9E94A9F7229ED26400A302FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9E94A9F9229EE5EF00A302FE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9E977CE8229D664800E0CE52 /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = logo.gif; path = Assets.xcassets/logo.dataset/logo.gif; sourceTree = "<group>"; };
 		9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		9E977CED229D78E500E0CE52 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		9E94A9F3229ECB7600A302FE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9E94A9F9229EE5EF00A302FE /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				BEA2426E228B1BFC00D641C9 /* CustomView.swift in Sources */,
 				BEA2427F228B1BFC00D641C9 /* UIImage.swift in Sources */,
 				BE5F327E229C80FB000EEA63 /* InitialViewController.swift in Sources */,
+				9E94A9FA229EE5EF00A302FE /* LoginViewModel.swift in Sources */,
 				BEA2426B228B1BFC00D641C9 /* UrlConstants.swift in Sources */,
 				BEA2426A228B1BFC00D641C9 /* Methods.swift in Sources */,
 				BEA24271228B1BFC00D641C9 /* PazMapDirections.swift in Sources */,

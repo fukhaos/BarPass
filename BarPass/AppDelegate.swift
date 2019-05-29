@@ -10,6 +10,7 @@ import UIKit
 import OneSignal
 import FacebookCore
 import IQKeyboardManagerSwift
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //base config for SVProgressHUD
+        SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
         
         IQKeyboardManager.shared.keyboardAppearance = UIKeyboardAppearance.dark
         IQKeyboardManager.shared.overrideKeyboardAppearance = true

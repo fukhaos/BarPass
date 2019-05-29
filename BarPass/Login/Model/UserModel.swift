@@ -19,12 +19,13 @@ struct UserModel: Codable {
     let premium: Bool?
     let fullName, email, photo, cpf: String?
     let blocked: Bool?
+    let id: String?
     
     enum CodingKeys: String, CodingKey {
         case password
         case facebookID = "facebookId"
         case nickName, phone, gender, sendSMS, sendEmail, notification
         case codID = "codId"
-        case premium, fullName, email, photo, cpf, blocked
+        case premium, fullName, email, photo, cpf, blocked, id
     }
 }

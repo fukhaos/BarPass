@@ -351,20 +351,20 @@ class Api {
     
     // TODO: Update post resquest to RequestManager method
 //    public func getToken(completed: @escaping (CustomError?, String) -> Void) {
-//        
+//
 //        do {
 //            guard let token = self.keychain.get(self.config.accessTokenKey), let refToken = self.keychain.get(self.config.refreshTokenKey) else {
 //                print("Megaleios - Nao esta logado. Erro.")
 //                completed(CustomError.userNotLoggedIn, "")
 //                return
 //            }
-//            
+//
 //            self.accessToken = try JSONDecoder().decode(jwt: token)
 //            self.refreshToken = try JSONDecoder().decode(jwt: refToken)
-//            
+//
 //            let currentAccessToken = self.accessToken.string
 //            let currentRefreshToken = self.refreshToken.string
-//            
+//
 //            if !self.accessToken.expired {
 //                //Normal
 //                print("Megaleios - token esta ok")
@@ -378,27 +378,27 @@ class Api {
 //                    completed(CustomError.configError, "")
 //                    return
 //                }
-//                
+//
 //                let refreshTokenEndpoint = URL(string: refreshUrl)!
-//                
+//
 //                let params: Parameters = [
 //                    self.config.refreshTokenParameter : currentRefreshToken
 //                ]
-//                
+//
 //                print(refreshTokenEndpoint)
 //                print(params)
-//                
+//
 //                Alamofire.request(refreshTokenEndpoint, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
-//                    
+//
 //                    print("Megaleios - statusCode: \(String(describing: response.response?.statusCode))")
-//                    
+//
 //                    if let statusCode = response.response?.statusCode {
 //                        if statusCode == 400 {
 //                            completed(CustomError.userNotLoggedIn, "")
 //                            return
 //                        }
 //                    }
-//                    
+//
 //                    if let data = response.data {
 //                        do {
 //                            let json = try JSONDecoder().decode(MegaleiosResponse<ResultAccessToken>.self, from: data)
@@ -417,14 +417,14 @@ class Api {
 //                        }
 //                    }
 //                }
-//                
+//
 //            }
-//            
+//
 //        } catch {
 //            print("Megaleios - Failed to decode JWT: \(error)")
 //            completed(CustomError.unknownError, "")
 //        }
-//        
+//
 //    }
 }
 

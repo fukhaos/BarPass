@@ -1,0 +1,44 @@
+//
+//  LoginViewModel.swift
+//  BarPass
+//
+//  Created by Bruno Lopes de Mello on 29/05/19.
+//  Copyright © 2019 Bruno Lopes. All rights reserved.
+//
+
+import Foundation
+import SVProgressHUD
+
+protocol LoginViewModelProtocol {
+    func createUser(_ user: UserModel, onComplete: @escaping (TokenModel) -> Void,
+                    onError: @escaping (_ message: String) -> Void)
+}
+
+class LoginViewModel: LoginViewModelProtocol {
+    func createUser(_ user: UserModel, onComplete: @escaping (TokenModel) -> Void,
+                    onError: @escaping (String) -> Void) {
+        
+        var parameters: [String: Any] = [
+            "password" : user.password ?? "",
+            "fullName" : user.fullName ?? "",
+            "email" : user.email ?? ""
+        ]
+        
+        if user.facebookID != "" && user.facebookID != nil {
+            parameters["facebookId"] = user.facebookID ?? ""
+        }
+        
+        SVProgressHUD.show()
+        Api().requestCodable(metodo: .wPOST, url: URLs.signup, objeto: RegisterReturn.self, parametros: parameters,
+                             onSuccess: { (response, result) in
+                                SVProgressHUD.dismiss()
+                                if result.erro ?? false {
+                                    onError(result.message ?? "")
+                                    return
+                                }
+        }) { (response, msg) in
+            SVProgressHUD.dismiss()
+            onError(msg)
+        }
+    }
+}
