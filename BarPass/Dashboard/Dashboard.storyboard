@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Dash Tab Bar Controller-->
         <scene sceneID="hGc-zU-TD2">
             <objects>
-                <tabBarController id="072-JA-gbm" sceneMemberID="viewController">
+                <tabBarController id="072-JA-gbm" customClass="DashTabBarController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="isA-Fu-98a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

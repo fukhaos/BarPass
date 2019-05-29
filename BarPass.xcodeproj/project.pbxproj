@@ -12,6 +12,7 @@
 		9E94A9F8229ED26400A302FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F7229ED26400A302FE /* UserModel.swift */; };
 		9E94A9FA229EE5EF00A302FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F9229EE5EF00A302FE /* LoginViewModel.swift */; };
 		9E94A9FD229F198700A302FE /* DefaultReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9FC229F198700A302FE /* DefaultReturn.swift */; };
+		9E94A9FF229F1BE600A302FE /* DashTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9FE229F1BE600A302FE /* DashTabBarController.swift */; };
 		9E977CE9229D664800E0CE52 /* logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E977CE8229D664800E0CE52 /* logo.gif */; };
 		9E977CEB229D768D00E0CE52 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */; };
 		9E977CEE229D78E500E0CE52 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977CED229D78E500E0CE52 /* TutorialViewController.swift */; };
@@ -101,6 +102,7 @@
 		9E94A9F7229ED26400A302FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9E94A9F9229EE5EF00A302FE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9E94A9FC229F198700A302FE /* DefaultReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultReturn.swift; sourceTree = "<group>"; };
+		9E94A9FE229F1BE600A302FE /* DashTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashTabBarController.swift; sourceTree = "<group>"; };
 		9E977CE8229D664800E0CE52 /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = logo.gif; path = Assets.xcassets/logo.dataset/logo.gif; sourceTree = "<group>"; };
 		9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		9E977CED229D78E500E0CE52 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				BE5F327B229C7A7B000EEA63 /* Dashboard.storyboard */,
+				9E94A9FE229F1BE600A302FE /* DashTabBarController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA24282228B1BFC00D641C9 /* UIViewController.swift in Sources */,
+				9E94A9FF229F1BE600A302FE /* DashTabBarController.swift in Sources */,
 				BEA2427E228B1BFC00D641C9 /* UIDeviceExtension.swift in Sources */,
 				BE5F3280229C8141000EEA63 /* LogoAnimationView.swift in Sources */,
 				9E977CF5229D795000E0CE52 /* UITableViewController.swift in Sources */,
