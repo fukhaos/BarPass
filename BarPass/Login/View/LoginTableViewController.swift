@@ -10,6 +10,8 @@ import UIKit
 import FacebookLogin
 import FBSDKCoreKit
 import SVProgressHUD
+import Spring
+import AudioToolbox
 
 class LoginTableViewController: UITableViewController {
 
@@ -17,8 +19,8 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
-    @IBOutlet weak var signInFaceButton: UIButton!
-    @IBOutlet weak var signInGmailButton: UIButton!
+    @IBOutlet weak var signInFaceButton: SpringButton!
+    @IBOutlet weak var signInGmailButton: SpringButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +58,10 @@ class LoginTableViewController: UITableViewController {
     }
     
     @objc func loginButtonClicked() {
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        signInFaceButton.animation = "pop"
+        signInFaceButton.animate()
+
         let loginManager = LoginManager()
         loginManager.logIn(readPermissions: [.publicProfile, .email, .userFriends], viewController: self) { (loginResult) in
             switch loginResult {
@@ -76,13 +82,22 @@ class LoginTableViewController: UITableViewController {
         performSegue(withIdentifier: "segueDash", sender: nil)
     }
     
+    @IBAction func loginGmail(_ sender: Any) {
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        signInGmailButton.animation = "pop"
+        signInGmailButton.animate()
+    }
+    
     private func getFBUserData(){
         if((FBSDKAccessToken.current()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil){
                     //everything works print the user data
-                    if let user = result as? [String: Any], let email = user["email"], let name = user["name"],
-                        let userName = user["first_name"], let faceID = user["id"] {
+                    if let user = result as? [String: Any],
+                        let email = user["email"],
+                        let name = user["name"],
+                        let userName = user["first_name"],
+                        let faceID = user["id"] {
                         
                         
                     }

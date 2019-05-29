@@ -165,7 +165,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="I2F-f0-qPd">
                                                     <rect key="frame" x="139.5" y="230.5" width="135" height="60"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9h-1h-25T">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9h-1h-25T" customClass="SpringButton" customModule="Spring">
                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="luH-Cv-Hj9"/>
@@ -173,13 +173,16 @@
                                                             </constraints>
                                                             <state key="normal" image="loginFace"/>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHl-lr-Fvj">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHl-lr-Fvj" customClass="SpringButton" customModule="Spring">
                                                             <rect key="frame" x="75" y="0.0" width="60" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="5g5-k2-fWN"/>
                                                                 <constraint firstAttribute="height" constant="60" id="fDN-he-94T"/>
                                                             </constraints>
                                                             <state key="normal" image="loginGoogle"/>
+                                                            <connections>
+                                                                <action selector="loginGmail:" destination="3yZ-5C-Kg0" eventType="touchUpInside" id="bKY-9t-xp6"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -231,8 +234,8 @@
                         <outlet property="emailField" destination="QXa-Tb-yLY" id="47Y-nE-F43"/>
                         <outlet property="passField" destination="Bxp-7x-oWy" id="Vxk-Vq-tvu"/>
                         <outlet property="signInButton" destination="M8V-ra-HPm" id="PjH-Le-6wa"/>
-                        <outlet property="signInFaceButton" destination="X9h-1h-25T" id="kZj-VS-bOr"/>
-                        <outlet property="signInGmailButton" destination="XHl-lr-Fvj" id="iYR-eP-nyu"/>
+                        <outlet property="signInFaceButton" destination="X9h-1h-25T" id="4Jn-HV-dIx"/>
+                        <outlet property="signInGmailButton" destination="XHl-lr-Fvj" id="pSo-Xl-X93"/>
                         <outlet property="signupButton" destination="Wju-Ym-iaL" id="0Vy-hu-p9Z"/>
                         <segue destination="XsQ-zi-Rqg" kind="presentation" identifier="segueDash" id="ecn-du-zYD"/>
                         <segue destination="K2g-tI-U6q" kind="presentation" identifier="segueTutorial" id="jKZ-Mp-orb"/>
