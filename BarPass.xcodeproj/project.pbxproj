@@ -13,6 +13,8 @@
 		9E94A9FA229EE5EF00A302FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F9229EE5EF00A302FE /* LoginViewModel.swift */; };
 		9E94A9FD229F198700A302FE /* DefaultReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9FC229F198700A302FE /* DefaultReturn.swift */; };
 		9E94A9FF229F1BE600A302FE /* DashTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9FE229F1BE600A302FE /* DashTabBarController.swift */; };
+		9E94AA04229F215500A302FE /* QRCodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94AA03229F215500A302FE /* QRCodeTableViewController.swift */; };
+		9E94AA06229F264D00A302FE /* QRCodeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94AA05229F264D00A302FE /* QRCodeNavigationController.swift */; };
 		9E977CE9229D664800E0CE52 /* logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E977CE8229D664800E0CE52 /* logo.gif */; };
 		9E977CEB229D768D00E0CE52 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */; };
 		9E977CEE229D78E500E0CE52 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977CED229D78E500E0CE52 /* TutorialViewController.swift */; };
@@ -103,6 +105,8 @@
 		9E94A9F9229EE5EF00A302FE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9E94A9FC229F198700A302FE /* DefaultReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultReturn.swift; sourceTree = "<group>"; };
 		9E94A9FE229F1BE600A302FE /* DashTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashTabBarController.swift; sourceTree = "<group>"; };
+		9E94AA03229F215500A302FE /* QRCodeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeTableViewController.swift; sourceTree = "<group>"; };
+		9E94AA05229F264D00A302FE /* QRCodeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeNavigationController.swift; sourceTree = "<group>"; };
 		9E977CE8229D664800E0CE52 /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = logo.gif; path = Assets.xcassets/logo.dataset/logo.gif; sourceTree = "<group>"; };
 		9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		9E977CED229D78E500E0CE52 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +222,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9E94AA00229F214500A302FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E94AA01229F214500A302FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9E94AA02229F214500A302FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E94AA03229F215500A302FE /* QRCodeTableViewController.swift */,
+				9E94AA05229F264D00A302FE /* QRCodeNavigationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9E977CF9229DAFBB00E0CE52 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +304,9 @@
 		BE4538A32297147100F1F0E0 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
+				9E94AA00229F214500A302FE /* Model */,
+				9E94AA02229F214500A302FE /* View */,
+				9E94AA01229F214500A302FE /* ViewModel */,
 				9E977D02229DB08D00E0CE52 /* QRCode.storyboard */,
 			);
 			path = QRCode;
@@ -655,6 +685,7 @@
 				BEA2427F228B1BFC00D641C9 /* UIImage.swift in Sources */,
 				BE5F327E229C80FB000EEA63 /* InitialViewController.swift in Sources */,
 				9E94A9FD229F198700A302FE /* DefaultReturn.swift in Sources */,
+				9E94AA04229F215500A302FE /* QRCodeTableViewController.swift in Sources */,
 				9E94A9FA229EE5EF00A302FE /* LoginViewModel.swift in Sources */,
 				BEA2426B228B1BFC00D641C9 /* UrlConstants.swift in Sources */,
 				BEA2426A228B1BFC00D641C9 /* Methods.swift in Sources */,
@@ -668,6 +699,7 @@
 				9E94A9F6229ECB8A00A302FE /* RegisterReturn.swift in Sources */,
 				BEA24268228B1BFC00D641C9 /* ProgrammableUIProtocol.swift in Sources */,
 				BEA2426C228B1BFC00D641C9 /* AsyncOperation.swift in Sources */,
+				9E94AA06229F264D00A302FE /* QRCodeNavigationController.swift in Sources */,
 				BEA24276228B1BFC00D641C9 /* DateFormaterExtension.swift in Sources */,
 				BEA24270228B1BFC00D641C9 /* JSONNull.swift in Sources */,
 				BEA24279228B1BFC00D641C9 /* Request.swift in Sources */,

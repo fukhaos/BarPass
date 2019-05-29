@@ -27,4 +27,14 @@ class DashTabBarController: UITabBarController, UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         
     }
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if viewController == tabBarController.viewControllers?[2] {
+            present(QRCodeNavigationController.instantiate("QRCode"),
+                    animated: true, completion: nil)
+            return false
+        } else {
+            return true
+        }
+    }
 }

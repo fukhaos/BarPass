@@ -12,16 +12,23 @@
         <!--BarPass-->
         <scene sceneID="FZa-bH-IRW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N1O-uG-zPc" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="QRCodeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="N1O-uG-zPc" customClass="QRCodeNavigationController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="BarPass" image="tabQRCodeIconOff" selectedImage="tabQRCodeIconOn" id="MEA-50-KYO">
                         <inset key="imageInsets" minX="0.0" minY="-80" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HIs-Pw-fc9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="HIs-Pw-fc9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.98823529409999999" green="0.56078431370000004" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -32,12 +39,12 @@
             </objects>
             <point key="canvasLocation" x="-62.318840579710148" y="181.47321428571428"/>
         </scene>
-        <!--Table View Controller-->
+        <!--QR CODE-->
         <scene sceneID="hJU-x4-l63">
             <objects>
-                <tableViewController id="9gj-Ec-1TG" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="QRCodeTableViewController" id="9gj-Ec-1TG" customClass="QRCodeTableViewController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="40Q-Ki-OUi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -55,8 +62,13 @@
                             <outlet property="delegate" destination="9gj-Ec-1TG" id="UNZ-dc-83u"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Pii-PB-KUU"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="QR CODE" id="L3d-8w-FGr">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="ygG-jB-hd2">
+                            <connections>
+                                <action selector="exit:" destination="9gj-Ec-1TG" id="Cx6-HI-opV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtC-3B-yr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
