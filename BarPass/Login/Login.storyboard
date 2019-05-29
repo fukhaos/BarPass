@@ -289,7 +289,7 @@
                                 <color key="textColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xsq-j1-5De">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite seu email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xsq-j1-5De">
                                 <rect key="frame" x="40" y="350" width="354" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="bng-UO-qbj"/>
@@ -310,6 +310,9 @@
                                     <constraint firstAttribute="height" constant="51" id="XYd-s7-K3W"/>
                                 </constraints>
                                 <state key="normal" image="sendButton"/>
+                                <connections>
+                                    <action selector="send:" destination="8Dj-Rp-pby" eventType="touchUpInside" id="M8l-d9-TRH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -334,6 +337,10 @@
                         <viewLayoutGuide key="safeArea" id="MbA-FE-wBa"/>
                     </view>
                     <navigationItem key="navigationItem" title="Esqueci senha" id="9AU-3c-DKf"/>
+                    <connections>
+                        <outlet property="emailField" destination="xsq-j1-5De" id="n40-bm-yLs"/>
+                        <outlet property="sendButton" destination="k3B-WJ-aHt" id="46t-hd-uJX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXW-kf-KRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

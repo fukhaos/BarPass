@@ -11,6 +11,7 @@
 		9E94A9F6229ECB8A00A302FE /* RegisterReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F5229ECB8A00A302FE /* RegisterReturn.swift */; };
 		9E94A9F8229ED26400A302FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F7229ED26400A302FE /* UserModel.swift */; };
 		9E94A9FA229EE5EF00A302FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F9229EE5EF00A302FE /* LoginViewModel.swift */; };
+		9E94A9FD229F198700A302FE /* DefaultReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9FC229F198700A302FE /* DefaultReturn.swift */; };
 		9E977CE9229D664800E0CE52 /* logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E977CE8229D664800E0CE52 /* logo.gif */; };
 		9E977CEB229D768D00E0CE52 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */; };
 		9E977CEE229D78E500E0CE52 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977CED229D78E500E0CE52 /* TutorialViewController.swift */; };
@@ -99,6 +100,7 @@
 		9E94A9F5229ECB8A00A302FE /* RegisterReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReturn.swift; sourceTree = "<group>"; };
 		9E94A9F7229ED26400A302FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9E94A9F9229EE5EF00A302FE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9E94A9FC229F198700A302FE /* DefaultReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultReturn.swift; sourceTree = "<group>"; };
 		9E977CE8229D664800E0CE52 /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = logo.gif; path = Assets.xcassets/logo.dataset/logo.gif; sourceTree = "<group>"; };
 		9E977CEA229D768D00E0CE52 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		9E977CED229D78E500E0CE52 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,14 @@
 				9E94A9F7229ED26400A302FE /* UserModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9E94A9FB229F197800A302FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E94A9FC229F198700A302FE /* DefaultReturn.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9E977CF9229DAFBB00E0CE52 /* Home */ = {
@@ -334,6 +344,7 @@
 				9E977CE8229D664800E0CE52 /* logo.gif */,
 				BEA24243228B1A5F00D641C9 /* Info.plist */,
 				BEA24258228B1BFC00D641C9 /* Extensions */,
+				9E94A9FB229F197800A302FE /* Models */,
 				BEA2424B228B1BFB00D641C9 /* Network */,
 				BEA24249228B1BFB00D641C9 /* Protocols */,
 				BEA2424F228B1BFC00D641C9 /* Utils */,
@@ -639,6 +650,7 @@
 				BEA2426E228B1BFC00D641C9 /* CustomView.swift in Sources */,
 				BEA2427F228B1BFC00D641C9 /* UIImage.swift in Sources */,
 				BE5F327E229C80FB000EEA63 /* InitialViewController.swift in Sources */,
+				9E94A9FD229F198700A302FE /* DefaultReturn.swift in Sources */,
 				9E94A9FA229EE5EF00A302FE /* LoginViewModel.swift in Sources */,
 				BEA2426B228B1BFC00D641C9 /* UrlConstants.swift in Sources */,
 				BEA2426A228B1BFC00D641C9 /* Methods.swift in Sources */,

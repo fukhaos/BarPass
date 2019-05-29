@@ -12,9 +12,19 @@ import SVProgressHUD
 protocol LoginViewModelProtocol {
     func createUser(_ user: UserModel, onComplete: @escaping (TokenModel) -> Void,
                     onError: @escaping (_ message: String) -> Void)
+    func forgotPassword(_ email: String, onComplete: @escaping () -> Void,
+                    onError: @escaping (_ message: String) -> Void)
 }
 
 class LoginViewModel: LoginViewModelProtocol {
+    
+    
+    /// Create a new user
+    ///
+    /// - Parameters:
+    ///   - user: <#user description#>
+    ///   - onComplete: <#onComplete description#>
+    ///   - onError: <#onError description#>
     func createUser(_ user: UserModel, onComplete: @escaping (TokenModel) -> Void,
                     onError: @escaping (String) -> Void) {
         
@@ -41,4 +51,27 @@ class LoginViewModel: LoginViewModelProtocol {
             onError(msg)
         }
     }
+    
+    func forgotPassword(_ email: String,
+                        onComplete: @escaping () -> Void,
+                        onError: @escaping (String) -> Void) {
+        
+        let parameters: [String: Any] = [
+            "email" : email
+        ]
+        
+        SVProgressHUD.show()
+        Api().requestCodable(metodo: .wPOST, url: URLs.signup, objeto: RegisterReturn.self, parametros: parameters,
+                             onSuccess: { (response, result) in
+                                SVProgressHUD.dismiss()
+                                if result.erro ?? false {
+                                    onError(result.message ?? "")
+                                    return
+                                }
+        }) { (response, msg) in
+            SVProgressHUD.dismiss()
+            onError(msg)
+        }
+    }
+    
 }

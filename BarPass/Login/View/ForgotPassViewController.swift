@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ForgotPassViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
+    
+    var viewModel: LoginViewModelProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,4 +29,7 @@ class ForgotPassViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
+    @IBAction func send(_ sender: Any) {
+        
+    }
 }
