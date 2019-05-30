@@ -18,6 +18,8 @@ protocol LoginViewModelProtocol {
                     onError: @escaping (_ message: String) -> Void)
     func signInWith(_ email: String, and password: String, onComplete: @escaping () -> Void,
                         onError: @escaping (_ message: String) -> Void)
+    func signInWith(_ facebookID: String, onComplete: @escaping () -> Void,
+                    onError: @escaping (_ message: String) -> Void)
 }
 
 class LoginViewModel: LoginViewModelProtocol {
@@ -122,6 +124,36 @@ class LoginViewModel: LoginViewModelProtocol {
         let parameters: [String: Any] = [
             "email" : email,
             "password" : password
+        ]
+        
+        SVProgressHUD.show()
+        Api().requestCodable(metodo: .wPOST, url: URLs.signin, objeto: RegisterReturn.self, parametros: parameters,
+                             onSuccess: { [unowned self] response, result in
+                                SVProgressHUD.dismiss()
+                                if result.erro ?? false {
+                                    onError(result.message ?? "")
+                                    return
+                                }
+                                
+                                if let tokenCodable = result.data {
+                                    self.realmModel?.save(tokenCodable, onComplete: {
+                                        onComplete()
+                                    }, onError: { (msg) in
+                                        onError(msg)
+                                    })
+                                    return
+                                }
+                                
+                                onError("Imposível obeter um token!")
+        }) { (response, msg) in
+            SVProgressHUD.dismiss()
+            onError(msg)
+        }
+    }
+    
+    func signInWith(_ facebookID: String, onComplete: @escaping () -> Void, onError: @escaping (String) -> Void) {
+        let parameters: [String: Any] = [
+            "facebookId" : facebookID
         ]
         
         SVProgressHUD.show()

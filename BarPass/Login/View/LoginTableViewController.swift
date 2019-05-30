@@ -105,9 +105,11 @@ class LoginTableViewController: UITableViewController {
     }
     
     private func getFBUserData(){
-        if((FBSDKAccessToken.current()) != nil){
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
-                if (error == nil){
+        if((FBSDKAccessToken.current()) != nil) {
+            FBSDKGraphRequest(graphPath: "me",
+                              parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"])
+                .start(completionHandler: { [unowned self] connection, result, error -> Void in
+                if (error == nil) {
                     //everything works print the user data
                     if let user = result as? [String: Any],
                         let email = user["email"],
@@ -115,7 +117,11 @@ class LoginTableViewController: UITableViewController {
                         let userName = user["first_name"],
                         let faceID = user["id"] {
                         
-                        
+                        self.viewModel.signInWith(faceID, onComplete: {
+                            
+                        }, onError: { [unowned self] msg in
+                            GlobalAlert(with: self, msg: msg).showAlert()
+                        })
                     }
                 }
             })
