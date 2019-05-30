@@ -16,7 +16,7 @@ protocol LoginViewModelProtocol {
                     onError: @escaping (_ message: String) -> Void)
     func forgotPassword(_ email: String, onComplete: @escaping () -> Void,
                     onError: @escaping (_ message: String) -> Void)
-    func signInWith(_ email: String, and password: String, onComplete: @escaping (TokenCodable) -> Void,
+    func signInWith(_ email: String, and password: String, onComplete: @escaping () -> Void,
                         onError: @escaping (_ message: String) -> Void)
 }
 
@@ -49,7 +49,7 @@ class LoginViewModel: LoginViewModelProtocol {
         
         SVProgressHUD.show()
         Api().requestCodable(metodo: .wPOST, url: URLs.signup, objeto: RegisterReturn.self, parametros: parameters,
-                             onSuccess: { (response, result) in
+                             onSuccess: { [unowned self] response, result in
                                 SVProgressHUD.dismiss()
                                 if result.erro ?? false {
                                     onError(result.message ?? "")
@@ -117,7 +117,7 @@ class LoginViewModel: LoginViewModelProtocol {
     ///   - onComplete: <#onComplete description#>
     ///   - onError: <#onError description#>
     func signInWith(_ email: String, and password: String,
-                    onComplete: @escaping (TokenCodable) -> Void,
+                    onComplete: @escaping () -> Void,
                     onError: @escaping (String) -> Void) {
         let parameters: [String: Any] = [
             "email" : email,
@@ -126,7 +126,7 @@ class LoginViewModel: LoginViewModelProtocol {
         
         SVProgressHUD.show()
         Api().requestCodable(metodo: .wPOST, url: URLs.signin, objeto: RegisterReturn.self, parametros: parameters,
-                             onSuccess: { (response, result) in
+                             onSuccess: { [unowned self] response, result in
                                 SVProgressHUD.dismiss()
                                 if result.erro ?? false {
                                     onError(result.message ?? "")
@@ -134,7 +134,11 @@ class LoginViewModel: LoginViewModelProtocol {
                                 }
                                 
                                 if let tokenCodable = result.data {
-                                    onComplete(tokenCodable)
+                                    self.realmModel?.save(tokenCodable, onComplete: {
+                                        onComplete()
+                                    }, onError: { (msg) in
+                                        onError(msg)
+                                    })
                                     return
                                 }
                                 

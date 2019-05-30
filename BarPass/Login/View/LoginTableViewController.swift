@@ -22,8 +22,12 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var signInFaceButton: SpringButton!
     @IBOutlet weak var signInGmailButton: SpringButton!
     
+    var viewModel: LoginViewModelProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel = LoginViewModel()
 
         signInFaceButton.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
         
@@ -63,7 +67,8 @@ class LoginTableViewController: UITableViewController {
         signInFaceButton.animate()
 
         let loginManager = LoginManager()
-        loginManager.logIn(readPermissions: [.publicProfile, .email, .userFriends], viewController: self) { (loginResult) in
+        loginManager.logIn(readPermissions: [.publicProfile, .email, .userFriends],
+                           viewController: self) { (loginResult) in
             switch loginResult {
             case .failed(let error):
                 print(error)
@@ -79,7 +84,18 @@ class LoginTableViewController: UITableViewController {
 
     @IBAction func signIn(_ sender: Any) {
 //        performSegue(withIdentifier: "segueTutorial", sender: nil)
-        performSegue(withIdentifier: "segueDash", sender: nil)
+        
+        if validateFields() == ""{
+            viewModel.signInWith(emailField.text ?? "",
+                                 and: passField.text ?? "",
+                                 onComplete: {
+                                    self.performSegue(withIdentifier: "segueDash", sender: nil)
+            }) { (msg) in
+                GlobalAlert(with: self, msg: msg).showAlert()
+            }
+        } else {
+            GlobalAlert(with: self, msg: validateFields()).showAlert()
+        }
     }
     
     @IBAction func loginGmail(_ sender: Any) {
@@ -104,6 +120,19 @@ class LoginTableViewController: UITableViewController {
                 }
             })
         }
+    }
+    
+    private func validateFields() -> String {
+        
+        var msg = ""
+        
+        if self.emailField.text == "" {
+            msg = "Preencha o email"
+        } else if self.passField.text == "" {
+            msg = "Preencha a senha"
+        }
+        
+        return msg
     }
     
     // MARK: - Table view data source
