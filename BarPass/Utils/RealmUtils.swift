@@ -51,7 +51,7 @@ class RealmUtils: RealmUtilsProtocol {
         userRealm.id = user.id
         
         try! realm?.safeWrite {
-            realm?.deleteAll()
+            realm?.delete((realm?.objects(User.self))!)
             realm?.add(userRealm)
             onComplete()
         }
@@ -66,7 +66,7 @@ class RealmUtils: RealmUtilsProtocol {
         tokenRealm.expiresType = token.expiresType
         
         try! realm?.safeWrite {
-            realm?.deleteAll()
+            realm?.delete((realm?.objects(Token.self))!)
             realm?.add(tokenRealm)
             onComplete()
         }

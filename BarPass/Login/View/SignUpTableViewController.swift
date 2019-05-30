@@ -77,19 +77,9 @@ class SignUpTableViewController: UITableViewController {
                                  fullName: nameField.text, email: emailField.text,
                                  photo: nil, cpf: nil, blocked: nil, id: nil)
             
-            viewModel.createUser(user, onComplete: { [unowned self] tokenModel in
-               self.realmModel.save(tokenModel,
-                                    onComplete: {
-                                        self.realmModel.save(user,
-                                                             onComplete: {
-                                                              GlobalAlert(with: self,
-                                                                          msg: "Usuário cadastrado com sucesso!").showAlert()
-                                        }, onError: { (msg) in
-                                            GlobalAlert(with: self, msg: msg).showAlert()
-                                        })
-               }, onError: { (msg) in
-                GlobalAlert(with: self, msg: msg).showAlert()
-               })
+            viewModel.createUser(user, onComplete: { [unowned self] in
+                GlobalAlert(with: self,
+                            msg: "Usuário cadastrado com sucesso!").showAlert()
             }) { (msg) in
                 GlobalAlert(with: self, msg: msg).showAlert()
             }

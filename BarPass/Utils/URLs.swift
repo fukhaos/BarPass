@@ -42,7 +42,8 @@ enum URLs {
     static let getAllPets = "\(apiEndPoint)/Pet/GetAllMy/1/100"
     
     //profile
-    static let signin = "\(apiEndPoint)/Profile/GetInfo"
+    static let signin = "\(apiEndPoint)/Profile/Token"
+    static let getInfo = "\(apiEndPoint)/Profile/GetInfo"
     static let getUser = "\(apiEndPoint)/Profile/Detail"
     static let signup = "\(apiEndPoint)/Profile/Register"
     static let deleteUser = "\(apiEndPoint)/Profile/Delete"
