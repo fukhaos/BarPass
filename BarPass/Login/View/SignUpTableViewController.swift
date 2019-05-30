@@ -23,14 +23,14 @@ class SignUpTableViewController: UITableViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     var viewModel: LoginViewModelProtocol!
+    var realmModel: RealmUtilsProtocol!
     var facebookId: String?
-    var realm: Realm!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         viewModel = LoginViewModel()
-        realm = try! Realm()
+        realmModel = RealmUtils()
         
         hideKeyboardWhenTappedAround()
         setUIElements()
@@ -70,7 +70,7 @@ class SignUpTableViewController: UITableViewController {
     @IBAction func concludeSignup(_ sender: Any) {
         if validateFields() == "" {
             
-            let user = UserModel(password: passField.text,
+            let user = UserCodable(password: passField.text,
                                  facebookID: facebookId, nickName: nil,
                                  phone: nil, gender: nil, sendSMS: nil, sendEmail: nil,
                                  notification: nil, codID: nil, premium: nil,
@@ -78,7 +78,18 @@ class SignUpTableViewController: UITableViewController {
                                  photo: nil, cpf: nil, blocked: nil, id: nil)
             
             viewModel.createUser(user, onComplete: { [unowned self] tokenModel in
-               
+               self.realmModel.save(tokenModel,
+                                    onComplete: {
+                                        self.realmModel.save(user,
+                                                             onComplete: {
+                                                              GlobalAlert(with: self,
+                                                                          msg: "Usuário cadastrado com sucesso!").showAlert()
+                                        }, onError: { (msg) in
+                                            GlobalAlert(with: self, msg: msg).showAlert()
+                                        })
+               }, onError: { (msg) in
+                GlobalAlert(with: self, msg: msg).showAlert()
+               })
             }) { (msg) in
                 GlobalAlert(with: self, msg: msg).showAlert()
             }

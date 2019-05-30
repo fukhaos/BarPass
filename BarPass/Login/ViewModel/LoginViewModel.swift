@@ -10,7 +10,7 @@ import Foundation
 import SVProgressHUD
 
 protocol LoginViewModelProtocol {
-    func createUser(_ user: UserModel, onComplete: @escaping (TokenModel) -> Void,
+    func createUser(_ user: UserCodable, onComplete: @escaping (TokenCodable) -> Void,
                     onError: @escaping (_ message: String) -> Void)
     func forgotPassword(_ email: String, onComplete: @escaping () -> Void,
                     onError: @escaping (_ message: String) -> Void)
@@ -25,7 +25,7 @@ class LoginViewModel: LoginViewModelProtocol {
     ///   - user: <#user description#>
     ///   - onComplete: <#onComplete description#>
     ///   - onError: <#onError description#>
-    func createUser(_ user: UserModel, onComplete: @escaping (TokenModel) -> Void,
+    func createUser(_ user: UserCodable, onComplete: @escaping (TokenCodable) -> Void,
                     onError: @escaping (String) -> Void) {
         
         var parameters: [String: Any] = [
@@ -46,6 +46,12 @@ class LoginViewModel: LoginViewModelProtocol {
                                     onError(result.message ?? "")
                                     return
                                 }
+                                if let tokenCodable = result.data {
+                                    onComplete(tokenCodable)
+                                    return
+                                }
+                                
+                                onError("Objeto vazio")
         }) { (response, msg) in
             SVProgressHUD.dismiss()
             onError(msg)

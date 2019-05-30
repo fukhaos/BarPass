@@ -11,7 +11,7 @@ import Realm
 import RealmSwift
 
 // MARK: - UserModel
-struct UserModel: Codable {
+struct UserCodable: Codable {
     let password, facebookID, nickName, phone: String?
     let gender: String?
     let sendSMS, sendEmail, notification: Bool?

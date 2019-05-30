@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - RegisterReturn
 struct RegisterReturn: Codable {
-    let data: TokenModel?
+    let data: TokenCodable?
     let erro: Bool?
     let errors: [String: String]?
     let message: String?
@@ -18,7 +18,7 @@ struct RegisterReturn: Codable {
 }
 
 // MARK: - DataClass
-struct TokenModel: Codable {
+struct TokenCodable: Codable {
     let accessToken, refreshToken: String?
     let expiresIn: Int?
     let expires, expiresType: String?
