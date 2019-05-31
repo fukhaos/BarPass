@@ -14,7 +14,7 @@ protocol LoginViewModelProtocol {
     
     func createUser(_ user: UserCodable, onComplete: @escaping () -> Void,
                     onError: @escaping (_ message: String) -> Void)
-    func forgotPassword(_ email: String, onComplete: @escaping () -> Void,
+    func forgotPassword(_ email: String, onComplete: @escaping (_ msg: String) -> Void,
                     onError: @escaping (_ message: String) -> Void)
     func signInWith(_ email: String, and password: String, onComplete: @escaping () -> Void,
                         onError: @escaping (_ message: String) -> Void)
@@ -87,7 +87,7 @@ class LoginViewModel: LoginViewModelProtocol {
     ///   - onComplete: <#onComplete description#>
     ///   - onError: <#onError description#>
     func forgotPassword(_ email: String,
-                        onComplete: @escaping () -> Void,
+                        onComplete: @escaping (_ msg: String) -> Void,
                         onError: @escaping (String) -> Void) {
         
         let parameters: [String: Any] = [
@@ -95,7 +95,7 @@ class LoginViewModel: LoginViewModelProtocol {
         ]
         
         SVProgressHUD.show()
-        Api().requestCodable(metodo: .wPOST, url: URLs.signup, objeto: RegisterReturn.self, parametros: parameters,
+        Api().requestCodable(metodo: .wPOST, url: URLs.forgotPass, objeto: RegisterReturn.self, parametros: parameters,
                              onSuccess: { (response, result) in
                                 SVProgressHUD.dismiss()
                                 if result.erro ?? false {
@@ -103,7 +103,7 @@ class LoginViewModel: LoginViewModelProtocol {
                                     return
                                 }
                                 
-                                onComplete()
+                                onComplete(result.message ?? "Verifique seu e-mail")
         }) { (response, msg) in
             SVProgressHUD.dismiss()
             onError(msg)

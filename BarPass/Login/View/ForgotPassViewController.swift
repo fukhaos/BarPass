@@ -33,9 +33,9 @@ class ForgotPassViewController: UIViewController {
     @IBAction func send(_ sender: Any) {
         if emailField.text != "" {
             viewModel.forgotPassword(emailField.text ?? "",
-                                     onComplete: {
-                                        GlobalAlert(with: self, msg: "Uma mensagem foi enviado para seu email").showAlertAndReturn()
-            }) { (msg) in
+                                     onComplete: { [unowned self] msg in
+                                        GlobalAlert(with: self, msg: msg).showAlert()
+            }) { [unowned self] msg in
                 GlobalAlert(with: self, msg: msg).showAlert()
             }
         } else {
