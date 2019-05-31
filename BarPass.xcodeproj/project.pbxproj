@@ -42,6 +42,7 @@
 		BE5F327C229C7A7B000EEA63 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5F327B229C7A7B000EEA63 /* Dashboard.storyboard */; };
 		BE5F327E229C80FB000EEA63 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F327D229C80FB000EEA63 /* InitialViewController.swift */; };
 		BE5F3280229C8141000EEA63 /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F327F229C8141000EEA63 /* LogoAnimationView.swift */; };
+		BE71BCDF22A18CA400799D1D /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE71BCDE22A18CA400799D1D /* ProfileTableViewController.swift */; };
 		BEA24238228B1A5900D641C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24237228B1A5900D641C9 /* AppDelegate.swift */; };
 		BEA2423F228B1A5F00D641C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA2423E228B1A5F00D641C9 /* Assets.xcassets */; };
 		BEA24242228B1A5F00D641C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA24240228B1A5F00D641C9 /* LaunchScreen.storyboard */; };
@@ -143,6 +144,7 @@
 		BE5F327B229C7A7B000EEA63 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		BE5F327D229C80FB000EEA63 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		BE5F327F229C8141000EEA63 /* LogoAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
+		BE71BCDE22A18CA400799D1D /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		BEA24234228B1A5800D641C9 /* BarPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA24237228B1A5900D641C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA2423E228B1A5F00D641C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 		BE1F76A522A05A56000BFD33 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BE71BCDE22A18CA400799D1D /* ProfileTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 				BEA2427F228B1BFC00D641C9 /* UIImage.swift in Sources */,
 				BE1F76A022A0114D000BFD33 /* User.swift in Sources */,
 				BE5F327E229C80FB000EEA63 /* InitialViewController.swift in Sources */,
+				BE71BCDF22A18CA400799D1D /* ProfileTableViewController.swift in Sources */,
 				BE1F76A222A0126C000BFD33 /* Token.swift in Sources */,
 				9E94A9FD229F198700A302FE /* DefaultReturn.swift in Sources */,
 				9E94AA04229F215500A302FE /* QRCodeTableViewController.swift in Sources */,
