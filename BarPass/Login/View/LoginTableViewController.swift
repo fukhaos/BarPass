@@ -33,7 +33,6 @@ class LoginTableViewController: UITableViewController {
         
         setUIElements()
         hideKeyboardWhenTappedAround()
-        navigationController?.hidesBarsOnSwipe = true
     }
     
     private func setUIElements() {
@@ -104,7 +103,7 @@ class LoginTableViewController: UITableViewController {
         signInGmailButton.animate()
     }
     
-    private func getFBUserData(){
+    private func getFBUserData() {
         if((FBSDKAccessToken.current()) != nil) {
             FBSDKGraphRequest(graphPath: "me",
                               parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"])
@@ -114,17 +113,33 @@ class LoginTableViewController: UITableViewController {
                     if let user = result as? [String: Any],
                         let email = user["email"],
                         let name = user["name"],
-                        let userName = user["first_name"],
+//                        let userName = user["first_name"],
                         let faceID = user["id"] {
                         
-                        self.viewModel.signInWith(faceID, onComplete: {
-                            
-                        }, onError: { [unowned self] msg in
-                            GlobalAlert(with: self, msg: msg).showAlert()
-                        })
+                        self.signInWithFacebook(faceId: faceID as! String,
+                                                email: email as! String,
+                                                name: name as! String)
+                        
                     }
                 }
             })
+        }
+    }
+    
+    private func signInWithFacebook(faceId: String, email: String, name: String) {
+        viewModel.signInWith(faceId, onComplete: {
+            self.performSegue(withIdentifier: "segueDash", sender: nil)
+        }) { [unowned self] msg in
+            if msg == "Usuário não encontrado" {
+                let userData: [String: String] = [
+                    "faceId": faceId,
+                    "name": name,
+                    "email": email
+                ]
+                self.performSegue(withIdentifier: "segueSignup", sender: userData)
+                return
+            }
+            GlobalAlert(with: self, msg: msg).showAlert()
         }
     }
     
@@ -139,6 +154,17 @@ class LoginTableViewController: UITableViewController {
         }
         
         return msg
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueSignup" {
+            guard let vc = segue.destination as? SignUpTableViewController else {return}
+            guard let userData = sender as? [String: String] else {return}
+            
+            vc.facebookId = userData["faceId"]
+            vc.name = userData["name"]
+            vc.email = userData["email"]
+        }
     }
     
     // MARK: - Table view data source

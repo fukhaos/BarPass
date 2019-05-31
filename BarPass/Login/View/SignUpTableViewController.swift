@@ -25,6 +25,8 @@ class SignUpTableViewController: UITableViewController {
     var viewModel: LoginViewModelProtocol!
     var realmModel: RealmUtilsProtocol!
     var facebookId: String?
+    var name: String?
+    var email: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,14 @@ class SignUpTableViewController: UITableViewController {
             ])
         attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 14.0, weight: .bold), range: NSRange(location: 24, length: 14))
         signUpButton.setAttributedTitle(attributedString, for: .normal)
+        
+        if facebookId != nil {
+            guard let name = name else {return}
+            guard let email = email else {return}
+            
+            nameField.text = name
+            emailField.text = email
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
