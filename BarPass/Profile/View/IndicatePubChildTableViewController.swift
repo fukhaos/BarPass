@@ -18,9 +18,13 @@ class IndicatePubChildTableViewController: UITableViewController {
     @IBOutlet weak var addressField: UITextField!
     @IBOutlet weak var indicateButton: SpringButton!
     
+    var viewModel: ProfileViewModelProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel = ProfileViewModel()
+        
         hideKeyboardWhenTappedAround()
     }
     
@@ -29,6 +33,38 @@ class IndicatePubChildTableViewController: UITableViewController {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         indicateButton.animation = "pop"
         indicateButton.animate()
+        
+        if validateFields() == "" {
+            var pub = [String: Any]()
+            pub["establishmentName"] = pubNameField.text
+            pub["contactName"] = contactNameField.text
+            pub["phone"] = phoneField.text
+            pub["fullAddress"] = addressField.text
+            viewModel.indicatePub(pub: pub,
+                                  onComplete: { [unowned self] msg in
+                                    GlobalAlert(with: self, msg: msg).showAlert()
+            }) { [unowned self] msg in
+                GlobalAlert(with: self, msg: msg).showAlert()
+            }
+        } else {
+            GlobalAlert(with: self, msg: validateFields()).showAlert()
+        }
+    }
+    
+    private func validateFields() -> String {
+        var msg = ""
+        
+        if pubNameField.text == "" {
+            msg = "Preencha o campo Nome do Bar"
+        } else if contactNameField.text == ""{
+            msg = "Preencha o campo Nome do contato"
+        } else if phoneField.text == "" {
+            msg = "Preencha o campo Telefone para Contato"
+        } else if addressField.text == ""{
+            msg = "Preencha o campo Endereço"
+        }
+        
+        return msg
     }
     
     // MARK: - Table view data source

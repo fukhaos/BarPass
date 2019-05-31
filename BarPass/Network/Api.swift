@@ -15,10 +15,6 @@ let debugRequests = false
 let debugRequests = true
 #endif
 
-public enum CustomError {
-    case userNotLoggedIn, unknownError, exceptionError, serverError, notConnected, jsonError, configError
-}
-
 // POST /api/v1/File/Upload
 struct ResultUploadImage : Codable {
     var data : UploadImageData!
@@ -148,8 +144,9 @@ class Api {
                 return
             }
             
+            let accessToken = RealmUtils().getToken().accessToken
+            
             let tipoRequisicao = getTipoRequisicao(tipo: metodo)
-//            let user = UserInfoHandler.fetchUser()
 //            let status = OneSignal.getPermissionSubscriptionState()
             var urlRequisicao = ""
             
@@ -167,7 +164,7 @@ class Api {
             
             let headers: HTTPHeaders = [
                 "Content-Type": "application/json",
-//                "Authorization": "Bearer \((token.isEmpty ? user?.token : token) ?? "" )"
+                "Authorization": "Bearer \((accessToken) ?? "" )"
             ]
             
             var encoded: ParameterEncoding = JSONEncoding.default
@@ -191,7 +188,24 @@ class Api {
                         print(response)
                     }
                     
+                    if response.response?.statusCode == 401 {
+                        self.getToken(completed: {
+                            self.requestCodable(metodo: metodo,
+                                                url: url,
+                                                objeto: objeto,
+                                                parametros: parametros, onSuccess: { (_, _) in
+                                                    
+                            }, onFail: { (_, _) in
+                                
+                            })
+                        }, onFail: { (msg) in
+                            onFail(nil, msg)
+                        })
+                        return
+                    }
+                    
                     switch response.result {
+                        
                     case .success:
                         //                                    let decoder = JSONDecoder()
                         //                                    decoder.dateDecodingStrategy = .formatted(DateFormatter.yyyyMMdd)
@@ -282,12 +296,12 @@ class Api {
     
     public func uploadImage(_ image: UIImage, onSuccess: @escaping (UploadImageData?) -> Void, onFailure: @escaping (Error) -> Void ) {
         
-//        let user = UserInfoHandler.fetchUser()
 //        let status = OneSignal.getPermissionSubscriptionState()
+        let accessToken = RealmUtils().getToken().accessToken
         
         let headers: HTTPHeaders = [
-//            "Authorization": "bearer \(user?.token ?? "")"
-            :]
+            "Authorization": "bearer \(accessToken ?? "")"
+            ]
         
         let imgData = image.jpeg(.high)
         Alamofire.upload(multipartFormData: { multipartFormData in
@@ -350,81 +364,48 @@ class Api {
     }
     
     // TODO: Update post resquest to RequestManager method
-//    public func getToken(completed: @escaping (CustomError?, String) -> Void) {
-//
-//        do {
-//            guard let token = self.keychain.get(self.config.accessTokenKey), let refToken = self.keychain.get(self.config.refreshTokenKey) else {
-//                print("Megaleios - Nao esta logado. Erro.")
-//                completed(CustomError.userNotLoggedIn, "")
-//                return
-//            }
-//
-//            self.accessToken = try JSONDecoder().decode(jwt: token)
-//            self.refreshToken = try JSONDecoder().decode(jwt: refToken)
-//
-//            let currentAccessToken = self.accessToken.string
-//            let currentRefreshToken = self.refreshToken.string
-//
-//            if !self.accessToken.expired {
-//                //Normal
-//                print("Megaleios - token esta ok")
-//                completed(nil, currentAccessToken)
-//            } else if self.accessToken.expired {
-//                //Faz logoff
-//                print("Megaleios - token expirado. renovando...")
-//                guard let refreshUrl = self.config.refreshTokenKeyURL else {
-//                    print("Megaleios - EndPoint de refresh token nao configurada.")
-//                    self.logout()
-//                    completed(CustomError.configError, "")
-//                    return
-//                }
-//
-//                let refreshTokenEndpoint = URL(string: refreshUrl)!
-//
-//                let params: Parameters = [
-//                    self.config.refreshTokenParameter : currentRefreshToken
-//                ]
-//
-//                print(refreshTokenEndpoint)
-//                print(params)
-//
-//                Alamofire.request(refreshTokenEndpoint, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
-//
-//                    print("Megaleios - statusCode: \(String(describing: response.response?.statusCode))")
-//
-//                    if let statusCode = response.response?.statusCode {
-//                        if statusCode == 400 {
-//                            completed(CustomError.userNotLoggedIn, "")
-//                            return
-//                        }
-//                    }
-//
-//                    if let data = response.data {
-//                        do {
-//                            let json = try JSONDecoder().decode(MegaleiosResponse<ResultAccessToken>.self, from: data)
-//                            if let newToken = json.data?.access_token, let refreshTkn = json.data?.refresh_token {
-//                                self.setToken(accessToken: newToken, refreshToken: refreshTkn)
-//                                completed(nil, newToken)
-//                            } else {
-//                                //error
-//                                self.logout()
-//                                completed(CustomError.userNotLoggedIn, "")
-//                            }
-//                        } catch {
-//                            print("Megaleios - Exception:\(error)")
-//                            self.logout()
-//                            completed(CustomError.userNotLoggedIn, "")
-//                        }
-//                    }
-//                }
-//
-//            }
-//
-//        } catch {
-//            print("Megaleios - Failed to decode JWT: \(error)")
-//            completed(CustomError.unknownError, "")
-//        }
-//
-//    }
+    public func getToken(completed: @escaping () -> Void,
+                         onFail: @escaping (_ msg: String) -> Void) {
+        
+        let refreshToken = RealmUtils().getToken().refreshToken
+        
+        let params: [String: Any] = [
+            "refreshToken": refreshToken ?? ""
+        ]
+
+            Alamofire.request(URLs.signin, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
+
+                print("Megaleios - statusCode: \(String(describing: response.response?.statusCode))")
+
+                if let statusCode = response.response?.statusCode {
+                    if statusCode == 400 {
+                        onFail("")
+                        return
+                    }
+                }
+
+                if response.data != nil {
+                    do {
+                        let objeto = try JSONDecoder().decode(RegisterReturn.self, from: response.data!)
+                        RealmUtils().save(objeto.data!,
+                                          onComplete: {
+                                            completed()
+                        }, onError: { (msg) in
+                            onFail(msg)
+                        })
+                    } catch (let error) {
+                        print("\n\n===========Error===========")
+                        print("Error Code: \(error._code)")
+                        print("Error Messsage: \(error.localizedDescription)")
+                        if let data = response.data, let str = String(data: data, encoding: String.Encoding.utf8){
+                            print("Server Error: " + str)
+                        }
+                        debugPrint(error as Any)
+                        print("===========================\n\n")
+                    }
+                }
+            }
+
+        }
 }
 
