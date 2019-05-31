@@ -52,6 +52,8 @@ class SignUpTableViewController: UITableViewController {
             
             nameField.text = name
             emailField.text = email
+            emailField.isEnabled = false
+            emailField.textColor = UIColor.lightGray
         }
     }
     
