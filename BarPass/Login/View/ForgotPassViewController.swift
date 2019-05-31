@@ -21,6 +21,7 @@ class ForgotPassViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         hideKeyboardWhenTappedAround()
+        viewModel = LoginViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +31,15 @@ class ForgotPassViewController: UIViewController {
     }
 
     @IBAction func send(_ sender: Any) {
-        
+        if emailField.text != "" {
+            viewModel.forgotPassword(emailField.text ?? "",
+                                     onComplete: {
+                                        GlobalAlert(with: self, msg: "Uma mensagem foi enviado para seu email").showAlertAndReturn()
+            }) { (msg) in
+                GlobalAlert(with: self, msg: msg).showAlert()
+            }
+        } else {
+            GlobalAlert(with: self, msg: "Preencha o campo email").showAlert()
+        }
     }
 }
