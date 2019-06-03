@@ -59,7 +59,10 @@ extension HomeTableViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = self.collectionView
+            .dequeueReusableCell(withReuseIdentifier: "reuseCell", for: indexPath) as? PromotionCollectionViewCell
+            else {return UICollectionViewCell()}
+        return cell
     }
 }
 

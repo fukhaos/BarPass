@@ -32,6 +32,7 @@
 		BE1F76A922A05A63000BFD33 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1F76A822A05A63000BFD33 /* ProfileViewModel.swift */; };
 		BE1F76AB22A05BCA000BFD33 /* InfoReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1F76AA22A05BCA000BFD33 /* InfoReturn.swift */; };
 		BE31DFA022A5583B001C4714 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE31DF9F22A5583B001C4714 /* HomeTableViewController.swift */; };
+		BE31DFA222A5A479001C4714 /* PromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE31DFA122A5A479001C4714 /* PromotionCollectionViewCell.swift */; };
 		BE57F22B2295C25B00B3E692 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57F22A2295C25B00B3E692 /* NotificationService.swift */; };
 		BE57F22F2295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BE5F326B229C11F1000EEA63 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F326A229C11F1000EEA63 /* SignUpTableViewController.swift */; };
@@ -134,6 +135,7 @@
 		BE1F76A822A05A63000BFD33 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		BE1F76AA22A05BCA000BFD33 /* InfoReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoReturn.swift; sourceTree = "<group>"; };
 		BE31DF9F22A5583B001C4714 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		BE31DFA122A5A479001C4714 /* PromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCollectionViewCell.swift; sourceTree = "<group>"; };
 		BE4538922296F94400F1F0E0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		BE57F2282295C25B00B3E692 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE57F22A2295C25B00B3E692 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				BE31DF9F22A5583B001C4714 /* HomeTableViewController.swift */,
+				BE31DFA122A5A479001C4714 /* PromotionCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				9E94A9F8229ED26400A302FE /* UserModel.swift in Sources */,
 				BEA24272228B1BFC00D641C9 /* URLs.swift in Sources */,
 				BEA24238228B1A5900D641C9 /* AppDelegate.swift in Sources */,
+				BE31DFA222A5A479001C4714 /* PromotionCollectionViewCell.swift in Sources */,
 				9E977CEE229D78E500E0CE52 /* TutorialViewController.swift in Sources */,
 				BE71BCE322A1A3B700799D1D /* IndicatePubChildTableViewController.swift in Sources */,
 				BE5F3273229C68C4000EEA63 /* UserTermViewController.swift in Sources */,
