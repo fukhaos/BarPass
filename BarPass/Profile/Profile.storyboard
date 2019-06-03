@@ -87,7 +87,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cW-m7-yUk" customClass="SpringButton" customModule="Spring">
-                                    <rect key="frame" x="0.0" y="31" width="369" height="174"/>
+                                    <rect key="frame" x="0.0" y="31" width="16" height="174"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="174" id="KsW-SV-6BM"/>
                                     </constraints>

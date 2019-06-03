@@ -190,14 +190,8 @@ class Api {
                     
                     if response.response?.statusCode == 401 {
                         self.getToken(completed: {
-                            self.requestCodable(metodo: metodo,
-                                                url: url,
-                                                objeto: objeto,
-                                                parametros: parametros, onSuccess: { (_, _) in
-                                                    
-                            }, onFail: { (_, _) in
-                                
-                            })
+                            //Forces a reconnection while i don`t find a way to re-call
+                            onFail(nil, "Não foi possível completar a operação, tente novamente!")
                         }, onFail: { (msg) in
                             onFail(nil, msg)
                         })
