@@ -78,6 +78,8 @@
 		BEA24281228B1BFC00D641C9 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24266228B1BFC00D641C9 /* UIView.swift */; };
 		BEA24282228B1BFC00D641C9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24267228B1BFC00D641C9 /* UIViewController.swift */; };
 		BEED9AD922972D8E009FAF89 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEED9AD822972D8E009FAF89 /* Login.storyboard */; };
+		BEFC9E6C22A69C240090E90B /* EstablishmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC9E6B22A69C240090E90B /* EstablishmentTableViewCell.swift */; };
+		BEFC9E6E22A69EBE0090E90B /* EstablishmentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC9E6D22A69EBE0090E90B /* EstablishmentListViewController.swift */; };
 		D0395774878C956BF8253AD7 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66069568C3440D2F0F386101 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +188,8 @@
 		BEA24266228B1BFC00D641C9 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		BEA24267228B1BFC00D641C9 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		BEED9AD822972D8E009FAF89 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		BEFC9E6B22A69C240090E90B /* EstablishmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentTableViewCell.swift; sourceTree = "<group>"; };
+		BEFC9E6D22A69EBE0090E90B /* EstablishmentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentListViewController.swift; sourceTree = "<group>"; };
 		D1CA98659D4C46758E0A69D0 /* Pods_BarPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -351,6 +355,8 @@
 			children = (
 				BE31DF9F22A5583B001C4714 /* HomeTableViewController.swift */,
 				BE31DFA122A5A479001C4714 /* PromotionCollectionViewCell.swift */,
+				BEFC9E6B22A69C240090E90B /* EstablishmentTableViewCell.swift */,
+				BEFC9E6D22A69EBE0090E90B /* EstablishmentListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -792,6 +798,7 @@
 				BEA24268228B1BFC00D641C9 /* ProgrammableUIProtocol.swift in Sources */,
 				BEA2426C228B1BFC00D641C9 /* AsyncOperation.swift in Sources */,
 				9E94AA06229F264D00A302FE /* QRCodeNavigationController.swift in Sources */,
+				BEFC9E6C22A69C240090E90B /* EstablishmentTableViewCell.swift in Sources */,
 				BEA24276228B1BFC00D641C9 /* DateFormaterExtension.swift in Sources */,
 				BEA24270228B1BFC00D641C9 /* JSONNull.swift in Sources */,
 				BEA24279228B1BFC00D641C9 /* Request.swift in Sources */,
@@ -801,6 +808,7 @@
 				BEA2426F228B1BFC00D641C9 /* GlobalAlert.swift in Sources */,
 				BE5F326D229C3DD9000EEA63 /* CAGradientLayer.swift in Sources */,
 				BEA2427A228B1BFC00D641C9 /* Storyboarded.swift in Sources */,
+				BEFC9E6E22A69EBE0090E90B /* EstablishmentListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
