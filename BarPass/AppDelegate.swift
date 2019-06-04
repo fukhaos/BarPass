@@ -11,11 +11,14 @@ import OneSignal
 import FacebookCore
 import IQKeyboardManagerSwift
 import SVProgressHUD
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var googleApiKey = "AIzaSyAluYMFESad3x8PE9JCbTNTuywXETEzy94"
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -28,6 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.keyboardAppearance = UIKeyboardAppearance.dark
         IQKeyboardManager.shared.overrideKeyboardAppearance = true
         IQKeyboardManager.shared.enable = true
+        
+        //Google maps and google places
+        GMSServices.provideAPIKey(googleApiKey)
+        GMSPlacesClient.provideAPIKey(googleApiKey)
         
         let navController = UINavigationController()
         

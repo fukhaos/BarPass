@@ -49,6 +49,13 @@ class EstablishmentListViewController: UIViewController {
         logoImage.layoutIfNeeded()
         self.view.layoutIfNeeded()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? EstablishmentDetailTableViewController {
+            let sender = sender as! Establishment
+            vc.bar = sender
+        }
+    }
 }
 
 
@@ -71,6 +78,10 @@ extension EstablishmentListViewController: UISearchBarDelegate {
             self.layoutIfNeededViews()
         }, completion: nil)
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+    }
 }
 
 
@@ -91,5 +102,7 @@ UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "segueDetail", sender: estabs[indexPath.row])
     }
 }

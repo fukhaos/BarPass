@@ -44,6 +44,7 @@
 		BE5F327C229C7A7B000EEA63 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5F327B229C7A7B000EEA63 /* Dashboard.storyboard */; };
 		BE5F327E229C80FB000EEA63 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F327D229C80FB000EEA63 /* InitialViewController.swift */; };
 		BE5F3280229C8141000EEA63 /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F327F229C8141000EEA63 /* LogoAnimationView.swift */; };
+		BE62A92D22A7040800F26AD0 /* EstablishmentDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE62A92C22A7040800F26AD0 /* EstablishmentDetailTableViewController.swift */; };
 		BE71BCDF22A18CA400799D1D /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE71BCDE22A18CA400799D1D /* ProfileTableViewController.swift */; };
 		BE71BCE122A19F4400799D1D /* IndicatePubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE71BCE022A19F4400799D1D /* IndicatePubViewController.swift */; };
 		BE71BCE322A1A3B700799D1D /* IndicatePubChildTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE71BCE222A1A3B700799D1D /* IndicatePubChildTableViewController.swift */; };
@@ -154,6 +155,7 @@
 		BE5F327B229C7A7B000EEA63 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		BE5F327D229C80FB000EEA63 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		BE5F327F229C8141000EEA63 /* LogoAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
+		BE62A92C22A7040800F26AD0 /* EstablishmentDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentDetailTableViewController.swift; sourceTree = "<group>"; };
 		BE71BCDE22A18CA400799D1D /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		BE71BCE022A19F4400799D1D /* IndicatePubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatePubViewController.swift; sourceTree = "<group>"; };
 		BE71BCE222A1A3B700799D1D /* IndicatePubChildTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatePubChildTableViewController.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 				BE31DFA122A5A479001C4714 /* PromotionCollectionViewCell.swift */,
 				BEFC9E6B22A69C240090E90B /* EstablishmentTableViewCell.swift */,
 				BEFC9E6D22A69EBE0090E90B /* EstablishmentListViewController.swift */,
+				BE62A92C22A7040800F26AD0 /* EstablishmentDetailTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -784,6 +787,7 @@
 				BE5F327E229C80FB000EEA63 /* InitialViewController.swift in Sources */,
 				BE71BCDF22A18CA400799D1D /* ProfileTableViewController.swift in Sources */,
 				BE1F76A222A0126C000BFD33 /* Token.swift in Sources */,
+				BE62A92D22A7040800F26AD0 /* EstablishmentDetailTableViewController.swift in Sources */,
 				9E94A9FD229F198700A302FE /* DefaultReturn.swift in Sources */,
 				9E94AA04229F215500A302FE /* QRCodeTableViewController.swift in Sources */,
 				9E94A9FA229EE5EF00A302FE /* LoginViewModel.swift in Sources */,
