@@ -39,9 +39,9 @@ class EstablishmentTableViewCell: UITableViewCell {
             self.imageIndicator.stopAnimating()
         }
         estabNameLabel.text = bar.name ?? ""
-        locationLabel.text = bar.fullAddress
-        locationLabel.text = "local"
-        discountLabel.text = " 15% "
+        locationLabel.text = bar.fullAddress ?? ""
+        shortLocationLabel.text = "local"
+        discountLabel.text = " \(bar.discount ?? 0.0) % "
         distanceLabel.text = "\(bar.distance ?? 0.0) km"
     }
 

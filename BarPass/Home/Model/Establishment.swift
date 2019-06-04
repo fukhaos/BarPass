@@ -27,12 +27,13 @@ struct Establishment: Codable {
     let fullAddress: String?
     let reason: String?
     let distance: Double?
+    let discount: Double?
     let blocked: Bool?
     let id: String?
     
     enum CodingKeys: String, CodingKey {
         case name, login, operatingHours
         case datumDescription = "description"
-        case contactName, type, cnpj, phone, email, photo, fullAddress, reason, distance, blocked, id
+        case contactName, type, cnpj, phone, email, photo, fullAddress, reason, distance, blocked, id, discount
     }
 }

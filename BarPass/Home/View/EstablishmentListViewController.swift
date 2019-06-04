@@ -13,6 +13,7 @@ class EstablishmentListViewController: UIViewController {
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var leadinBarConstraint: NSLayoutConstraint!
     
     var viewModel: EstablishmentViewModelProtocol!
     var estabs: [Establishment] = [] {
@@ -26,6 +27,8 @@ class EstablishmentListViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         viewModel = EstablishmentViewModel()
+        tableView.tableFooterView = UIView()
+        hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,5 +59,9 @@ UITableViewDelegate {
             as? EstablishmentTableViewCell else {return UITableViewCell()}
         cell.fillCell(estabs[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
 }
