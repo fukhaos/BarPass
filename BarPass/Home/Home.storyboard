@@ -439,21 +439,34 @@ Bairro: Itaim Bibi</string>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cu0-uJ-BYb">
+                                                    <rect key="frame" x="62" y="46.5" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.1 Km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hma-9J-was">
+                                                    <rect key="frame" x="300" y="97" width="33" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.66666666666666663" green="0.67450980392156867" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Nok-8a-Wuc" firstAttribute="top" secondItem="TsF-mR-S7m" secondAttribute="bottom" constant="7.5" id="15p-pl-Nqg"/>
                                                 <constraint firstItem="bIV-33-56j" firstAttribute="leading" secondItem="hez-Ee-EhK" secondAttribute="leading" id="1yf-J8-Swk"/>
                                                 <constraint firstItem="UeL-Bt-F8X" firstAttribute="leading" secondItem="t4V-B1-B2E" secondAttribute="leadingMargin" constant="8" id="4jl-KZ-wAC"/>
                                                 <constraint firstItem="bIV-33-56j" firstAttribute="top" secondItem="hez-Ee-EhK" secondAttribute="bottom" constant="5.2000000000000002" id="5L5-1g-KEX"/>
+                                                <constraint firstItem="cu0-uJ-BYb" firstAttribute="centerX" secondItem="UeL-Bt-F8X" secondAttribute="centerX" id="9a0-RW-xxy"/>
                                                 <constraint firstItem="hez-Ee-EhK" firstAttribute="top" secondItem="EPF-FW-j4E" secondAttribute="bottom" constant="5" id="Bhz-09-hjY"/>
                                                 <constraint firstAttribute="trailing" secondItem="hez-Ee-EhK" secondAttribute="trailing" constant="23" id="Fqu-6a-NoI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hma-9J-was" secondAttribute="trailing" constant="21" id="Mh2-wb-5r6"/>
                                                 <constraint firstItem="TsF-mR-S7m" firstAttribute="top" secondItem="hez-Ee-EhK" secondAttribute="bottom" constant="5.0999999999999996" id="WgJ-kl-3aB"/>
                                                 <constraint firstItem="TsF-mR-S7m" firstAttribute="leading" secondItem="bIV-33-56j" secondAttribute="trailing" constant="6" id="Wsw-Ud-OwT"/>
                                                 <constraint firstItem="UeL-Bt-F8X" firstAttribute="centerY" secondItem="t4V-B1-B2E" secondAttribute="centerY" id="Xwx-Cd-vxF"/>
+                                                <constraint firstItem="hma-9J-was" firstAttribute="bottom" secondItem="Nok-8a-Wuc" secondAttribute="bottom" id="cch-eZ-DoS"/>
                                                 <constraint firstItem="EPF-FW-j4E" firstAttribute="top" secondItem="UeL-Bt-F8X" secondAttribute="top" id="dHp-Ag-NBy"/>
                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="TsF-mR-S7m" secondAttribute="trailing" constant="13" id="djt-Qk-3ij"/>
                                                 <constraint firstAttribute="bottom" secondItem="Nok-8a-Wuc" secondAttribute="bottom" constant="3.5" id="fry-55-hOg"/>
                                                 <constraint firstItem="EPF-FW-j4E" firstAttribute="leading" secondItem="UeL-Bt-F8X" secondAttribute="trailing" constant="26.399999999999999" id="lES-ll-O7E"/>
+                                                <constraint firstItem="cu0-uJ-BYb" firstAttribute="centerY" secondItem="UeL-Bt-F8X" secondAttribute="centerY" id="nii-T9-Cxb"/>
                                                 <constraint firstItem="EPF-FW-j4E" firstAttribute="top" secondItem="t4V-B1-B2E" secondAttribute="topMargin" constant="1.5" id="rdz-VF-LIL"/>
                                                 <constraint firstItem="Nok-8a-Wuc" firstAttribute="leading" secondItem="bIV-33-56j" secondAttribute="leading" id="upe-AD-v3t"/>
                                                 <constraint firstItem="hez-Ee-EhK" firstAttribute="leading" secondItem="EPF-FW-j4E" secondAttribute="leading" id="wMg-uB-wS3"/>
@@ -466,8 +479,10 @@ Bairro: Itaim Bibi</string>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="discountLabel" destination="Nok-8a-Wuc" id="HMd-NQ-CRt"/>
+                                            <outlet property="distanceLabel" destination="hma-9J-was" id="BVW-pW-EBa"/>
                                             <outlet property="estabImage" destination="UeL-Bt-F8X" id="Enm-eP-gY1"/>
                                             <outlet property="estabNameLabel" destination="EPF-FW-j4E" id="V31-RC-JFN"/>
+                                            <outlet property="imageIndicator" destination="cu0-uJ-BYb" id="Xi2-PM-dup"/>
                                             <outlet property="locationLabel" destination="hez-Ee-EhK" id="N6k-tx-WS6"/>
                                             <outlet property="shortLocationLabel" destination="TsF-mR-S7m" id="lKN-YS-INN"/>
                                         </connections>

@@ -34,6 +34,9 @@ enum URLs {
     static let deleteUser = "\(apiEndPoint)/Profile/Delete"
     static let updateUser = "\(apiEndPoint)/Profile/Update"
     
+    //stablishment
+    static let getStabs = "\(apiEndPoint)/Establishment/GetAll"
+    
     //Indication
     static let indicate = "\(apiEndPoint)/Indication/IndicateEstablishment"
     

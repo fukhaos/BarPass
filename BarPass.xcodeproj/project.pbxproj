@@ -80,6 +80,8 @@
 		BEED9AD922972D8E009FAF89 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEED9AD822972D8E009FAF89 /* Login.storyboard */; };
 		BEFC9E6C22A69C240090E90B /* EstablishmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC9E6B22A69C240090E90B /* EstablishmentTableViewCell.swift */; };
 		BEFC9E6E22A69EBE0090E90B /* EstablishmentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC9E6D22A69EBE0090E90B /* EstablishmentListViewController.swift */; };
+		BEFC9E7022A6A63D0090E90B /* Establishment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC9E6F22A6A63D0090E90B /* Establishment.swift */; };
+		BEFC9E7222A6A96D0090E90B /* EstablishmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC9E7122A6A96C0090E90B /* EstablishmentViewModel.swift */; };
 		D0395774878C956BF8253AD7 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66069568C3440D2F0F386101 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 /* End PBXBuildFile section */
 
@@ -190,6 +192,8 @@
 		BEED9AD822972D8E009FAF89 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BEFC9E6B22A69C240090E90B /* EstablishmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentTableViewCell.swift; sourceTree = "<group>"; };
 		BEFC9E6D22A69EBE0090E90B /* EstablishmentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentListViewController.swift; sourceTree = "<group>"; };
+		BEFC9E6F22A6A63D0090E90B /* Establishment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Establishment.swift; sourceTree = "<group>"; };
+		BEFC9E7122A6A96C0090E90B /* EstablishmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentViewModel.swift; sourceTree = "<group>"; };
 		D1CA98659D4C46758E0A69D0 /* Pods_BarPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -364,6 +368,7 @@
 		BE31DF9D22A557D6001C4714 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BEFC9E6F22A6A63D0090E90B /* Establishment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 		BE31DF9E22A557E4001C4714 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BEFC9E7122A6A96C0090E90B /* EstablishmentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -795,6 +801,8 @@
 				BE5F326F229C3E05000EEA63 /* UINavigationBar.swift in Sources */,
 				BEA2426D228B1BFC00D641C9 /* CopyableLabel.swift in Sources */,
 				9E94A9F6229ECB8A00A302FE /* RegisterReturn.swift in Sources */,
+				BEFC9E7222A6A96D0090E90B /* EstablishmentViewModel.swift in Sources */,
+				BEFC9E7022A6A63D0090E90B /* Establishment.swift in Sources */,
 				BEA24268228B1BFC00D641C9 /* ProgrammableUIProtocol.swift in Sources */,
 				BEA2426C228B1BFC00D641C9 /* AsyncOperation.swift in Sources */,
 				9E94AA06229F264D00A302FE /* QRCodeNavigationController.swift in Sources */,

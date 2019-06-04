@@ -1,0 +1,38 @@
+//
+//  Establishment.swift
+//  BarPass
+//
+//  Created by Bruno Lopes on 04/06/19.
+//  Copyright © 2019 Bruno Lopes. All rights reserved.
+//
+
+import Foundation
+
+// MARK: - EstablishmentReturn
+struct EstablishmentReturn: Codable {
+    let data: [Establishment]?
+    let erro: Bool?
+    let errors: [String: String]?
+    let message: String?
+    let messageEx: String?
+}
+
+// MARK: - Datum
+struct Establishment: Codable {
+    let name, login, operatingHours, datumDescription: String?
+    let contactName: String?
+    let type: String?
+    let cnpj, phone, email: String?
+    let photo: String?
+    let fullAddress: String?
+    let reason: String?
+    let distance: Double?
+    let blocked: Bool?
+    let id: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case name, login, operatingHours
+        case datumDescription = "description"
+        case contactName, type, cnpj, phone, email, photo, fullAddress, reason, distance, blocked, id
+    }
+}

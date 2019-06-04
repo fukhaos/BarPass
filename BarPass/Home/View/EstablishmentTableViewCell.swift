@@ -12,10 +12,12 @@ import SDWebImage
 class EstablishmentTableViewCell: UITableViewCell {
 
     @IBOutlet weak var estabImage: UIImageView!
+    @IBOutlet weak var imageIndicator: UIActivityIndicatorView!
     @IBOutlet weak var estabNameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var shortLocationLabel: UILabel!
     @IBOutlet weak var discountLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,6 +32,17 @@ class EstablishmentTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func fillCell(_ bar: Establishment) {
+        estabImage.sd_setImage(with: URL(string: bar.photo ?? "")) { [unowned self] image, error, cache, url in
+            self.imageIndicator.stopAnimating()
+        }
+        estabNameLabel.text = bar.name ?? ""
+        locationLabel.text = bar.fullAddress
+        locationLabel.text = "local"
+        discountLabel.text = " 15% "
+        distanceLabel.text = "\(bar.distance ?? 0.0) km"
     }
 
 }
