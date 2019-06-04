@@ -539,7 +539,7 @@ Bairro: Itaim Bibi</string>
             </objects>
             <point key="canvasLocation" x="1186.9565217391305" y="1.3392857142857142"/>
         </scene>
-        <!--Establishment Detail Table View Controller-->
+        <!--Data Source-->
         <scene sceneID="HIt-SN-YWu">
             <objects>
                 <tableViewController storyboardIdentifier="EstablishmentDetailTableViewController" id="TEj-c6-rtN" customClass="EstablishmentDetailTableViewController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
@@ -553,9 +553,13 @@ Bairro: Itaim Bibi</string>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fs7-1v-xye" customClass="iCarousel">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="TEj-c6-rtN" id="Gqe-WU-E9S"/>
+                                        <outlet property="delegate" destination="TEj-c6-rtN" id="fY1-Ei-rJH"/>
+                                    </connections>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfr-HD-3I8">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfr-HD-3I8" customClass="SpringButton" customModule="Spring">
                                     <rect key="frame" x="355" y="18" width="44" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="D8c-ga-Qoc"/>
@@ -563,6 +567,9 @@ Bairro: Itaim Bibi</string>
                                     </constraints>
                                     <state key="normal" image="likeOff"/>
                                     <state key="selected" image="likeOn"/>
+                                    <connections>
+                                        <action selector="like:" destination="TEj-c6-rtN" eventType="touchUpInside" id="I9C-nI-SGT"/>
+                                    </connections>
                                 </button>
                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vXk-OU-kC3">
                                     <rect key="frame" x="187.5" y="173" width="39" height="37"/>
@@ -782,6 +789,11 @@ Bairro: Itaim Bibi</string>
                         </connections>
                     </tableView>
                     <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="carouselView" destination="fs7-1v-xye" id="JAg-3q-DED"/>
+                        <outlet property="likeButton" destination="Xfr-HD-3I8" id="NnX-lO-Vab"/>
+                        <outlet property="pageControl" destination="vXk-OU-kC3" id="XlZ-yl-6IG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0m-25-p64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
