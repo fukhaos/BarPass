@@ -21,6 +21,7 @@ class EstablishmentListViewController: UIViewController {
             tableView.reloadData()
         }
     }
+    let animationOptions: UIView.AnimationOptions = [.allowAnimatedContent, .preferredFramesPerSecond60, .curveEaseOut]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,33 @@ class EstablishmentListViewController: UIViewController {
         }
     }
     
+    private func layoutIfNeededViews() {
+        searchBar.layoutIfNeeded()
+        logoImage.layoutIfNeeded()
+        self.view.layoutIfNeeded()
+    }
+}
+
+
+// MARK: - <#UISearchBarDelegate#>
+extension EstablishmentListViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: animationOptions, animations: {
+            
+            self.logoImage.alpha = 0
+            self.leadinBarConstraint.constant = 20
+            self.layoutIfNeededViews()
+        }, completion: nil)
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: animationOptions, animations: {
+            
+            self.logoImage.alpha = 1
+            self.leadinBarConstraint.constant = 134
+            self.layoutIfNeededViews()
+        }, completion: nil)
+    }
 }
 
 
