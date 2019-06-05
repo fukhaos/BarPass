@@ -17,6 +17,7 @@ class DashTabBarController: UITabBarController, UITabBarControllerDelegate {
 
         // Do any additional setup after loading the view.
         self.delegate = self
+        UserDefaults.standard.set(true, forKey: "logged")
     }
     
 

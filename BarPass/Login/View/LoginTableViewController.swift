@@ -67,6 +67,11 @@ class LoginTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        let logged = UserDefaults.standard.bool(forKey: "logged")
+        if logged {
+            self.performSegue(withIdentifier: "segueDash", sender: nil)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
