@@ -36,6 +36,8 @@ class LoginTableViewController: UITableViewController {
         hideKeyboardWhenTappedAround()
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.uiDelegate = self
+        //i only want the user gmail data, not necessary staying logged in
+        GIDSignIn.sharedInstance()?.signOut()
     }
     
     private func setUIElements() {
@@ -61,6 +63,12 @@ class LoginTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        GIDSignIn.sharedInstance()?.signOut()
     }
     
     @objc func loginButtonClicked() {
