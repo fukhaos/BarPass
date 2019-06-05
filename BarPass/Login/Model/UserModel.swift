@@ -12,7 +12,7 @@ import RealmSwift
 
 // MARK: - UserModel
 struct UserCodable: Codable {
-    let password, facebookID, nickName, phone: String?
+    let password, facebookID, googleId, nickName, phone: String?
     let gender: String?
     let sendSMS, sendEmail, notification: Bool?
     let codID: String?
@@ -24,6 +24,7 @@ struct UserCodable: Codable {
     enum CodingKeys: String, CodingKey {
         case password
         case facebookID = "facebookId"
+        case googleId = "googleId"
         case nickName, phone, gender, sendSMS, sendEmail, notification
         case codID = "codId"
         case premium, fullName, email, photo, cpf, blocked, id
