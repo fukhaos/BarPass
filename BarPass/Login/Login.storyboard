@@ -196,7 +196,7 @@
                                                         <color key="titleColor" red="0.28627450980000002" green="0.31764705879999999" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="feG-iT-aJG" kind="show" identifier="segueSignup" id="p6M-gn-cNB"/>
+                                                        <action selector="signUp:" destination="3yZ-5C-Kg0" eventType="touchUpInside" id="qab-J0-hIy"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -239,6 +239,7 @@
                         <outlet property="signupButton" destination="Wju-Ym-iaL" id="0Vy-hu-p9Z"/>
                         <segue destination="XsQ-zi-Rqg" kind="presentation" identifier="segueDash" id="ecn-du-zYD"/>
                         <segue destination="K2g-tI-U6q" kind="presentation" identifier="segueTutorial" id="jKZ-Mp-orb"/>
+                        <segue destination="feG-iT-aJG" kind="show" identifier="segueSignup" id="RdZ-wm-7lK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLr-eN-LWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -349,7 +350,7 @@
         <!--Cadastro-->
         <scene sceneID="8Ph-4a-MtQ">
             <objects>
-                <tableViewController id="feG-iT-aJG" customClass="SignUpTableViewController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SignUpTableViewController" id="feG-iT-aJG" customClass="SignUpTableViewController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0x9-KZ-FbG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

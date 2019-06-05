@@ -11,6 +11,30 @@ import UIKit
 
 extension UINavigationController {
     
+    func pushViewController(viewController: UIViewController, animated: Bool, completion: @escaping () -> ()) {
+        pushViewController(viewController, animated: animated)
+        
+        if let coordinator = transitionCoordinator, animated {
+            coordinator.animate(alongsideTransition: nil) { _ in
+                completion()
+            }
+        } else {
+            completion()
+        }
+    }
+    
+    func popViewController(animated: Bool, completion: @escaping () -> ()) {
+        popViewController(animated: animated)
+        
+        if let coordinator = transitionCoordinator, animated {
+            coordinator.animate(alongsideTransition: nil) { _ in
+                completion()
+            }
+        } else {
+            completion()
+        }
+    }
+    
     func popToViewController(ofClass: AnyClass, animated: Bool = true) {
         if let vc = viewControllers.filter({$0.isKind(of: ofClass)}).last {
             popToViewController(vc, animated: animated)

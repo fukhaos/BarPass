@@ -28,6 +28,7 @@ class SignUpTableViewController: UITableViewController {
     var googleId: String?
     var name: String?
     var email: String?
+    weak var delegate: DidCompleteSignupDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,8 +92,14 @@ class SignUpTableViewController: UITableViewController {
                                  photo: nil, cpf: nil, blocked: nil, id: nil)
             
             viewModel.createUser(user, onComplete: { [unowned self] in
-                GlobalAlert(with: self,
-                            msg: "Usuário cadastrado com sucesso!").showAlert()
+                let alert = UIAlertController(title: "Atenção", message: "Usuário cadastrado com sucesso",
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [unowned self] _ in
+                    self.navigationController?.popViewController(animated: true, completion: {
+                        self.delegate.login()
+                    })
+                }))
+                self.present(alert, animated: true, completion: nil)
             }) { (msg) in
                 GlobalAlert(with: self, msg: msg).showAlert()
             }

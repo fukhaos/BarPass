@@ -14,6 +14,10 @@ import Spring
 import AudioToolbox
 import GoogleSignIn
 
+protocol DidCompleteSignupDelegate: class {
+    func login()
+}
+
 class LoginTableViewController: UITableViewController {
 
     @IBOutlet weak var emailField: UITextField!
@@ -116,6 +120,12 @@ class LoginTableViewController: UITableViewController {
         GIDSignIn.sharedInstance()?.signIn()
     }
     
+    @IBAction func signUp(_ sender: Any) {
+        let vc = SignUpTableViewController.instantiate("Login")
+        vc.delegate = self
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     private func getFBUserData() {
         if((FBSDKAccessToken.current()) != nil) {
             FBSDKGraphRequest(graphPath: "me",
@@ -178,6 +188,7 @@ class LoginTableViewController: UITableViewController {
             vc.googleId = userData["googleId"]
             vc.name = userData["name"]
             vc.email = userData["email"]
+            vc.delegate = self
         }
     }
     
@@ -237,5 +248,11 @@ extension LoginTableViewController: GIDSignInDelegate, GIDSignInUIDelegate {
     func sign(_ signIn: GIDSignIn!,
               dismiss viewController: UIViewController!) {
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension LoginTableViewController: DidCompleteSignupDelegate {
+    func login() {
+        performSegue(withIdentifier: "segueDash", sender: nil)
     }
 }

@@ -65,7 +65,7 @@ struct GlobalAlert {
             }
             
         }
-        self.controller.show(alerta, sender: nil)
+        self.controller.present(alerta, animated: true, completion: nil)
     }
 }
 
