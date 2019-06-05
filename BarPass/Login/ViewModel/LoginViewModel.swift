@@ -51,6 +51,10 @@ class LoginViewModel: LoginViewModelProtocol {
             parameters["facebookId"] = user.facebookID ?? ""
         }
         
+        if user.googleId != "" && user.googleId != nil {
+            parameters["googleId"] = user.googleId ?? ""
+        }
+        
         SVProgressHUD.show()
         Api().requestCodable(metodo: .wPOST, url: URLs.signup, objeto: RegisterReturn.self, parametros: parameters,
                              onSuccess: { [unowned self] response, result in
