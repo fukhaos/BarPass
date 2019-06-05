@@ -12,6 +12,7 @@ import FBSDKCoreKit
 import SVProgressHUD
 import Spring
 import AudioToolbox
+import GoogleSignIn
 
 class LoginTableViewController: UITableViewController {
 
@@ -33,6 +34,8 @@ class LoginTableViewController: UITableViewController {
         
         setUIElements()
         hideKeyboardWhenTappedAround()
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance()?.uiDelegate = self
     }
     
     private func setUIElements() {
@@ -101,6 +104,8 @@ class LoginTableViewController: UITableViewController {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         signInGmailButton.animation = "pop"
         signInGmailButton.animate()
+        
+        GIDSignIn.sharedInstance()?.signIn()
     }
     
     private func getFBUserData() {
@@ -176,5 +181,40 @@ class LoginTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 3
+    }
+}
+
+extension LoginTableViewController: GIDSignInDelegate, GIDSignInUIDelegate {
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if (error == nil) {
+            // Perform any operations on signed in user here.
+//            let userId = user.userID                  // For client-side use only!
+//            let idToken = user.authentication.idToken // Safe to send to the server
+//            let fullName = user.profile.name
+//            let givenName = user.profile.givenName
+//            let familyName = user.profile.familyName
+//            let email = user.profile.email
+        } else {
+            print("\(error.localizedDescription)")
+        }
+    }
+    
+    // Stop the UIActivityIndicatorView animation that was started when the user
+    // pressed the Sign In button
+    private func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
+        SVProgressHUD.dismiss()
+    }
+    
+    // Present a view that prompts the user to sign in with Google
+    func sign(_ signIn: GIDSignIn!,
+              present viewController: UIViewController!) {
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    // Dismiss the "Sign in with Google" view
+    func sign(_ signIn: GIDSignIn!,
+              dismiss viewController: UIViewController!) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
