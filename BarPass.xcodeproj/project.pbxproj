@@ -48,6 +48,7 @@
 		BE71BCDF22A18CA400799D1D /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE71BCDE22A18CA400799D1D /* ProfileTableViewController.swift */; };
 		BE71BCE122A19F4400799D1D /* IndicatePubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE71BCE022A19F4400799D1D /* IndicatePubViewController.swift */; };
 		BE71BCE322A1A3B700799D1D /* IndicatePubChildTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE71BCE222A1A3B700799D1D /* IndicatePubChildTableViewController.swift */; };
+		BE9314D722A855D30086BE7E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9314D622A855D30086BE7E /* RootViewController.swift */; };
 		BEA24238228B1A5900D641C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24237228B1A5900D641C9 /* AppDelegate.swift */; };
 		BEA2423F228B1A5F00D641C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA2423E228B1A5F00D641C9 /* Assets.xcassets */; };
 		BEA24242228B1A5F00D641C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA24240228B1A5F00D641C9 /* LaunchScreen.storyboard */; };
@@ -159,6 +160,7 @@
 		BE71BCDE22A18CA400799D1D /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		BE71BCE022A19F4400799D1D /* IndicatePubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatePubViewController.swift; sourceTree = "<group>"; };
 		BE71BCE222A1A3B700799D1D /* IndicatePubChildTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatePubChildTableViewController.swift; sourceTree = "<group>"; };
+		BE9314D622A855D30086BE7E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		BEA24234228B1A5800D641C9 /* BarPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA24237228B1A5900D641C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA2423E228B1A5F00D641C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 				BEA24256228B1BFC00D641C9 /* URLs.swift */,
 				BEA24257228B1BFC00D641C9 /* Utils.swift */,
 				BE1F769C22A00FD4000BFD33 /* RealmUtils.swift */,
+				BE9314D622A855D30086BE7E /* RootViewController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 				BEA24271228B1BFC00D641C9 /* PazMapDirections.swift in Sources */,
 				BE1F76A922A05A63000BFD33 /* ProfileViewModel.swift in Sources */,
 				9E977CEB229D768D00E0CE52 /* ForgotPassViewController.swift in Sources */,
+				BE9314D722A855D30086BE7E /* RootViewController.swift in Sources */,
 				BEA2427D228B1BFC00D641C9 /* UIColor.swift in Sources */,
 				BE5F3271229C572F000EEA63 /* UINavigationItem.swift in Sources */,
 				BEA2427B228B1BFC00D641C9 /* String.swift in Sources */,

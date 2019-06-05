@@ -559,7 +559,7 @@ Bairro: Itaim Bibi</string>
                                         <outlet property="delegate" destination="TEj-c6-rtN" id="fY1-Ei-rJH"/>
                                     </connections>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfr-HD-3I8" customClass="SpringButton" customModule="Spring">
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfr-HD-3I8" customClass="SpringButton" customModule="Spring">
                                     <rect key="frame" x="355" y="18" width="44" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="D8c-ga-Qoc"/>
@@ -621,26 +621,26 @@ Bairro: Itaim Bibi</string>
                                                     <color key="textColor" red="0.27843137254901962" green="0.18823529411764706" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="N8q-bP-FGW">
-                                                    <rect key="frame" x="23" y="140" width="95.5" height="44"/>
+                                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="N8q-bP-FGW">
+                                                    <rect key="frame" x="23" y="140" width="108" height="44"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnO-U2-fyc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="13.5" height="44"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="44"/>
                                                             <state key="normal" image="starOff"/>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkd-8P-y5c">
-                                                            <rect key="frame" x="20.5" y="0.0" width="13.5" height="44"/>
+                                                            <rect key="frame" x="23" y="0.0" width="16" height="44"/>
                                                             <state key="normal" image="starOff"/>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zas-iE-s69">
-                                                            <rect key="frame" x="41" y="0.0" width="13.5" height="44"/>
+                                                            <rect key="frame" x="46" y="0.0" width="16" height="44"/>
                                                             <state key="normal" image="starOff"/>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pz-7P-MPq">
-                                                            <rect key="frame" x="61.5" y="0.0" width="13.5" height="44"/>
+                                                            <rect key="frame" x="69" y="0.0" width="16" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="44" id="WfH-Px-zGv"/>
                                                             </constraints>
@@ -648,14 +648,14 @@ Bairro: Itaim Bibi</string>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZY-EH-KYe">
-                                                            <rect key="frame" x="82" y="0.0" width="13.5" height="44"/>
+                                                            <rect key="frame" x="92" y="0.0" width="16" height="44"/>
                                                             <state key="normal" image="starOff"/>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.9(55)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUT-i8-q9L">
-                                                    <rect key="frame" x="126.5" y="156" width="36" height="12"/>
+                                                    <rect key="frame" x="139" y="156" width="36" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -733,8 +733,11 @@ Bairro: Itaim Bibi</string>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TI6-6f-koo">
-                                                    <rect key="frame" x="82.5" y="713" width="249" height="44"/>
+                                                    <rect key="frame" x="199" y="713" width="16" height="22"/>
                                                     <state key="normal" image="botaoComoChegar"/>
+                                                    <connections>
+                                                        <action selector="directions:" destination="TEj-c6-rtN" eventType="touchUpInside" id="g7i-aJ-KmZ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -791,7 +794,16 @@ Bairro: Itaim Bibi</string>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="carouselView" destination="fs7-1v-xye" id="JAg-3q-DED"/>
+                        <outlet property="dateLabel" destination="QQZ-8V-x39" id="oan-rG-xK8"/>
+                        <outlet property="detailLabel" destination="OZr-6a-QKQ" id="OJL-G1-FCY"/>
+                        <outlet property="discountLabel" destination="A8g-Ep-Jyb" id="1lv-7t-CBR"/>
+                        <outlet property="distanceLabel" destination="qSe-65-FOY" id="WMR-wW-Okm"/>
+                        <outlet property="emailLabel" destination="T75-4d-DLJ" id="Pnr-ul-VDQ"/>
                         <outlet property="likeButton" destination="Xfr-HD-3I8" id="NnX-lO-Vab"/>
+                        <outlet property="locationLabel" destination="bfR-bX-lq4" id="zhZ-Kf-tNM"/>
+                        <outlet property="mapContainer" destination="TMV-gJ-Yaw" id="Ax3-Ir-foY"/>
+                        <outlet property="nameLabel" destination="cha-Mj-t5M" id="8ue-2V-Bgh"/>
+                        <outlet property="numberLabel" destination="1OP-PM-Q6P" id="cVN-JA-ZRM"/>
                         <outlet property="pageControl" destination="vXk-OU-kC3" id="XlZ-yl-6IG"/>
                     </connections>
                 </tableViewController>

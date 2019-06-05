@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EstablishmentListViewController: UIViewController {
+class EstablishmentListViewController: RootViewController {
 
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var searchBar: UISearchBar!

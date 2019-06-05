@@ -42,6 +42,8 @@ class LoginTableViewController: UITableViewController {
         GIDSignIn.sharedInstance()?.uiDelegate = self
         //i only want the user gmail data, not necessary staying logged in
         GIDSignIn.sharedInstance()?.signOut()
+        
+        RootViewController.locationManager.requestWhenInUseAuthorization()
     }
     
     private func setUIElements() {

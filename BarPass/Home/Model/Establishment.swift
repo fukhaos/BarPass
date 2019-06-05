@@ -27,11 +27,13 @@ struct EstablishmentDetailReturn: Codable {
 
 // MARK: - Datum
 struct Establishment: Codable {
-    let name, login, operatingHours, datumDescription: String?
+    let name, login, operatingHours, description: String?
     let contactName: String?
     let type: String?
+    let latitude: Double?
+    let longitude: Double?
     let cnpj, phone, email: String?
-    let photo: String?
+    let photo: [String]?
     let fullAddress: String?
     let reason: String?
     let distance: Double?
@@ -41,7 +43,8 @@ struct Establishment: Codable {
     
     enum CodingKeys: String, CodingKey {
         case name, login, operatingHours
-        case datumDescription = "description"
+        case description = "description"
+        case latitude, longitude
         case contactName, type, cnpj, phone, email, photo, fullAddress, reason, distance, blocked, id, discount
     }
 }

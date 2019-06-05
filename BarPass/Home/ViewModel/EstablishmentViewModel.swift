@@ -20,10 +20,16 @@ class EstablishmentViewModel: EstablishmentViewModelProtocol {
     
     func getStabs(onComplete: @escaping ([Establishment]) -> Void,
                   onError: @escaping (String) -> Void) {
+        let userLocation = RootViewController.locationManager.location?.coordinate
+        
+        let params: [String: Any] = [
+            "latitude": userLocation?.latitude ?? 0.0,
+            "longitude": userLocation?.longitude ?? 0.0
+        ]
         
         SVProgressHUD.show()
-        Api().requestCodable(metodo: .wGET, url: URLs.getStabs, objeto: EstablishmentReturn.self,
-                             parametros: [:],
+        Api().requestCodable(metodo: .wPOST, url: URLs.getStabs, objeto: EstablishmentReturn.self,
+                             parametros: params,
                              onSuccess: { (response, result) in
                                 SVProgressHUD.dismiss()
                                 
@@ -42,9 +48,18 @@ class EstablishmentViewModel: EstablishmentViewModelProtocol {
     
     func getStabDetail(with id: String, onComplete: @escaping (Establishment) -> Void,
                        onError: @escaping (String) -> Void) {
+        
+        let userLocation = RootViewController.locationManager.location?.coordinate
+        
+        let params: [String: Any] = [
+            "latitude": userLocation?.latitude ?? 0.0,
+            "longitude": userLocation?.longitude ?? 0.0,
+            "id": id
+        ]
+        
         SVProgressHUD.show()
-        Api().requestCodable(metodo: .wGET, url: "\(URLs.getEstabDetail)/\(id)", objeto: EstablishmentDetailReturn.self,
-                             parametros: [:],
+        Api().requestCodable(metodo: .wPOST, url: URLs.getEstabDetail, objeto: EstablishmentDetailReturn.self,
+                             parametros: params,
                              onSuccess: { (response, result) in
                                 SVProgressHUD.dismiss()
                                 

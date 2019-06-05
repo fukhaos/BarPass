@@ -35,7 +35,7 @@ class EstablishmentTableViewCell: UITableViewCell {
     }
     
     func fillCell(_ bar: Establishment) {
-        estabImage.sd_setImage(with: URL(string: bar.photo ?? "")) { [unowned self] image, error, cache, url in
+        estabImage.sd_setImage(with: URL(string: bar.photo?.first ?? "")) { [unowned self] image, error, cache, url in
             self.imageIndicator.stopAnimating()
         }
         estabNameLabel.text = bar.name ?? ""
