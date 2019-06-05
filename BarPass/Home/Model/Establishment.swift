@@ -17,6 +17,14 @@ struct EstablishmentReturn: Codable {
     let messageEx: String?
 }
 
+struct EstablishmentDetailReturn: Codable {
+    let data: Establishment?
+    let erro: Bool?
+    let errors: [String: String]?
+    let message: String?
+    let messageEx: String?
+}
+
 // MARK: - Datum
 struct Establishment: Codable {
     let name, login, operatingHours, datumDescription: String?

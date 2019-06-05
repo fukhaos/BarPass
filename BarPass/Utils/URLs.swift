@@ -36,6 +36,7 @@ enum URLs {
     
     //stablishment
     static let getStabs = "\(apiEndPoint)/Establishment/GetAll"
+    static let getEstabDetail = "\(apiEndPoint)/Establishment/Detail"
     
     //Indication
     static let indicate = "\(apiEndPoint)/Indication/IndicateEstablishment"

@@ -103,6 +103,12 @@ UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
         
-        performSegue(withIdentifier: "segueDetail", sender: estabs[indexPath.row])
+        viewModel.getStabDetail(with: estabs[indexPath.row].id ?? "",
+                                onComplete: { [unowned self] detailed in
+                                    self.performSegue(withIdentifier: "segueDetail",
+                                                      sender: detailed)
+        }) { (msg) in
+            GlobalAlert(with: self, msg: msg).showAlert()
+        }
     }
 }
