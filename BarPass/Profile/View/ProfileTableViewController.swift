@@ -46,10 +46,20 @@ class ProfileTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.row == 1 {
+            let alert = UIAlertController(title: "Atenção", message: "Tem certeza que deseja deslogar?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Sim", style: .destructive, handler: { (action) in
+                UserDefaults.standard.set(false, forKey: "logged")
+               self.dismiss(animated: true, completion: nil)
+            }))
+            alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

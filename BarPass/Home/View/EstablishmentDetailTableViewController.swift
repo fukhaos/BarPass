@@ -50,6 +50,7 @@ class EstablishmentDetailTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         setInitialLocation(lat: bar.latitude ?? 0.0, long: bar.longitude ?? 0.0)
+        self.tabBarController?.tabBar.isHidden = true
         carouselView.reloadData()
     }
 

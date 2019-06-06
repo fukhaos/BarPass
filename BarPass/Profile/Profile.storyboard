@@ -83,11 +83,11 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" hidden="YES" contentMode="scaleToFill" id="G0M-Jj-j2a">
-                            <rect key="frame" x="0.0" y="216" width="414" height="205"/>
+                            <rect key="frame" x="0.0" y="282" width="414" height="205"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cW-m7-yUk" customClass="SpringButton" customModule="Spring">
-                                    <rect key="frame" x="0.0" y="31" width="16" height="174"/>
+                                    <rect key="frame" x="0.0" y="31" width="369" height="174"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="174" id="KsW-SV-6BM"/>
                                     </constraints>
@@ -137,6 +137,35 @@
                                         <connections>
                                             <segue destination="wmr-5s-Mqc" kind="show" id="Wfj-2t-N2k"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="hMG-Fm-8IR">
+                                        <rect key="frame" x="0.0" y="216" width="414" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hMG-Fm-8IR" id="PT0-iq-NMD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logout" translatesAutoresizingMaskIntoConstraints="NO" id="oJ1-4C-Xu8">
+                                                    <rect key="frame" x="44" y="24.5" width="20" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="WBf-o6-BSv"/>
+                                                        <constraint firstAttribute="height" constant="17" id="veI-fj-Ook"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deslogar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvK-yU-V4n">
+                                                    <rect key="frame" x="79" y="23" width="68" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oJ1-4C-Xu8" firstAttribute="centerY" secondItem="PT0-iq-NMD" secondAttribute="centerY" id="Lp3-Ym-PGH"/>
+                                                <constraint firstItem="LvK-yU-V4n" firstAttribute="leading" secondItem="oJ1-4C-Xu8" secondAttribute="trailing" constant="15" id="elo-yj-wHs"/>
+                                                <constraint firstItem="LvK-yU-V4n" firstAttribute="centerY" secondItem="oJ1-4C-Xu8" secondAttribute="centerY" id="fkl-78-AKd"/>
+                                                <constraint firstItem="oJ1-4C-Xu8" firstAttribute="leading" secondItem="PT0-iq-NMD" secondAttribute="leading" constant="44" id="uS3-lV-2g8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -237,7 +266,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-vB-9C3" customClass="SpringButton" customModule="Spring">
-                                    <rect key="frame" x="0.0" y="62.5" width="414" height="22"/>
+                                    <rect key="frame" x="0.0" y="51.5" width="414" height="44"/>
                                     <state key="normal" image="indicateButton"/>
                                     <connections>
                                         <action selector="indicate:" destination="qxD-kX-6y4" eventType="touchUpInside" id="ati-bF-hQZ"/>
@@ -413,6 +442,7 @@
         <image name="addProfilePicIcon" width="67" height="67"/>
         <image name="backButton" width="16" height="16"/>
         <image name="indicateButton" width="249" height="44"/>
+        <image name="logout" width="512" height="512"/>
         <image name="navBackGround" width="377.5" height="151.5"/>
         <image name="premiumButton" width="369" height="181"/>
         <image name="settings" width="20" height="20"/>

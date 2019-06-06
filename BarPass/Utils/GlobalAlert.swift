@@ -67,5 +67,45 @@ struct GlobalAlert {
         }
         self.controller.present(alerta, animated: true, completion: nil)
     }
+    
+    func logout() {
+        let alerta = UIAlertController(title: "Atenção", message: self.msg, preferredStyle: UIAlertController.Style.alert)
+        if isModal {
+            
+            if self.confirmButton && !self.confirmAndCancelButton {
+                alerta.addAction(UIAlertAction(title: "ok", style: .default, handler: { (action) in
+                    UserDefaults.standard.set(false, forKey: "logged")
+                    self.controller.dismiss(animated: true, completion: nil)
+                }))
+            } else {
+                alerta.addAction(UIAlertAction(title: "ok", style: .default, handler: { (action) in
+                    UserDefaults.standard.set(false, forKey: "logged")
+                    self.controller.dismiss(animated: true, completion: nil)
+                }))
+                alerta.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
+                }))
+            }
+            
+            
+        } else {
+            
+            if self.confirmButton && !self.confirmAndCancelButton {
+                alerta.addAction(UIAlertAction(title: "ok", style: .default, handler: { (action) in
+                    UserDefaults.standard.set(false, forKey: "logged")
+                    self.controller.dismiss(animated: true, completion: nil)
+                }))
+            } else {
+                alerta.addAction(UIAlertAction(title: "ok", style: .default, handler: { (action) in
+                    UserDefaults.standard.set(false, forKey: "logged")
+                    self.controller.dismiss(animated: true, completion: nil)
+                }))
+                alerta.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
+                }))
+            }
+            
+        }
+        
+        self.controller.present(alerta, animated: true, completion: nil)
+    }
 }
 

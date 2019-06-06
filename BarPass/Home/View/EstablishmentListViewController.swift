@@ -37,6 +37,7 @@ class EstablishmentListViewController: RootViewController {
         
         navigationController?.setNavigationBarHidden(true, animated: true)
         searchBar.backgroundImage = UIImage()
+        self.tabBarController?.tabBar.isHidden = false
         viewModel.getStabs(onComplete: { [unowned self] bars in
             self.estabs = bars
         }) { (msg) in
