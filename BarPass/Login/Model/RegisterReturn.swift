@@ -12,7 +12,6 @@ import Foundation
 struct RegisterReturn: Codable {
     let data: TokenCodable?
     let erro: Bool?
-    let errors: [String: String]?
     let message: String?
     let messageEx: String?
 }

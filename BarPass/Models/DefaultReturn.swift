@@ -11,7 +11,6 @@ import Foundation
 struct DefaultReturn: Codable {
     let data: DataClass?
     let erro: Bool?
-    let errors: [String: String]?
     let message, messageEx: String?
 }
 

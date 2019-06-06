@@ -11,6 +11,5 @@ import Foundation
 struct InfoReturn: Codable {
     let data: UserCodable?
     let erro: Bool?
-    let errors: [String: String]?
     let message, messageEx: String?
 }
