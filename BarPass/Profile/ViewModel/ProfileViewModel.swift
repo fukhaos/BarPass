@@ -50,7 +50,7 @@ class ProfileViewModel: ProfileViewModelProtocol {
         let parameters: [String: Any] = [:]
         
         SVProgressHUD.show()
-        Api().requestCodable(metodo: .wPOST, url: URLs.getInfo, objeto: InfoReturn.self, parametros: parameters,
+        Api().requestCodable(metodo: .wGET, url: URLs.getInfo, objeto: InfoReturn.self, parametros: parameters,
                              onSuccess: { (response, result) in
                                 SVProgressHUD.dismiss()
                                 if result.erro ?? false {

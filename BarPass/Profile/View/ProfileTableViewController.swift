@@ -34,6 +34,9 @@ class ProfileTableViewController: UITableViewController {
         
         self.tabBarController?.tabBar.isHidden = false
         navigationController?.setNavigationBarHidden(true, animated: false)
+        let user = RealmUtils().getUser()
+        picButton.sd_setImage(with: URL(string: user.photo ?? ""), for: .normal,
+                              completed: nil)
     }
     
     @IBAction func signPremium(_ sender: Any) {

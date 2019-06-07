@@ -12,12 +12,19 @@ import Spring
 
 class DashTabBarController: UITabBarController, UITabBarControllerDelegate {
 
+    var viewModel: ProfileViewModelProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.delegate = self
         UserDefaults.standard.set(true, forKey: "logged")
+        viewModel = ProfileViewModel()
+        viewModel.getInfo(onComplete: { (user) in
+            RealmUtils().save(user, onComplete: {
+            }, onError: { _ in})
+        }) { _ in}
     }
     
 
