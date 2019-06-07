@@ -253,7 +253,7 @@
             </objects>
             <point key="canvasLocation" x="1906" y="46"/>
         </scene>
-        <!--Indicate Pub Child Table View Controller-->
+        <!--Delegate-->
         <scene sceneID="HVP-Cd-BGR">
             <objects>
                 <tableViewController storyboardIdentifier="IndicatePubChildTableViewController" id="qxD-kX-6y4" customClass="IndicatePubChildTableViewController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
@@ -266,7 +266,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-vB-9C3" customClass="SpringButton" customModule="Spring">
-                                    <rect key="frame" x="0.0" y="62.5" width="414" height="22"/>
+                                    <rect key="frame" x="0.0" y="51.5" width="414" height="44"/>
                                     <state key="normal" image="indicateButton"/>
                                     <connections>
                                         <action selector="indicate:" destination="qxD-kX-6y4" eventType="touchUpInside" id="ati-bF-hQZ"/>
@@ -347,6 +347,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="hHc-E2-Ar1" id="HKC-gb-94X"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -402,10 +405,20 @@
                         <outlet property="contactNameField" destination="wNA-5t-qcP" id="zZq-gR-j3F"/>
                         <outlet property="indicateButton" destination="iOe-vB-9C3" id="4Xh-Zk-Wxo"/>
                         <outlet property="phoneField" destination="sal-dT-5TW" id="vYb-Dx-NPZ"/>
+                        <outlet property="phoneMaskListener" destination="hHc-E2-Ar1" id="mkB-CZ-NHz"/>
                         <outlet property="pubNameField" destination="O15-PE-Kfl" id="CE1-xm-ReU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86g-3h-aSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="hHc-E2-Ar1" customClass="MaskedTextFieldDelegate" customModule="InputMask">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="autocomplete" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="primaryMaskFormat" value="{([00])}{ }[0]{ }[0000]{-}[0000]"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="qxD-kX-6y4" id="qNf-Dn-bXK"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1905.7971014492755" y="797.54464285714278"/>
         </scene>

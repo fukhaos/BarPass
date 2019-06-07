@@ -9,6 +9,7 @@
 import UIKit
 import Spring
 import AudioToolbox
+import InputMask
 
 class IndicatePubChildTableViewController: UITableViewController {
 
@@ -17,6 +18,7 @@ class IndicatePubChildTableViewController: UITableViewController {
     @IBOutlet weak var phoneField: UITextField!
     @IBOutlet weak var addressField: UITextField!
     @IBOutlet weak var indicateButton: SpringButton!
+    @IBOutlet var phoneMaskListener: MaskedTextFieldDelegate!
     
     var viewModel: ProfileViewModelProtocol!
     
@@ -76,5 +78,13 @@ class IndicatePubChildTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 5
+    }
+}
+
+// MARK: - <#MaskedTextFieldDelegateListener#>
+extension IndicatePubChildTableViewController: MaskedTextFieldDelegateListener {
+    
+    func textField(_ textField: UITextField, didFillMandatoryCharacters complete: Bool, didExtractValue value: String) {
+        print(value)
     }
 }
