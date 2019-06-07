@@ -26,6 +26,8 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var signInFaceButton: SpringButton!
     @IBOutlet weak var signInGmailButton: SpringButton!
+    @IBOutlet weak var showPassButton: SpringButton!
+    
     
     var viewModel: LoginViewModelProtocol!
     
@@ -131,6 +133,20 @@ class LoginTableViewController: UITableViewController {
         let vc = SignUpTableViewController.instantiate("Login")
         vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func showPassword(_ sender: Any) {
+        showPassButton.animation = "pop"
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        if showPassButton.isSelected {
+            showPassButton.isSelected = false
+            showPassButton.animate()
+            passField.isSecureTextEntry = true
+        } else {
+            showPassButton.isSelected = true
+            showPassButton.animate()
+            passField.isSecureTextEntry = false
+        }
     }
     
     private func getFBUserData() {
