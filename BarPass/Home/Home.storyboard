@@ -380,7 +380,7 @@
                                     <constraint firstItem="ldT-SQ-tXF" firstAttribute="leading" secondItem="g3e-7f-7DZ" secondAttribute="leading" constant="134" id="qRY-S2-LSm"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="140" estimatedRowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hqj-HW-fCA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hqj-HW-fCA">
                                 <rect key="frame" x="20" y="168" width="374" height="694"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.93333333330000001" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -407,7 +407,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="hez-Ee-EhK">
-                                                            <rect key="frame" x="123" y="40" width="243" height="29"/>
+                                                            <rect key="frame" x="123" y="40" width="243" height="26"/>
                                                             <string key="text">Rua Dr. James Ferraz Alvim, 271
 Bairro: Itaim Bibi</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -430,9 +430,8 @@ Bairro: Itaim Bibi</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLocal" translatesAutoresizingMaskIntoConstraints="NO" id="bIV-33-56j">
-                                                            <rect key="frame" x="123" y="75" width="9" height="13"/>
+                                                            <rect key="frame" x="123" y="72" width="9" height="20"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="13" id="89T-wK-6xy"/>
                                                                 <constraint firstAttribute="width" constant="9" id="rAP-2r-Sh4"/>
                                                             </constraints>
                                                         </imageView>
@@ -467,11 +466,12 @@ Bairro: Itaim Bibi</string>
                                                         <constraint firstItem="TsF-mR-S7m" firstAttribute="centerY" secondItem="bIV-33-56j" secondAttribute="centerY" id="Je4-UR-rwb"/>
                                                         <constraint firstItem="bIV-33-56j" firstAttribute="leading" secondItem="hez-Ee-EhK" secondAttribute="leading" id="Lbu-K1-CtH"/>
                                                         <constraint firstItem="cu0-uJ-BYb" firstAttribute="centerX" secondItem="UeL-Bt-F8X" secondAttribute="centerX" id="Oye-Jy-nPX"/>
+                                                        <constraint firstItem="EPF-FW-j4E" firstAttribute="top" secondItem="NuC-lc-fSL" secondAttribute="top" constant="18" id="Pff-Vv-Pre"/>
                                                         <constraint firstItem="hez-Ee-EhK" firstAttribute="leading" secondItem="EPF-FW-j4E" secondAttribute="leading" id="Tft-Vr-Wuy"/>
                                                         <constraint firstItem="cu0-uJ-BYb" firstAttribute="centerY" secondItem="UeL-Bt-F8X" secondAttribute="centerY" id="Tpe-4c-FOv"/>
                                                         <constraint firstAttribute="trailing" secondItem="hez-Ee-EhK" secondAttribute="trailing" constant="8" id="VnY-BS-2GL"/>
                                                         <constraint firstItem="EPF-FW-j4E" firstAttribute="top" secondItem="UeL-Bt-F8X" secondAttribute="top" id="YkX-wS-Gd7"/>
-                                                        <constraint firstItem="Nok-8a-Wuc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="TsF-mR-S7m" secondAttribute="bottom" constant="8" id="aA1-CL-JpU"/>
+                                                        <constraint firstItem="Nok-8a-Wuc" firstAttribute="top" secondItem="TsF-mR-S7m" secondAttribute="bottom" constant="8" id="aA1-CL-JpU"/>
                                                         <constraint firstAttribute="trailing" secondItem="TsF-mR-S7m" secondAttribute="trailing" constant="8" id="ao9-yb-sQ7"/>
                                                         <constraint firstItem="EPF-FW-j4E" firstAttribute="leading" secondItem="UeL-Bt-F8X" secondAttribute="trailing" constant="26" id="b75-k8-HdE"/>
                                                         <constraint firstItem="hma-9J-was" firstAttribute="centerY" secondItem="Nok-8a-Wuc" secondAttribute="centerY" id="g2j-Xr-ofA"/>

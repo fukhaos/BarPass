@@ -44,7 +44,7 @@ class IndicatePubChildTableViewController: UITableViewController {
             pub["fullAddress"] = addressField.text
             viewModel.indicatePub(pub: pub,
                                   onComplete: { [unowned self] msg in
-                                    GlobalAlert(with: self, msg: msg).showAlert()
+                                    GlobalAlert(with: self, msg: msg).showAlertAndReturn()
             }) { [unowned self] msg in
                 GlobalAlert(with: self, msg: msg).showAlert()
             }

@@ -26,21 +26,21 @@
                                     <rect key="frame" x="0.0" y="-45" width="414" height="195"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar cadastro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxx-yW-31C">
-                                    <rect key="frame" x="185" y="67.5" width="97" height="17"/>
+                                    <rect key="frame" x="173" y="73.5" width="97" height="17"/>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marion Larson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-Pr-gtJ">
-                                    <rect key="frame" x="151" y="42" width="124" height="24"/>
+                                    <rect key="frame" x="151" y="42" width="124" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zW-Q5-D02">
-                                    <rect key="frame" x="143" y="60" width="44" height="44"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zW-Q5-D02">
+                                    <rect key="frame" x="143" y="60" width="120" height="44"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="44" id="QcY-AV-YXE"/>
+                                        <constraint firstAttribute="width" constant="120" id="VCJ-0Q-zJa"/>
                                         <constraint firstAttribute="height" constant="44" id="uBB-y0-VIg"/>
                                     </constraints>
                                     <state key="normal" image="settings"/>
@@ -49,7 +49,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Código ID: 25786" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oy-vF-mle">
-                                    <rect key="frame" x="151" y="92.5" width="112" height="17"/>
+                                    <rect key="frame" x="151" y="98.5" width="112" height="17"/>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -81,11 +81,12 @@
                                 <constraint firstItem="uEh-Pr-gtJ" firstAttribute="top" secondItem="GXG-6r-yTm" secondAttribute="top" id="IC0-oe-Gh9"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uEh-Pr-gtJ" secondAttribute="trailing" constant="10" id="LtP-JX-NlI"/>
                                 <constraint firstItem="5Yd-qx-Usk" firstAttribute="top" secondItem="Pif-iZ-GI0" secondAttribute="top" constant="-45" id="PM7-wu-6z5"/>
+                                <constraint firstItem="Bxx-yW-31C" firstAttribute="centerY" secondItem="8zW-Q5-D02" secondAttribute="centerY" id="UVf-1S-dlc"/>
                                 <constraint firstItem="8zW-Q5-D02" firstAttribute="leading" secondItem="GXG-6r-yTm" secondAttribute="trailing" id="VQz-Bw-vyw"/>
                                 <constraint firstItem="5oy-vF-mle" firstAttribute="top" secondItem="Bxx-yW-31C" secondAttribute="bottom" constant="8" id="WFe-wf-AZR"/>
                                 <constraint firstItem="uEh-Pr-gtJ" firstAttribute="leading" secondItem="GXG-6r-yTm" secondAttribute="trailing" constant="8" id="Y3y-FX-Wgy"/>
                                 <constraint firstAttribute="trailing" secondItem="5Yd-qx-Usk" secondAttribute="trailing" id="dVb-Vt-w4V"/>
-                                <constraint firstItem="Bxx-yW-31C" firstAttribute="leading" secondItem="8zW-Q5-D02" secondAttribute="trailing" constant="-2" id="fgw-lm-pLU"/>
+                                <constraint firstItem="Bxx-yW-31C" firstAttribute="leading" secondItem="8zW-Q5-D02" secondAttribute="trailing" constant="-90" id="fgw-lm-pLU"/>
                                 <constraint firstItem="GXG-6r-yTm" firstAttribute="top" secondItem="Pif-iZ-GI0" secondAttribute="top" constant="42" id="gIs-xC-eG2"/>
                                 <constraint firstItem="5Yd-qx-Usk" firstAttribute="leading" secondItem="Pif-iZ-GI0" secondAttribute="leading" id="zl8-qv-ekg"/>
                             </constraints>
@@ -269,7 +270,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-vB-9C3" customClass="SpringButton" customModule="Spring">
-                                    <rect key="frame" x="0.0" y="62.5" width="414" height="22"/>
+                                    <rect key="frame" x="0.0" y="51.5" width="414" height="44"/>
                                     <state key="normal" image="indicateButton"/>
                                     <connections>
                                         <action selector="indicate:" destination="qxD-kX-6y4" eventType="touchUpInside" id="ati-bF-hQZ"/>
@@ -799,7 +800,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcM-3P-ohO" customClass="SpringButton" customModule="Spring">
-                                    <rect key="frame" x="0.0" y="62.5" width="414" height="22"/>
+                                    <rect key="frame" x="0.0" y="51.5" width="414" height="44"/>
                                     <state key="normal" image="indicateButton"/>
                                     <connections>
                                         <action selector="changePassword:" destination="VhG-V2-gRu" eventType="touchUpInside" id="e2p-d1-UVN"/>
