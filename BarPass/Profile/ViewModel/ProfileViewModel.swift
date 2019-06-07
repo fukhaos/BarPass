@@ -26,6 +26,9 @@ protocol ProfileViewModelProtocol {
     func updatePass(_ oldPass: String, _ newPass: String,
                     onComplete: @escaping (_ message: String) -> Void,
                     onError: @escaping (_ message: String) -> Void)
+    func getAddress(_ lat: Double, _ long: Double,
+                    onComplete: @escaping (Address) -> Void,
+                    onError: @escaping (_ message: String) -> Void)
 }
     
 class ProfileViewModel: ProfileViewModelProtocol {
@@ -182,6 +185,34 @@ class ProfileViewModel: ProfileViewModelProtocol {
                                 }
                                 
                                 onComplete(result.message ?? "Senha atualziada com sucesso!")
+        }) { (response, msg) in
+            SVProgressHUD.dismiss()
+            onError(msg)
+        }
+    }
+    
+    func getAddress(_ lat: Double, _ long: Double,
+                    onComplete: @escaping (Address) -> Void, onError: @escaping (String) -> Void) {
+        let parameters: [String: Any] = [
+            "latitude": lat,
+            "longitude": long
+        ]
+        
+        SVProgressHUD.show()
+        Api().requestCodable(metodo: .wPOST, url: URLs.getAddress, objeto: AddressReturn.self, parametros: parameters,
+                             onSuccess: { (response, result) in
+                                SVProgressHUD.dismiss()
+                                if result.erro ?? false {
+                                    onError(result.message ?? "")
+                                    return
+                                }
+                                
+                                if let address = result.data {
+                                    onComplete(address)
+                                    return
+                                }
+                                
+                                onError("Não foi possível obter a localização")
         }) { (response, msg) in
             SVProgressHUD.dismiss()
             onError(msg)

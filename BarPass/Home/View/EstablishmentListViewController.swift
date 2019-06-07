@@ -16,11 +16,15 @@ class EstablishmentListViewController: RootViewController {
     @IBOutlet weak var leadinBarConstraint: NSLayoutConstraint!
     
     var viewModel: EstablishmentViewModelProtocol!
-    var estabs: [Establishment] = [] {
+    var userViewModel: ProfileViewModelProtocol!
+    var estabs: [Establishment] = []
+    var filteredEstabs: [Establishment] = [] {
         didSet {
             tableView.reloadData()
         }
     }
+    var location: String = ""
+    
     let animationOptions: UIView.AnimationOptions = [.allowAnimatedContent, .preferredFramesPerSecond60, .curveEaseOut]
     
     override func viewDidLoad() {
@@ -28,6 +32,7 @@ class EstablishmentListViewController: RootViewController {
 
         // Do any additional setup after loading the view.
         viewModel = EstablishmentViewModel()
+        userViewModel = ProfileViewModel()
         tableView.tableFooterView = UIView()
         hideKeyboardWhenTappedAround()
     }
@@ -38,10 +43,22 @@ class EstablishmentListViewController: RootViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         searchBar.backgroundImage = UIImage()
         self.tabBarController?.tabBar.isHidden = false
-        viewModel.getStabs(onComplete: { [unowned self] bars in
-            self.estabs = bars
-        }) { (msg) in
-            GlobalAlert(with: self, msg: msg).showAlert()
+        if let userLocation = RootViewController.locationManager.location?.coordinate {
+            let lat = userLocation.latitude
+            let lon = userLocation.longitude
+            
+            userViewModel.getAddress(lat, lon,
+                                     onComplete: { [unowned self] address in
+                                        self.location = address.formatedAddress ?? ""
+                                        self.viewModel.getStabs(onComplete: { [unowned self] bars in
+                                            self.estabs = bars
+                                            self.filteredEstabs = bars
+                                        }) { (msg) in
+                                            GlobalAlert(with: self, msg: msg).showAlert()
+                                        }
+            }) { [unowned self] msg in
+                GlobalAlert(with: self, msg: msg).showAlert()
+            }
         }
     }
     
@@ -81,7 +98,17 @@ extension EstablishmentListViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            filteredEstabs = estabs
+            return
+        }
         
+        let localFiltering = estabs.filter({
+            ($0.name?.lowercased().contains(searchText.lowercased()) ?? false) ||
+            ($0.fullAddress?.lowercased().contains(searchText.lowercased()) ?? false)
+        })
+        
+        filteredEstabs = localFiltering
     }
 }
 
@@ -91,20 +118,20 @@ extension EstablishmentListViewController: UITableViewDataSource,
 UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return estabs.count
+        return filteredEstabs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "reuseCell", for: indexPath)
             as? EstablishmentTableViewCell else {return UITableViewCell()}
-        cell.fillCell(estabs[indexPath.row])
+        cell.fillCell(filteredEstabs[indexPath.row], self.location)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
         
-        viewModel.getStabDetail(with: estabs[indexPath.row].id ?? "",
+        viewModel.getStabDetail(with: filteredEstabs[indexPath.row].id ?? "",
                                 onComplete: { [unowned self] detailed in
                                     self.performSegue(withIdentifier: "segueDetail",
                                                       sender: detailed)

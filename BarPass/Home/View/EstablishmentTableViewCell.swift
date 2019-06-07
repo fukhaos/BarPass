@@ -34,13 +34,13 @@ class EstablishmentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func fillCell(_ bar: Establishment) {
+    func fillCell(_ bar: Establishment, _ location: String = "") {
         estabImage.sd_setImage(with: URL(string: bar.photo?.first ?? "")) { [unowned self] image, error, cache, url in
             self.imageIndicator.stopAnimating()
         }
         estabNameLabel.text = bar.name ?? ""
         locationLabel.text = bar.fullAddress ?? ""
-        shortLocationLabel.text = "local"
+        shortLocationLabel.text = location
         discountLabel.text = " \(bar.discount ?? 0.0) % "
         distanceLabel.text = "\(bar.distance ?? 0.0) km"
     }
