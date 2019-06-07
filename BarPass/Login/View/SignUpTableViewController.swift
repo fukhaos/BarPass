@@ -117,12 +117,16 @@ class SignUpTableViewController: UITableViewController {
             msg = "Preencha nome"
         } else if self.emailField.text == "" {
             msg = "Preencha o email"
+        } else if !(self.emailField.text?.isValidEmail() ?? true){
+            msg = "O email não é válido"
         } else if emailField.text == "" {
             msg = "Preencha o campo nome de usuário"
         } else if passField.text == "" {
             msg = "Preencha a senha"
         } else if confirmPassField.text == ""{
             msg = "Confirme a senha"
+        } else if passField.text?.count ?? 6 < 6 {
+            msg = "A senha deve ao menos ter 6 dígitos"
         } else if passField.text != confirmPassField.text {
             msg = "As senhas são diferentes"
         } else if !checkButton.isSelected {
