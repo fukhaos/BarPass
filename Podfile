@@ -27,6 +27,7 @@ target 'BarPass' do
     pod 'SwiftyGif'
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'InputMask'
     pod 'OneSignal', '>= 2.6.2', '< 3.0'
 
 end

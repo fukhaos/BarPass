@@ -49,6 +49,7 @@ PODS:
   - "GoogleToolboxForMac/NSString+URLArguments (2.2.1)"
   - GTMSessionFetcher/Core (1.2.2)
   - iCarousel (1.8.3)
+  - InputMask (4.2.0)
   - IQKeyboardManagerSwift (6.3.0)
   - OneSignal (2.10.0)
   - Realm (3.15.0):
@@ -78,6 +79,7 @@ DEPENDENCIES:
   - GooglePlaces
   - GoogleSignIn
   - iCarousel
+  - InputMask
   - IQKeyboardManagerSwift
   - OneSignal (< 3.0, >= 2.6.2)
   - RealmSwift
@@ -105,6 +107,7 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GTMSessionFetcher
     - iCarousel
+    - InputMask
     - IQKeyboardManagerSwift
     - OneSignal
     - Realm
@@ -132,6 +135,7 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  InputMask: e585565c05564147722ead0b6e2ffce6cbceae6b
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   OneSignal: 0f5ff711d9f25da54885e4ab06ef0abc221a46ef
   Realm: 9b834e1be6062f544805252c812348872dc5d4ed
@@ -142,6 +146,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyGif: f7702483db93586a41f04f4927cd682852a2fa10
 
-PODFILE CHECKSUM: 87fb8aa58f85b6fcac270b7fd5ef1e0459d870bc
+PODFILE CHECKSUM: d2236c0e728f6debb0d6db52fc33d89db1bab1f5
 
 COCOAPODS: 1.7.1
