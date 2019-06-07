@@ -14,6 +14,8 @@ import SVProgressHUD
 import GoogleMaps
 import GooglePlaces
 import GoogleSignIn
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //fabric
+        Fabric.with([Crashlytics.self])
         
         //base config for SVProgressHUD
         SVProgressHUD.setDefaultStyle(.dark)

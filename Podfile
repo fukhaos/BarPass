@@ -25,6 +25,8 @@ target 'BarPass' do
     pod 'GoogleMaps'
     pod 'GooglePlaces'
     pod 'SwiftyGif'
+    pod 'Fabric'
+    pod 'Crashlytics'
     pod 'OneSignal', '>= 2.6.2', '< 3.0'
 
 end

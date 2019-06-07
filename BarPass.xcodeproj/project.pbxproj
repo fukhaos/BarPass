@@ -586,6 +586,7 @@
 				B26EE00A7780C580D1C7C29E /* [CP] Embed Pods Frameworks */,
 				ED320183684CBBE62D9D4DDC /* [CP] Copy Pods Resources */,
 				BE57F2332295C25B00B3E692 /* Embed App Extensions */,
+				BE119A5F22AAB0E800A24CEE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -707,6 +708,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BarPass/Pods-BarPass-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		BE119A5F22AAB0E800A24CEE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 90ed484256e3abe0a19f73acad5fb9575ac6e448 aa74bd6c8f89c389ccc74dd2b5054802e11e13f9389342d915dd9e3c1722ffbf\n";
 		};
 		D846B48FA4C5D4F9EB25BADC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1016,6 +1034,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BarPass/BarPass.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = JFLZRURJB2;
 				INFOPLIST_FILE = BarPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;

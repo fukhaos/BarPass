@@ -6,6 +6,9 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - Crashlytics (3.13.1):
+    - Fabric (~> 1.10.1)
+  - Fabric (1.10.1)
   - FacebookCore (0.5.0):
     - Bolts (~> 1.9)
     - FBSDKCoreKit (~> 4.37)
@@ -64,6 +67,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Bolts (~> 1.9.0)
+  - Crashlytics
+  - Fabric
   - FacebookCore
   - FacebookLogin
   - FacebookShare
@@ -86,6 +91,8 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Bolts
+    - Crashlytics
+    - Fabric
     - FacebookCore
     - FacebookLogin
     - FacebookShare
@@ -111,6 +118,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Crashlytics: 5aa8e90dcbf2f34898b4f5a0037787531246cca0
+  Fabric: f6f21452846788bb44595d73e9909d79d328e617
   FacebookCore: 74288d0add931d361b1596beae787ab72c438249
   FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
   FacebookShare: 963b4bb1124a64a395b1e428163d70b5774116e8
@@ -133,6 +142,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyGif: f7702483db93586a41f04f4927cd682852a2fa10
 
-PODFILE CHECKSUM: 52fb63b08ad1249b952c6bda99fb9421095ef555
+PODFILE CHECKSUM: 87fb8aa58f85b6fcac270b7fd5ef1e0459d870bc
 
-COCOAPODS: 1.7.0
+COCOAPODS: 1.7.1
