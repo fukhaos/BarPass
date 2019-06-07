@@ -37,6 +37,8 @@ class ProfileTableViewController: UITableViewController {
         let user = RealmUtils().getUser()
         picButton.sd_setImage(with: URL(string: user.photo ?? ""), for: .normal,
                               completed: nil)
+        nameLabel.text = user.fullName
+        codLabel.text = "Código ID: \(user.codID ?? "")"
     }
     
     @IBAction func signPremium(_ sender: Any) {
@@ -58,6 +60,12 @@ class ProfileTableViewController: UITableViewController {
         }))
         alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ProfileDetailTableViewController {
+            vc.fileName = self.fileName
+        }
     }
     
     // MARK: - Table view data source

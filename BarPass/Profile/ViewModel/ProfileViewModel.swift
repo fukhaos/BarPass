@@ -20,6 +20,9 @@ protocol ProfileViewModelProtocol {
     func updateUserPhoto(with fileName: String,
                          onComplete: @escaping () -> Void,
                    onError: @escaping (_ message: String) -> Void)
+    func updateUser(_ user: User,
+                         onComplete: @escaping () -> Void,
+                         onError: @escaping (_ message: String) -> Void)
 }
 
 class ProfileViewModel: ProfileViewModelProtocol {
@@ -95,14 +98,63 @@ class ProfileViewModel: ProfileViewModelProtocol {
         ]
         
         SVProgressHUD.show()
-        Api().requestCodable(metodo: .wPOST, url: URLs.updateUserPic, objeto: DefaultReturn.self, parametros: parameters,
+        Api().requestCodable(metodo: .wPOST, url: URLs.updateUserPic, objeto: InfoReturn.self, parametros: parameters,
                              onSuccess: { (response, result) in
                                 SVProgressHUD.dismiss()
                                 if result.erro ?? false {
                                     onError(result.message ?? "")
                                     return
                                 }
-                                onComplete()
+                                
+                                
+                                if let user = result.data {
+                                    
+                                    RealmUtils().save(user,
+                                                      onComplete: {
+                                                    onComplete()
+                                    }, onError: { (msg) in
+                                        SVProgressHUD.dismiss()
+                                        onError(msg)
+                                    })
+                                }
+        }) { (response, msg) in
+            SVProgressHUD.dismiss()
+            onError(msg)
+        }
+    }
+    
+    func updateUser(_ user: User,
+                    onComplete: @escaping () -> Void, onError: @escaping (String) -> Void) {
+        
+        let parameters: [String: Any] = [
+            "sendSMS": user.sendSMS,
+            "sendEmail": user.sendEmail,
+            "notification": user.notification,
+            "fullName": user.fullName ?? "",
+            "email": user.email ?? "",
+            "photo": user.photo ?? ""
+        ]
+        
+        SVProgressHUD.show()
+        Api().requestCodable(metodo: .wPOST, url: URLs.updateUser, objeto: InfoReturn.self, parametros: parameters,
+                             onSuccess: { (response, result) in
+                                SVProgressHUD.dismiss()
+                                if result.erro ?? false {
+                                    onError(result.message ?? "")
+                                    return
+                                }
+                                
+                                
+                                if let user = result.data {
+                                    
+                                    RealmUtils().save(user,
+                                                      onComplete: {
+                                                        onComplete()
+                                    }, onError: { (msg) in
+                                        SVProgressHUD.dismiss()
+                                        onError(msg)
+                                    })
+                                }
         }) { (response, msg) in
             SVProgressHUD.dismiss()
             onError(msg)
