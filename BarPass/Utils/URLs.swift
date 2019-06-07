@@ -34,6 +34,7 @@ enum URLs {
     static let deleteUser = "\(apiEndPoint)/Profile/Delete"
     static let updateUser = "\(apiEndPoint)/Profile/Update"
     static let updateUserPic = "\(apiEndPoint)/Profile/UpdatePhoto"
+    static let changePass = "\(apiEndPoint)/Profile/ChangePassword"
     
     //stablishment
     static let getStabs = "\(apiEndPoint)/Establishment/GetAll"

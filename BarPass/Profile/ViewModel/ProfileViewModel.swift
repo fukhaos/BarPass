@@ -23,8 +23,11 @@ protocol ProfileViewModelProtocol {
     func updateUser(_ user: User,
                          onComplete: @escaping () -> Void,
                          onError: @escaping (_ message: String) -> Void)
+    func updatePass(_ oldPass: String, _ newPass: String,
+                    onComplete: @escaping (_ message: String) -> Void,
+                    onError: @escaping (_ message: String) -> Void)
 }
-
+    
 class ProfileViewModel: ProfileViewModelProtocol {
     
     func indicatePub(pub: [String: Any], onComplete: @escaping (String) -> Void,
@@ -155,6 +158,30 @@ class ProfileViewModel: ProfileViewModelProtocol {
                                         onError(msg)
                                     })
                                 }
+        }) { (response, msg) in
+            SVProgressHUD.dismiss()
+            onError(msg)
+        }
+    }
+    
+    func updatePass(_ oldPass: String, _ newPass: String,
+                    onComplete: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
+        
+        let parameters: [String: Any] = [
+            "currentPassword": oldPass,
+            "newPassword": newPass
+        ]
+        
+        SVProgressHUD.show()
+        Api().requestCodable(metodo: .wPOST, url: URLs.changePass, objeto: DefaultReturn.self, parametros: parameters,
+                             onSuccess: { (response, result) in
+                                SVProgressHUD.dismiss()
+                                if result.erro ?? false {
+                                    onError(result.message ?? "")
+                                    return
+                                }
+                                
+                                onComplete(result.message ?? "Senha atualziada com sucesso!")
         }) { (response, msg) in
             SVProgressHUD.dismiss()
             onError(msg)
