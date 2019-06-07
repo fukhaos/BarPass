@@ -14,6 +14,12 @@ protocol ProfileViewModelProtocol {
                     onError: @escaping (_ message: String) -> Void)
     func indicatePub(pub: [String: Any], onComplete: @escaping (_ msg: String) -> Void,
                      onError: @escaping (_ msg: String) -> Void)
+    func uploadPic(with image: UIImage,
+                   onComplete: @escaping (_ fileName: String) -> Void,
+                   onError: @escaping (_ message: String) -> Void)
+    func updateUserPhoto(with fileName: String,
+                         onComplete: @escaping () -> Void,
+                   onError: @escaping (_ message: String) -> Void)
 }
 
 class ProfileViewModel: ProfileViewModelProtocol {
@@ -39,7 +45,8 @@ class ProfileViewModel: ProfileViewModelProtocol {
         }
     }
 
-    func getInfo(onComplete: @escaping (UserCodable) -> Void, onError: @escaping (String) -> Void) {
+    func getInfo(onComplete: @escaping (UserCodable) -> Void,
+                 onError: @escaping (String) -> Void) {
         let parameters: [String: Any] = [:]
         
         SVProgressHUD.show()
@@ -50,6 +57,52 @@ class ProfileViewModel: ProfileViewModelProtocol {
                                     onError(result.message ?? "")
                                     return
                                 }
+                                
+                                if let user = result.data {
+                                    onComplete(user)
+                                    return
+                                }
+                                
+                                onError("Não foi possível concluir o procedimento, tente novamente")
+        }) { (response, msg) in
+            SVProgressHUD.dismiss()
+            onError(msg)
+        }
+    }
+    
+    func uploadPic(with image: UIImage, onComplete: @escaping (_ fileName: String) -> Void,
+                   onError: @escaping (String) -> Void) {
+        
+        SVProgressHUD.show()
+        Api().uploadImage(image, onSuccess: { (imageData) in
+            SVProgressHUD.dismiss()
+            if let json = imageData, let fileName = json.fileName {
+                onComplete(fileName)
+                return
+            }
+            onError("ERRO")
+        }) { (error) in
+            SVProgressHUD.dismiss()
+            onError(error.localizedDescription)
+        }
+    }
+    
+    func updateUserPhoto(with fileName: String, onComplete: @escaping () -> Void,
+                         onError: @escaping (String) -> Void) {
+        
+        let parameters: [String: Any] = [
+            "photo": fileName
+        ]
+        
+        SVProgressHUD.show()
+        Api().requestCodable(metodo: .wPOST, url: URLs.updateUserPic, objeto: DefaultReturn.self, parametros: parameters,
+                             onSuccess: { (response, result) in
+                                SVProgressHUD.dismiss()
+                                if result.erro ?? false {
+                                    onError(result.message ?? "")
+                                    return
+                                }
+                                onComplete()
         }) { (response, msg) in
             SVProgressHUD.dismiss()
             onError(msg)

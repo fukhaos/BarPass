@@ -11,14 +11,22 @@ import Spring
 
 class ProfileTableViewController: UITableViewController {
 
-    @IBOutlet weak var profileImage: SpringImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var codLabel: UILabel!
     @IBOutlet weak var premiumButton: SpringButton!
+    @IBOutlet weak var picButton: UIButton!
+    
+    var viewModel: ProfileViewModelProtocol!
+    var imagePicker = UIImagePickerController()
+    var picture: UIImage!
+    var fileName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        imagePicker.delegate = self
+        viewModel = ProfileViewModel()
+        picButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,15 +35,26 @@ class ProfileTableViewController: UITableViewController {
         self.tabBarController?.tabBar.isHidden = false
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
-
-    @IBAction func tappedImage(_ sender: UITapGestureRecognizer) {
-        profileImage.animation = "pop"
-        profileImage.animate()
-    }
     
     @IBAction func signPremium(_ sender: Any) {
         premiumButton.animation = "pop"
         premiumButton.animate()
+    }
+    
+    @IBAction func addNewPic(_ sender: Any) {
+        let alert = UIAlertController(title: "Incluir imagem", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+        alert.addAction(UIAlertAction(title: "Galeria", style: UIAlertAction.Style.default, handler: { action in
+            self.imagePicker.allowsEditing = true
+            self.imagePicker.sourceType = .photoLibrary
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Camera", style: UIAlertAction.Style.default, handler: { action in
+            self.imagePicker.allowsEditing = true
+            self.imagePicker.sourceType = .camera
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: - Table view data source
@@ -60,6 +79,41 @@ class ProfileTableViewController: UITableViewController {
             }))
             alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
+        }
+    }
+}
+
+// MARK: - <#UIImagePickerControllerDelegate, UINavigationControllerDelegate#>
+extension ProfileTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pic = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            let image = pic.fixedOrientation()
+            viewModel.uploadPic(with: image, onComplete: { [unowned self] fileName in
+                DispatchQueue.main.async {
+                    self.picture = image
+                    self.fileName = fileName
+                }
+    
+                self.viewModel.updateUserPhoto(with: fileName,
+                                               onComplete: {
+                                                DispatchQueue.main.async {
+                                                    self.picButton.setImage(self.picture, for: .normal)
+                                                    
+                                                }
+                                              self.imagePicker.dismiss(animated: true, completion: nil)
+                }, onError: { (msg) in
+                    self.imagePicker.dismiss(animated: true, completion: {
+                        GlobalAlert(with: self, msg: msg).showAlert()
+                    })
+                })
+        
+            }) { [unowned self] msg in
+                self.imagePicker.dismiss(animated: true, completion: {
+                    GlobalAlert(with: self, msg: msg).showAlert()
+                })
+            }
         }
     }
 }
