@@ -46,7 +46,7 @@ class SignUpTableViewController: UITableViewController {
             .foregroundColor: UIColor(white: 36.0 / 255.0, alpha: 1.0)
             ])
         attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 14.0, weight: .bold), range: NSRange(location: 24, length: 14))
-        signUpButton.setAttributedTitle(attributedString, for: .normal)
+        useAndTermsButton.setAttributedTitle(attributedString, for: .normal)
         
         if facebookId != nil || googleId != nil {
             guard let name = name else {return}
