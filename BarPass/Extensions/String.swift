@@ -35,13 +35,20 @@ extension String {
     }
     
     func makeACall() {
-        if isValid(regex: .phone) {
-            if let url = URL(string: "tel://\(self.onlyDigits())"), UIApplication.shared.canOpenURL(url) {
-                if #available(iOS 10, *) {
-                    UIApplication.shared.open(url)
-                } else {
-                    UIApplication.shared.openURL(url)
-                }
+//        if isValid(regex: .phone) {
+//            if let url = URL(string: "tel://\(self.onlyDigits())"), UIApplication.shared.canOpenURL(url) {
+//                if #available(iOS 10, *) {
+//                    UIApplication.shared.open(url)
+//                } else {
+//                    UIApplication.shared.openURL(url)
+//                }
+//            }
+//        }
+        if let url = URL(string: "tel://\(self.onlyDigits())"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
             }
         }
     }

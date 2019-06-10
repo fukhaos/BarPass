@@ -417,7 +417,7 @@
                 <customObject id="hHc-E2-Ar1" customClass="MaskedTextFieldDelegate" customModule="InputMask">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="autocomplete" value="YES"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="primaryMaskFormat" value="{([00])}{ }[0]{ }[0000]{-}[0000]"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="primaryMaskFormat" value="{([00])}{ }[00000]{-}[0000]"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="delegate" destination="qxD-kX-6y4" id="qNf-Dn-bXK"/>
