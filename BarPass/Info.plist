@@ -17,13 +17,13 @@
 		</array>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Precisamos da sua localização para encontrar bares mais próximas de você.</string>
+	<string>Precisamos da sua localização para encontrar bares mais próximos de você.</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>Você precisa fornecer acesso à sua camera para personalizar sua foto de perfil.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Você precisa fornecer acesso à sua camera para personalizar sua foto de perfil.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Precisamos da sua localização para encontrar bares mais próximas de você.</string>
+	<string>Precisamos da sua localização para encontrar bares mais próximos de você.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
