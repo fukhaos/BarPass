@@ -623,25 +623,25 @@ Bairro: Itaim Bibi</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="N8q-bP-FGW">
-                                                    <rect key="frame" x="23" y="140" width="108" height="44"/>
+                                                    <rect key="frame" x="23" y="140" width="95.5" height="44"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnO-U2-fyc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="44"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="13.5" height="44"/>
                                                             <state key="normal" image="starOff"/>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkd-8P-y5c">
-                                                            <rect key="frame" x="23" y="0.0" width="16" height="44"/>
+                                                            <rect key="frame" x="20.5" y="0.0" width="13.5" height="44"/>
                                                             <state key="normal" image="starOff"/>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zas-iE-s69">
-                                                            <rect key="frame" x="46" y="0.0" width="16" height="44"/>
+                                                            <rect key="frame" x="41" y="0.0" width="13.5" height="44"/>
                                                             <state key="normal" image="starOff"/>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pz-7P-MPq">
-                                                            <rect key="frame" x="69" y="0.0" width="16" height="44"/>
+                                                            <rect key="frame" x="61.5" y="0.0" width="13.5" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="44" id="WfH-Px-zGv"/>
                                                             </constraints>
@@ -649,14 +649,14 @@ Bairro: Itaim Bibi</string>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZY-EH-KYe">
-                                                            <rect key="frame" x="92" y="0.0" width="16" height="44"/>
+                                                            <rect key="frame" x="82" y="0.0" width="13.5" height="44"/>
                                                             <state key="normal" image="starOff"/>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.9(55)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUT-i8-q9L">
-                                                    <rect key="frame" x="139" y="156" width="36" height="12"/>
+                                                    <rect key="frame" x="126.5" y="156" width="36" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -694,12 +694,6 @@ Bairro: Itaim Bibi</string>
                                                         <constraint firstAttribute="width" constant="14" id="GIP-Id-i7s"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(11) 3785-2535" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OP-PM-Q6P">
-                                                    <rect key="frame" x="44" y="362.5" width="116.5" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                                    <color key="textColor" red="0.66666666669999997" green="0.67450980390000004" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconEmail" translatesAutoresizingMaskIntoConstraints="NO" id="8l7-vC-WNJ">
                                                     <rect key="frame" x="20" y="390" width="14" height="20"/>
                                                     <constraints>
@@ -707,12 +701,6 @@ Bairro: Itaim Bibi</string>
                                                         <constraint firstAttribute="height" constant="20" id="Jkr-pM-686"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bardataverna@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T75-4d-DLJ">
-                                                    <rect key="frame" x="44" y="390.5" width="350" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                                    <color key="textColor" red="0.66666666669999997" green="0.67450980390000004" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconRelogio" translatesAutoresizingMaskIntoConstraints="NO" id="LyH-M4-w11">
                                                     <rect key="frame" x="20" y="418" width="14" height="20"/>
                                                     <constraints>
@@ -734,10 +722,33 @@ Bairro: Itaim Bibi</string>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TI6-6f-koo">
-                                                    <rect key="frame" x="199" y="713" width="16" height="22"/>
+                                                    <rect key="frame" x="82.5" y="713" width="249" height="44"/>
                                                     <state key="normal" image="botaoComoChegar"/>
                                                     <connections>
                                                         <action selector="directions:" destination="TEj-c6-rtN" eventType="touchUpInside" id="g7i-aJ-KmZ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJ8-DN-4hD">
+                                                    <rect key="frame" x="40" y="356" width="183" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="183" id="AQK-ZG-qwa"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <state key="normal" title="(11) 3785-2535">
+                                                        <color key="titleColor" red="0.66666666666666663" green="0.67450980392156867" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="makeCall:" destination="TEj-c6-rtN" eventType="touchUpInside" id="Enm-U7-gCD"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umf-z2-A4L">
+                                                    <rect key="frame" x="44" y="384" width="190" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <state key="normal" title="bardataverna@gmail.com">
+                                                        <color key="titleColor" red="0.66666666669999997" green="0.67450980390000004" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="makeAEmail:" destination="TEj-c6-rtN" eventType="touchUpInside" id="WMe-Hi-FDP"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -745,12 +756,11 @@ Bairro: Itaim Bibi</string>
                                                 <constraint firstItem="TMV-gJ-Yaw" firstAttribute="top" secondItem="LyH-M4-w11" secondAttribute="bottom" constant="30" id="2tf-HY-6N9"/>
                                                 <constraint firstItem="shv-ku-hbB" firstAttribute="leading" secondItem="hzD-SM-P8b" secondAttribute="leading" id="4yD-oK-S8W"/>
                                                 <constraint firstItem="TI6-6f-koo" firstAttribute="centerX" secondItem="6Nn-eh-M3n" secondAttribute="centerX" id="7GL-k3-byL"/>
+                                                <constraint firstItem="eJ8-DN-4hD" firstAttribute="leading" secondItem="shv-ku-hbB" secondAttribute="trailing" constant="6" id="8SI-gu-kq0"/>
                                                 <constraint firstItem="bfR-bX-lq4" firstAttribute="centerY" secondItem="hzD-SM-P8b" secondAttribute="centerY" id="9Vm-fG-ADu"/>
                                                 <constraint firstItem="QQZ-8V-x39" firstAttribute="leading" secondItem="LyH-M4-w11" secondAttribute="trailing" constant="10" id="ASk-7b-re4"/>
                                                 <constraint firstItem="QQZ-8V-x39" firstAttribute="centerY" secondItem="LyH-M4-w11" secondAttribute="centerY" id="Aky-Qj-bu9"/>
-                                                <constraint firstItem="T75-4d-DLJ" firstAttribute="leading" secondItem="8l7-vC-WNJ" secondAttribute="trailing" constant="10" id="BPn-QT-O2U"/>
                                                 <constraint firstItem="A8g-Ep-Jyb" firstAttribute="top" secondItem="cha-Mj-t5M" secondAttribute="bottom" constant="3" id="CN9-HW-bwZ"/>
-                                                <constraint firstItem="1OP-PM-Q6P" firstAttribute="leading" secondItem="shv-ku-hbB" secondAttribute="trailing" constant="10" id="DOn-Kj-7o3"/>
                                                 <constraint firstItem="8l7-vC-WNJ" firstAttribute="leading" secondItem="6Nn-eh-M3n" secondAttribute="leadingMargin" id="FhI-Vn-CxB"/>
                                                 <constraint firstItem="xqx-2D-6qu" firstAttribute="leading" secondItem="6Nn-eh-M3n" secondAttribute="leadingMargin" id="HAz-5z-YZa"/>
                                                 <constraint firstItem="OZr-6a-QKQ" firstAttribute="top" secondItem="N8q-bP-FGW" secondAttribute="bottom" constant="34" id="Hjy-Wh-h6S"/>
@@ -767,15 +777,15 @@ Bairro: Itaim Bibi</string>
                                                 <constraint firstItem="cha-Mj-t5M" firstAttribute="top" secondItem="xqx-2D-6qu" secondAttribute="bottom" constant="14" id="dno-Vl-APl"/>
                                                 <constraint firstItem="cha-Mj-t5M" firstAttribute="leading" secondItem="6Nn-eh-M3n" secondAttribute="leadingMargin" id="g1f-tB-6MI"/>
                                                 <constraint firstItem="xqx-2D-6qu" firstAttribute="top" secondItem="6Nn-eh-M3n" secondAttribute="topMargin" constant="1" id="gfF-DL-HZG"/>
-                                                <constraint firstItem="T75-4d-DLJ" firstAttribute="trailing" secondItem="6Nn-eh-M3n" secondAttribute="trailingMargin" id="gyB-Om-IbM"/>
+                                                <constraint firstItem="Umf-z2-A4L" firstAttribute="centerY" secondItem="8l7-vC-WNJ" secondAttribute="centerY" id="gkJ-Qx-ZkZ"/>
                                                 <constraint firstItem="CUT-i8-q9L" firstAttribute="centerY" secondItem="N8q-bP-FGW" secondAttribute="centerY" id="i7f-qN-vto"/>
                                                 <constraint firstAttribute="trailing" secondItem="qSe-65-FOY" secondAttribute="trailing" constant="20" id="kOP-UV-Lg1"/>
+                                                <constraint firstItem="eJ8-DN-4hD" firstAttribute="centerY" secondItem="shv-ku-hbB" secondAttribute="centerY" id="kVH-JB-cir"/>
                                                 <constraint firstItem="OZr-6a-QKQ" firstAttribute="leading" secondItem="6Nn-eh-M3n" secondAttribute="leadingMargin" id="lJ3-x7-Mo0"/>
+                                                <constraint firstItem="Umf-z2-A4L" firstAttribute="leading" secondItem="8l7-vC-WNJ" secondAttribute="trailing" constant="10" id="mUq-5I-CbJ"/>
                                                 <constraint firstItem="N8q-bP-FGW" firstAttribute="top" secondItem="A8g-Ep-Jyb" secondAttribute="bottom" constant="13" id="n23-FR-y5e"/>
                                                 <constraint firstItem="A8g-Ep-Jyb" firstAttribute="leading" secondItem="cha-Mj-t5M" secondAttribute="leading" id="qN1-s0-0Hd"/>
-                                                <constraint firstItem="T75-4d-DLJ" firstAttribute="centerY" secondItem="8l7-vC-WNJ" secondAttribute="centerY" id="sW8-WU-1xC"/>
                                                 <constraint firstItem="shv-ku-hbB" firstAttribute="top" secondItem="hzD-SM-P8b" secondAttribute="bottom" constant="8" id="shb-pV-kS1"/>
-                                                <constraint firstItem="1OP-PM-Q6P" firstAttribute="centerY" secondItem="shv-ku-hbB" secondAttribute="centerY" id="tFN-OV-rFT"/>
                                                 <constraint firstItem="hzD-SM-P8b" firstAttribute="top" secondItem="OZr-6a-QKQ" secondAttribute="bottom" constant="30" id="tNL-0n-mbv"/>
                                                 <constraint firstItem="N8q-bP-FGW" firstAttribute="leading" secondItem="6Nn-eh-M3n" secondAttribute="leading" constant="23" id="upP-wx-GsN"/>
                                                 <constraint firstItem="LyH-M4-w11" firstAttribute="leading" secondItem="6Nn-eh-M3n" secondAttribute="leadingMargin" id="wXf-f0-uAJ"/>
@@ -799,12 +809,12 @@ Bairro: Itaim Bibi</string>
                         <outlet property="detailLabel" destination="OZr-6a-QKQ" id="OJL-G1-FCY"/>
                         <outlet property="discountLabel" destination="A8g-Ep-Jyb" id="1lv-7t-CBR"/>
                         <outlet property="distanceLabel" destination="qSe-65-FOY" id="WMR-wW-Okm"/>
-                        <outlet property="emailLabel" destination="T75-4d-DLJ" id="Pnr-ul-VDQ"/>
+                        <outlet property="emailButton" destination="Umf-z2-A4L" id="gqw-qH-CR5"/>
                         <outlet property="likeButton" destination="Xfr-HD-3I8" id="NnX-lO-Vab"/>
                         <outlet property="locationLabel" destination="bfR-bX-lq4" id="zhZ-Kf-tNM"/>
                         <outlet property="mapContainer" destination="TMV-gJ-Yaw" id="Ax3-Ir-foY"/>
                         <outlet property="nameLabel" destination="cha-Mj-t5M" id="8ue-2V-Bgh"/>
-                        <outlet property="numberLabel" destination="1OP-PM-Q6P" id="cVN-JA-ZRM"/>
+                        <outlet property="numberButton" destination="eJ8-DN-4hD" id="Xr6-CM-ptq"/>
                         <outlet property="pageControl" destination="vXk-OU-kC3" id="XlZ-yl-6IG"/>
                     </connections>
                 </tableViewController>

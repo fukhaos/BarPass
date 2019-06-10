@@ -10,6 +10,7 @@ import UIKit
 import iCarousel
 import Spring
 import GoogleMaps
+import MessageUI
 
 class EstablishmentDetailTableViewController: UITableViewController {
     
@@ -21,8 +22,8 @@ class EstablishmentDetailTableViewController: UITableViewController {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var numberButton: UIButton!
+    @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var mapContainer: GMSMapView!
     
@@ -38,8 +39,8 @@ class EstablishmentDetailTableViewController: UITableViewController {
         distanceLabel.text = "\(bar.distance ?? 0.0) Km de você"
         detailLabel.text = bar.description
         locationLabel.text = bar.fullAddress
-        numberLabel.text = bar.phone
-        emailLabel.text = bar.email
+        numberButton.setTitle(bar.phone ?? "", for: .normal)
+        emailButton.setTitle(bar.email ?? "", for: .normal)
         dateLabel.text = bar.description
         pageControl.numberOfPages = bar.photo?.count ?? 0
         
@@ -77,6 +78,28 @@ class EstablishmentDetailTableViewController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func makeCall(_ sender: Any) {
+        bar.phone?.makeACall()
+    }
+    
+    @IBAction func makeAEmail(_ sender: Any) {
+        sendEmail()
+    }
+    
+    private func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([bar.email ?? ""])
+            mail.setSubject("Contato Barpass")
+            
+            present(mail, animated: true)
+            
+        } else {
+           GlobalAlert(with: self, msg: "Não foi possível abrir o mail").showAlert()
+        }
+    }
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -89,6 +112,8 @@ class EstablishmentDetailTableViewController: UITableViewController {
     }
 }
 
+
+// MARK: - <#iCarouselDelegate, iCarouselDataSource#>
 extension EstablishmentDetailTableViewController: iCarouselDelegate, iCarouselDataSource {
     
     func numberOfItems(in carousel: iCarousel) -> Int {
@@ -116,6 +141,8 @@ extension EstablishmentDetailTableViewController: iCarouselDelegate, iCarouselDa
     }
 }
 
+
+// MARK: - <#GMSMapViewDelegate#>
 extension EstablishmentDetailTableViewController: GMSMapViewDelegate {
     
     func setInitialLocation(lat: Double, long: Double) {
@@ -127,5 +154,13 @@ extension EstablishmentDetailTableViewController: GMSMapViewDelegate {
         let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: lat,
                                                                 longitude:long))
         marker.map = mapContainer
+    }
+}
+
+
+// MARK: - <#MFMailComposeViewControllerDelegate#>
+extension EstablishmentDetailTableViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
