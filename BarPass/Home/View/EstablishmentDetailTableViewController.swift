@@ -129,7 +129,7 @@ extension EstablishmentDetailTableViewController: iCarouselDelegate, iCarouselDa
         let frame = CGRect(x: 0, y: 0, width: carouselView.bounds.width, height: 200)
         let imageView = UIImageView()
         imageView.frame = frame
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         imageView.sd_setImage(with: URL(string: pics[index]), completed: nil)
         tempView.addSubview(imageView)
         

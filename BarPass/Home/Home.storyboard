@@ -544,16 +544,16 @@ Bairro: Itaim Bibi</string>
         <scene sceneID="HIt-SN-YWu">
             <objects>
                 <tableViewController storyboardIdentifier="EstablishmentDetailTableViewController" id="TEj-c6-rtN" customClass="EstablishmentDetailTableViewController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8oG-od-1p6">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" id="8oG-od-1p6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Rtk-e4-YAb">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fs7-1v-xye" customClass="iCarousel">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <outlet property="dataSource" destination="TEj-c6-rtN" id="Gqe-WU-E9S"/>
@@ -573,27 +573,27 @@ Bairro: Itaim Bibi</string>
                                     </connections>
                                 </button>
                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vXk-OU-kC3">
-                                    <rect key="frame" x="187.5" y="173" width="39" height="37"/>
+                                    <rect key="frame" x="187.5" y="163" width="39" height="37"/>
                                     <color key="currentPageIndicatorTintColor" red="0.99215686270000003" green="0.45882352939999999" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </pageControl>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="fs7-1v-xye" secondAttribute="bottom" id="3uC-G8-ACd"/>
+                                <constraint firstItem="vXk-OU-kC3" firstAttribute="bottom" secondItem="fs7-1v-xye" secondAttribute="bottom" id="CLC-f5-ylj"/>
                                 <constraint firstItem="fs7-1v-xye" firstAttribute="leading" secondItem="Rtk-e4-YAb" secondAttribute="leading" id="Dqi-E2-lme"/>
                                 <constraint firstAttribute="trailing" secondItem="fs7-1v-xye" secondAttribute="trailing" id="KdU-hh-kY0"/>
                                 <constraint firstItem="fs7-1v-xye" firstAttribute="top" secondItem="Rtk-e4-YAb" secondAttribute="top" id="UdK-fx-1UE"/>
                                 <constraint firstAttribute="trailing" secondItem="Xfr-HD-3I8" secondAttribute="trailing" constant="15" id="eQH-fT-cla"/>
-                                <constraint firstAttribute="bottom" secondItem="fs7-1v-xye" secondAttribute="bottom" id="g56-uJ-mDP"/>
                                 <constraint firstItem="vXk-OU-kC3" firstAttribute="centerX" secondItem="Rtk-e4-YAb" secondAttribute="centerX" id="m4R-47-SiC"/>
                                 <constraint firstItem="Xfr-HD-3I8" firstAttribute="top" secondItem="Rtk-e4-YAb" secondAttribute="top" constant="18" id="nnp-iw-i86"/>
-                                <constraint firstAttribute="bottom" secondItem="vXk-OU-kC3" secondAttribute="bottom" id="vYn-aE-Fux"/>
                             </constraints>
                         </view>
                         <sections>
                             <tableViewSection id="JKo-0c-HYh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="850" id="IHp-YK-9qz">
-                                        <rect key="frame" x="0.0" y="210" width="414" height="850"/>
+                                        <rect key="frame" x="0.0" y="200" width="414" height="850"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IHp-YK-9qz" id="6Nn-eh-M3n">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
@@ -741,8 +741,8 @@ Bairro: Itaim Bibi</string>
                                                         <action selector="makeCall:" destination="TEj-c6-rtN" eventType="touchUpInside" id="Enm-U7-gCD"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umf-z2-A4L">
-                                                    <rect key="frame" x="44" y="384" width="190" height="32"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umf-z2-A4L">
+                                                    <rect key="frame" x="44" y="384" width="350" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                     <state key="normal" title="bardataverna@gmail.com">
                                                         <color key="titleColor" red="0.66666666669999997" green="0.67450980390000004" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -772,6 +772,7 @@ Bairro: Itaim Bibi</string>
                                                 <constraint firstItem="CUT-i8-q9L" firstAttribute="leading" secondItem="N8q-bP-FGW" secondAttribute="trailing" constant="8" id="S41-wq-gzJ"/>
                                                 <constraint firstItem="bfR-bX-lq4" firstAttribute="trailing" secondItem="6Nn-eh-M3n" secondAttribute="trailingMargin" id="SJ5-ZP-0L8"/>
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="TI6-6f-koo" secondAttribute="bottom" constant="10" id="TKq-dI-niI"/>
+                                                <constraint firstItem="Umf-z2-A4L" firstAttribute="trailing" secondItem="6Nn-eh-M3n" secondAttribute="trailingMargin" id="UoE-DP-42g"/>
                                                 <constraint firstItem="hzD-SM-P8b" firstAttribute="leading" secondItem="6Nn-eh-M3n" secondAttribute="leadingMargin" id="ZuY-Co-RLj"/>
                                                 <constraint firstItem="TI6-6f-koo" firstAttribute="top" secondItem="TMV-gJ-Yaw" secondAttribute="bottom" constant="22" id="aQh-tO-G4Q"/>
                                                 <constraint firstItem="cha-Mj-t5M" firstAttribute="top" secondItem="xqx-2D-6qu" secondAttribute="bottom" constant="14" id="dno-Vl-APl"/>
