@@ -423,14 +423,14 @@ Bairro: Itaim Bibi</string>
                                                             <color key="textColor" red="0.66666666666666663" green="0.67450980392156867" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Bar do Cofre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPF-FW-j4E">
-                                                            <rect key="frame" x="123" y="18" width="89" height="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Bar do Cofre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="EPF-FW-j4E">
+                                                            <rect key="frame" x="123" y="18" width="241" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                                             <color key="textColor" red="0.27843137254901962" green="0.18823529411764706" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLocal" translatesAutoresizingMaskIntoConstraints="NO" id="bIV-33-56j">
-                                                            <rect key="frame" x="123" y="74" width="9" height="16"/>
+                                                            <rect key="frame" x="123" y="72" width="9" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="9" id="rAP-2r-Sh4"/>
                                                             </constraints>
@@ -466,6 +466,7 @@ Bairro: Itaim Bibi</string>
                                                         <constraint firstItem="TsF-mR-S7m" firstAttribute="centerY" secondItem="bIV-33-56j" secondAttribute="centerY" id="Je4-UR-rwb"/>
                                                         <constraint firstItem="bIV-33-56j" firstAttribute="leading" secondItem="hez-Ee-EhK" secondAttribute="leading" id="Lbu-K1-CtH"/>
                                                         <constraint firstItem="cu0-uJ-BYb" firstAttribute="centerX" secondItem="UeL-Bt-F8X" secondAttribute="centerX" id="Oye-Jy-nPX"/>
+                                                        <constraint firstAttribute="trailing" secondItem="EPF-FW-j4E" secondAttribute="trailing" constant="10" id="PBo-4j-q0f"/>
                                                         <constraint firstItem="EPF-FW-j4E" firstAttribute="top" secondItem="NuC-lc-fSL" secondAttribute="top" constant="18" id="Pff-Vv-Pre"/>
                                                         <constraint firstItem="hez-Ee-EhK" firstAttribute="leading" secondItem="EPF-FW-j4E" secondAttribute="leading" id="Tft-Vr-Wuy"/>
                                                         <constraint firstItem="cu0-uJ-BYb" firstAttribute="centerY" secondItem="UeL-Bt-F8X" secondAttribute="centerY" id="Tpe-4c-FOv"/>
