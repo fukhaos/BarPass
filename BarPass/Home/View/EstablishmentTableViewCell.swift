@@ -42,7 +42,7 @@ class EstablishmentTableViewCell: UITableViewCell {
         locationLabel.text = bar.fullAddress ?? ""
         shortLocationLabel.text = location
         discountLabel.text = " \(bar.discount ?? 0.0) % "
-        distanceLabel.text = "\(bar.distance ?? 0.0) km"
+        distanceLabel.text = "\(bar.distance?.rounded() ?? 0.0) km"
     }
 
 }
