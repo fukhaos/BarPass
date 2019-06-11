@@ -35,6 +35,8 @@ class EstablishmentListViewController: RootViewController {
         userViewModel = ProfileViewModel()
         tableView.tableFooterView = UIView()
         hideKeyboardWhenTappedAround()
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,6 +86,7 @@ extension EstablishmentListViewController: UISearchBarDelegate {
             
             self.logoImage.alpha = 0
             self.leadinBarConstraint.constant = 20
+            self.searchBar.setShowsCancelButton(true, animated: true)
             self.layoutIfNeededViews()
         }, completion: nil)
     }
@@ -93,6 +96,7 @@ extension EstablishmentListViewController: UISearchBarDelegate {
             
             self.logoImage.alpha = 1
             self.leadinBarConstraint.constant = 134
+            self.searchBar.setShowsCancelButton(false, animated: true)
             self.layoutIfNeededViews()
         }, completion: nil)
     }
@@ -109,6 +113,12 @@ extension EstablishmentListViewController: UISearchBarDelegate {
         })
         
         filteredEstabs = localFiltering
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        filteredEstabs = estabs
+        dismissKeyboard()
     }
 }
 
