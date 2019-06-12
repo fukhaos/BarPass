@@ -89,7 +89,7 @@ class SignUpTableViewController: UITableViewController {
                                  phone: nil, gender: nil, sendSMS: nil, sendEmail: nil,
                                  notification: nil, codID: nil, premium: nil,
                                  fullName: nameField.text, email: emailField.text,
-                                 photo: nil, cpf: nil, blocked: nil, id: nil)
+                                 photo: nil, cpf: nil, blocked: nil, linkedAccount: false, id: nil)
             
             viewModel.createUser(user, onComplete: { [unowned self] in
                 let alert = UIAlertController(title: "Atenção", message: "Usuário cadastrado com sucesso",

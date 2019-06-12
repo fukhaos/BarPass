@@ -132,14 +132,17 @@ class ProfileViewModel: ProfileViewModelProtocol {
     func updateUser(_ user: User,
                     onComplete: @escaping () -> Void, onError: @escaping (String) -> Void) {
         
-        let parameters: [String: Any] = [
+        var parameters: [String: Any] = [
             "sendSMS": user.sendSMS,
             "sendEmail": user.sendEmail,
             "notification": user.notification,
             "fullName": user.fullName ?? "",
             "email": user.email ?? "",
-            "photo": user.photo ?? ""
         ]
+        
+        if !user.linkedAccount {
+            parameters["photo"] = user.photo ?? ""
+        }
         
         SVProgressHUD.show()
         Api().requestCodable(metodo: .wPOST, url: URLs.updateUser, objeto: InfoReturn.self, parametros: parameters,

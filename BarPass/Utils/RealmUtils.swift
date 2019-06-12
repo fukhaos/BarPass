@@ -47,6 +47,7 @@ class RealmUtils: RealmUtilsProtocol {
         userRealm.email = user.email
         userRealm.photo = user.photo
         userRealm.cpf = user.cpf
+        userRealm.linkedAccount = user.linkedAccount ?? false
         userRealm.blocked = user.blocked ?? false
         userRealm.id = user.id
         

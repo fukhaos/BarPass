@@ -18,6 +18,7 @@ class User: Object {
     @objc dynamic var notification = false
     @objc dynamic var codID: String?
     @objc dynamic var premium = false
+    @objc dynamic var linkedAccount = false
     @objc dynamic var fullName, email, photo, cpf: String?
     @objc dynamic var blocked = false
     @objc dynamic var id: String?
