@@ -54,6 +54,9 @@ class ProfileDetailTableViewController: UITableViewController {
         smsSwitch.setOn(user.sendSMS, animated: true)
         emailSwitch.setOn(user.sendEmail, animated: true)
         notificationsSwitch.setOn(user.notification, animated: true)
+        sendSMS = user.sendSMS
+        sendEmail = user.sendEmail
+        sendNotification = user.notification
     }
 
     @IBAction func back(_ sender: Any) {
