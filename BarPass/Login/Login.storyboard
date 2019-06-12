@@ -375,7 +375,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9q-yq-d0X">
-                                    <rect key="frame" x="44" y="194" width="327" height="52"/>
+                                    <rect key="frame" x="44" y="224" width="327" height="22"/>
                                     <state key="normal" image="concludeButton"/>
                                     <connections>
                                         <action selector="concludeSignup:" destination="feG-iT-aJG" eventType="touchUpInside" id="MsS-gO-Zah"/>
