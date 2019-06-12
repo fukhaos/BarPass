@@ -140,7 +140,7 @@ class ProfileViewModel: ProfileViewModelProtocol {
             "email": user.email ?? "",
         ]
         
-        if !user.linkedAccount {
+        if !user.linkedAccount && user.photo != "" {
             parameters["photo"] = user.photo ?? ""
         }
         
