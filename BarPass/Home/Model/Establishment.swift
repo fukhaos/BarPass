@@ -37,7 +37,7 @@ struct Establishment: Codable {
     let fullAddress: String?
     let reason: String?
     let distance: Double?
-    let discount: Double?
+    let discount: Int?
     let blocked: Bool?
     let id: String?
     

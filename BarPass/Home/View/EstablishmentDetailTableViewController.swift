@@ -35,7 +35,7 @@ class EstablishmentDetailTableViewController: UITableViewController {
         super.viewDidLoad()
 
         nameLabel.text = bar.name
-        discountLabel.text = "\(bar.discount ?? 0.0)% de Desconto"
+        discountLabel.text = "\(bar.discount ?? 0)% de Desconto"
         distanceLabel.text = "\(bar.distance ?? 0.0) Km de você"
         detailLabel.text = bar.description
         locationLabel.text = bar.fullAddress
