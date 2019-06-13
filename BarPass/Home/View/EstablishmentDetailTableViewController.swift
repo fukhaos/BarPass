@@ -41,7 +41,7 @@ class EstablishmentDetailTableViewController: UITableViewController {
         locationLabel.text = bar.fullAddress
         numberButton.setTitle(bar.phone ?? "", for: .normal)
         emailButton.setTitle(bar.email ?? "", for: .normal)
-        dateLabel.text = bar.description
+        dateLabel.text = bar.operatingHours
         pageControl.numberOfPages = bar.photo?.count ?? 0
         
         pics = bar.photo ?? [String]()
