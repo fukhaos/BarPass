@@ -24,6 +24,18 @@ extension String {
         return isValid(regex: regex.rawValue)
     }
     
+    func fileName() -> String {
+        return NSURL(fileURLWithPath: self).deletingPathExtension?.lastPathComponent ?? ""
+    }
+    
+    func fileExtension() -> String {
+        return NSURL(fileURLWithPath: self).pathExtension ?? ""
+    }
+    
+    func fullFileName() -> String {
+        return "\(fileName()).\(fileExtension())"
+    }
+    
     func isValid(regex: String) -> Bool {
         let matches = range(of: regex, options: .regularExpression)
         return matches != nil

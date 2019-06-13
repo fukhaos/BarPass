@@ -141,7 +141,7 @@ class ProfileViewModel: ProfileViewModelProtocol {
         ]
         
         if !user.linkedAccount && user.photo != "" {
-            parameters["photo"] = user.photo ?? ""
+            parameters["photo"] = user.photo?.fullFileName()
         }
         
         SVProgressHUD.show()
