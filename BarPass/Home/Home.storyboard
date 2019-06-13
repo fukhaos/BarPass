@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="WRO-7a-hp5">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="WRO-7a-hp5">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -78,7 +78,7 @@
                                     <rect key="frame" x="187.5" y="281.5" width="39" height="37"/>
                                 </pageControl>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ehd-vG-mUb">
-                                    <rect key="frame" x="8" y="364" width="398" height="236"/>
+                                    <rect key="frame" x="8" y="668" width="398" height="236"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="5LG-Pz-2wC">
                                             <rect key="frame" x="0.0" y="0.0" width="98" height="236"/>
@@ -347,8 +347,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3e-7f-7DZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="g7U-NV-nsJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                    </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHome" translatesAutoresizingMaskIntoConstraints="NO" id="jFN-mW-zXM">
                                         <rect key="frame" x="20" y="80" width="100" height="28"/>
                                         <constraints>
@@ -369,19 +372,23 @@
                                         </connections>
                                     </searchBar>
                                 </subviews>
-                                <color key="backgroundColor" red="0.98584467170000001" green="0.5587203503" blue="0.29388189320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="g7U-NV-nsJ" firstAttribute="leading" secondItem="g3e-7f-7DZ" secondAttribute="leading" id="5Yt-nH-ck9"/>
                                     <constraint firstAttribute="trailing" secondItem="ldT-SQ-tXF" secondAttribute="trailing" constant="30" id="5ek-it-fnk"/>
+                                    <constraint firstAttribute="trailing" secondItem="g7U-NV-nsJ" secondAttribute="trailing" id="C00-Zt-3kM"/>
                                     <constraint firstItem="ldT-SQ-tXF" firstAttribute="centerY" secondItem="jFN-mW-zXM" secondAttribute="centerY" id="Eyk-Fo-PNf"/>
                                     <constraint firstItem="jFN-mW-zXM" firstAttribute="leading" secondItem="g3e-7f-7DZ" secondAttribute="leading" constant="20" id="EzW-9m-Ila"/>
                                     <constraint firstItem="ldT-SQ-tXF" firstAttribute="leading" secondItem="jFN-mW-zXM" secondAttribute="trailing" constant="14" id="K6a-MW-d2W"/>
                                     <constraint firstItem="jFN-mW-zXM" firstAttribute="top" secondItem="g3e-7f-7DZ" secondAttribute="top" constant="80" id="Rvs-UE-M5v"/>
-                                    <constraint firstAttribute="height" constant="140" id="Ukk-cz-0ra"/>
+                                    <constraint firstAttribute="height" constant="180" id="Ukk-cz-0ra"/>
+                                    <constraint firstItem="g7U-NV-nsJ" firstAttribute="top" secondItem="g3e-7f-7DZ" secondAttribute="top" id="V1e-yA-zlg"/>
                                     <constraint firstItem="ldT-SQ-tXF" firstAttribute="leading" secondItem="g3e-7f-7DZ" secondAttribute="leading" constant="134" id="qRY-S2-LSm"/>
+                                    <constraint firstAttribute="bottom" secondItem="g7U-NV-nsJ" secondAttribute="bottom" id="tAM-3u-x1R"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hqj-HW-fCA">
-                                <rect key="frame" x="20" y="168" width="374" height="694"/>
+                                <rect key="frame" x="20" y="208" width="374" height="654"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.93333333330000001" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseCell" rowHeight="140" id="UBW-yg-mAa" customClass="EstablishmentTableViewCell" customModule="BarPass" customModuleProvider="target">
@@ -430,7 +437,7 @@ Bairro: Itaim Bibi</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLocal" translatesAutoresizingMaskIntoConstraints="NO" id="bIV-33-56j">
-                                                            <rect key="frame" x="123" y="74" width="9" height="16"/>
+                                                            <rect key="frame" x="123" y="72" width="9" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="9" id="rAP-2r-Sh4"/>
                                                             </constraints>
@@ -624,25 +631,25 @@ Bairro: Itaim Bibi</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="N8q-bP-FGW">
-                                                    <rect key="frame" x="23" y="140" width="108" height="44"/>
+                                                    <rect key="frame" x="23" y="140" width="95.5" height="44"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnO-U2-fyc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="44"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="13.5" height="44"/>
                                                             <state key="normal" image="starOff"/>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkd-8P-y5c">
-                                                            <rect key="frame" x="23" y="0.0" width="16" height="44"/>
+                                                            <rect key="frame" x="20.5" y="0.0" width="13.5" height="44"/>
                                                             <state key="normal" image="starOff"/>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zas-iE-s69">
-                                                            <rect key="frame" x="46" y="0.0" width="16" height="44"/>
+                                                            <rect key="frame" x="41" y="0.0" width="13.5" height="44"/>
                                                             <state key="normal" image="starOff"/>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pz-7P-MPq">
-                                                            <rect key="frame" x="69" y="0.0" width="16" height="44"/>
+                                                            <rect key="frame" x="61.5" y="0.0" width="13.5" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="44" id="WfH-Px-zGv"/>
                                                             </constraints>
@@ -650,14 +657,14 @@ Bairro: Itaim Bibi</string>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZY-EH-KYe">
-                                                            <rect key="frame" x="92" y="0.0" width="16" height="44"/>
+                                                            <rect key="frame" x="82" y="0.0" width="13.5" height="44"/>
                                                             <state key="normal" image="starOff"/>
                                                             <state key="selected" image="starOn"/>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.9(55)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUT-i8-q9L">
-                                                    <rect key="frame" x="139" y="156" width="36" height="12"/>
+                                                    <rect key="frame" x="126.5" y="156" width="36" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -723,7 +730,7 @@ Bairro: Itaim Bibi</string>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TI6-6f-koo">
-                                                    <rect key="frame" x="199" y="713" width="16" height="22"/>
+                                                    <rect key="frame" x="82.5" y="713" width="249" height="44"/>
                                                     <state key="normal" image="botaoComoChegar"/>
                                                     <connections>
                                                         <action selector="directions:" destination="TEj-c6-rtN" eventType="touchUpInside" id="g7i-aJ-KmZ"/>
