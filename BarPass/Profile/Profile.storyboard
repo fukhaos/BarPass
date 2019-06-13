@@ -496,6 +496,19 @@
                                         <action selector="updatePic:" destination="jks-bV-Kwc" eventType="touchUpInside" id="3Ra-pO-C8w"/>
                                     </connections>
                                 </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addPic" translatesAutoresizingMaskIntoConstraints="NO" id="DFV-Bs-5ci">
+                                    <rect key="frame" x="172" y="118" width="70" height="23"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="Zra-ca-njW"/>
+                                        <constraint firstAttribute="height" constant="23" id="jt4-p5-0YF"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar Cadastro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmC-DZ-1Ru">
+                                    <rect key="frame" x="179.5" y="119.5" width="55" height="8.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar Cadastro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnY-V1-yBk">
                                     <rect key="frame" x="145" y="21.5" width="124.5" height="21"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -517,6 +530,7 @@
                                 <constraint firstAttribute="bottom" secondItem="BQh-p3-2at" secondAttribute="bottom" id="3YN-AO-cgQ"/>
                                 <constraint firstItem="2Nr-EL-u53" firstAttribute="leading" secondItem="Gg0-u6-jjS" secondAttribute="leading" constant="10" id="4Ja-6Q-uYF"/>
                                 <constraint firstItem="Rkz-4v-b29" firstAttribute="top" secondItem="BQh-p3-2at" secondAttribute="bottom" constant="-44" id="543-U6-Vfb"/>
+                                <constraint firstAttribute="bottom" secondItem="DFV-Bs-5ci" secondAttribute="bottom" constant="-38" id="6Oq-7q-yNa"/>
                                 <constraint firstItem="Rkz-4v-b29" firstAttribute="centerX" secondItem="Gg0-u6-jjS" secondAttribute="centerX" id="6gE-37-POc"/>
                                 <constraint firstItem="BQh-p3-2at" firstAttribute="top" secondItem="Gg0-u6-jjS" secondAttribute="top" constant="-45" id="7K1-1U-TiB"/>
                                 <constraint firstItem="BQh-p3-2at" firstAttribute="leading" secondItem="Gg0-u6-jjS" secondAttribute="leading" id="7Tv-n2-bDT"/>
@@ -525,7 +539,10 @@
                                 <constraint firstItem="dbS-HA-vIp" firstAttribute="centerY" secondItem="mnY-V1-yBk" secondAttribute="centerY" id="SZI-3x-IWa"/>
                                 <constraint firstItem="mnY-V1-yBk" firstAttribute="centerY" secondItem="2Nr-EL-u53" secondAttribute="centerY" id="WtI-ff-cyf"/>
                                 <constraint firstAttribute="trailing" secondItem="BQh-p3-2at" secondAttribute="trailing" id="YSF-OT-72H"/>
+                                <constraint firstItem="DFV-Bs-5ci" firstAttribute="top" secondItem="tmC-DZ-1Ru" secondAttribute="bottom" constant="-10" id="bSP-6s-T6K"/>
+                                <constraint firstItem="tmC-DZ-1Ru" firstAttribute="centerX" secondItem="DFV-Bs-5ci" secondAttribute="centerX" id="bfT-V3-vcO"/>
                                 <constraint firstItem="2Nr-EL-u53" firstAttribute="top" secondItem="Gg0-u6-jjS" secondAttribute="top" constant="10" id="cTi-Ve-Ub0"/>
+                                <constraint firstItem="DFV-Bs-5ci" firstAttribute="centerX" secondItem="Rkz-4v-b29" secondAttribute="centerX" id="hKS-6U-UEA"/>
                             </constraints>
                         </view>
                         <sections>
@@ -538,7 +555,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="701"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Membro Premium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-Rp-9BI">
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Membro Premium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-Rp-9BI">
                                                     <rect key="frame" x="146" y="51" width="122" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -919,6 +936,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addPic" width="64" height="23.5"/>
         <image name="addProfilePicIcon" width="67" height="67"/>
         <image name="backButton" width="16" height="16"/>
         <image name="editIcon" width="18" height="18"/>
