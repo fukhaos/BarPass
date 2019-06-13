@@ -114,6 +114,7 @@ class ProfileDetailTableViewController: UITableViewController {
     
     @IBAction func tappedOnSMS(_ sender: Any) {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        saveButton.isHidden = false
         if smsSwitch.isOn {
             self.sendSMS = true
         } else {
@@ -123,6 +124,7 @@ class ProfileDetailTableViewController: UITableViewController {
     
     @IBAction func tappedOnEmail(_ sender: Any) {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        saveButton.isHidden = false
         if emailSwitch.isOn {
             self.sendEmail = true
         } else {
@@ -132,6 +134,7 @@ class ProfileDetailTableViewController: UITableViewController {
     
     @IBAction func tappedOnNotification(_ sender: Any) {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        saveButton.isHidden = false
         if notificationsSwitch.isOn {
             self.sendNotification = true
         } else {
