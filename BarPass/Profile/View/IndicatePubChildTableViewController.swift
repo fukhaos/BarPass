@@ -61,8 +61,8 @@ class IndicatePubChildTableViewController: UITableViewController {
             msg = "Preencha o campo Nome do contato"
         } else if phoneField.text == "" {
             msg = "Preencha o campo Telefone para Contato"
-        } else if phoneField.text?.count ?? 0 < 15 {
-            msg = "Preencha corretamente o campo Telefone celular"
+        } else if phoneField.text?.count ?? 0 < 14 {
+            msg = "Preencha corretamente o campo Telefone para Contato com um número válido"
         } else if addressField.text == ""{
             msg = "Preencha o campo Endereço"
         }
