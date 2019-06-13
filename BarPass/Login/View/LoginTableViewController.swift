@@ -72,6 +72,7 @@ class LoginTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(true, animated: true)
+        RootViewController.stopUpdatingLocation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
