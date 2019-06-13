@@ -257,7 +257,7 @@
             </objects>
             <point key="canvasLocation" x="1906" y="46"/>
         </scene>
-        <!--Delegate-->
+        <!--Indicate Pub Child Table View Controller-->
         <scene sceneID="HVP-Cd-BGR">
             <objects>
                 <tableViewController storyboardIdentifier="IndicatePubChildTableViewController" id="qxD-kX-6y4" customClass="IndicatePubChildTableViewController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
@@ -352,7 +352,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="hHc-E2-Ar1" id="HKC-gb-94X"/>
+                                                        <outlet property="delegate" destination="qxD-kX-6y4" id="hhf-Wz-u48"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -409,20 +409,10 @@
                         <outlet property="contactNameField" destination="wNA-5t-qcP" id="zZq-gR-j3F"/>
                         <outlet property="indicateButton" destination="iOe-vB-9C3" id="4Xh-Zk-Wxo"/>
                         <outlet property="phoneField" destination="sal-dT-5TW" id="vYb-Dx-NPZ"/>
-                        <outlet property="phoneMaskListener" destination="hHc-E2-Ar1" id="mkB-CZ-NHz"/>
                         <outlet property="pubNameField" destination="O15-PE-Kfl" id="CE1-xm-ReU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86g-3h-aSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="hHc-E2-Ar1" customClass="MaskedTextFieldDelegate" customModule="InputMask">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="autocomplete" value="YES"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="primaryMaskFormat" value="{([00])}{ }[00000]{-}[0000]"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="delegate" destination="qxD-kX-6y4" id="qNf-Dn-bXK"/>
-                    </connections>
-                </customObject>
             </objects>
             <point key="canvasLocation" x="1905.7971014492755" y="797.54464285714278"/>
         </scene>
@@ -561,14 +551,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUk-Py-adi">
-                                                    <rect key="frame" x="20" y="101" width="43" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome Completo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUk-Py-adi">
+                                                    <rect key="frame" x="20" y="101" width="117.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZa-xm-Ouv" customClass="SpringButton" customModule="Spring">
-                                                    <rect key="frame" x="88" y="90" width="44" height="44"/>
+                                                    <rect key="frame" x="162.5" y="90" width="44" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="4BG-RR-Aw7"/>
                                                         <constraint firstAttribute="width" constant="44" id="zVE-tH-NiA"/>

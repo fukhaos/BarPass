@@ -18,7 +18,6 @@ class IndicatePubChildTableViewController: UITableViewController {
     @IBOutlet weak var phoneField: UITextField!
     @IBOutlet weak var addressField: UITextField!
     @IBOutlet weak var indicateButton: SpringButton!
-    @IBOutlet var phoneMaskListener: MaskedTextFieldDelegate!
     
     var viewModel: ProfileViewModelProtocol!
     
@@ -84,9 +83,61 @@ class IndicatePubChildTableViewController: UITableViewController {
 }
 
 // MARK: - <#MaskedTextFieldDelegateListener#>
-extension IndicatePubChildTableViewController: MaskedTextFieldDelegateListener {
+extension IndicatePubChildTableViewController: UITextFieldDelegate {
     
-    func textField(_ textField: UITextField, didFillMandatoryCharacters complete: Bool, didExtractValue value: String) {
-        print(value)
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        //New String and components
+        let newStr = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        let components = (newStr as NSString).components(separatedBy: NSCharacterSet.decimalDigits.inverted)
+        
+        //Decimal string, length and leading
+        let decimalString = components.joined(separator: "") as NSString
+        let length = decimalString.length
+        let hasLeadingOne = length > 0 && decimalString.character(at: 0) == (1 as unichar)
+        
+        //Checking the length
+        if length == 0 || (length > 11 && !hasLeadingOne) || length > 13 {
+            let newLength = (textField.text! as NSString).length + (string as NSString).length - range.length as Int
+            
+            return (newLength > 11) ? false : true
+        }
+        
+        //Index and formatted string
+        var index = 0 as Int
+        let formattedString = NSMutableString()
+        
+        //Check if it has leading
+        if hasLeadingOne {
+            formattedString.append("1 ")
+            index += 1
+        }
+        
+        //Area Code
+        if (length - index) > 2 {
+            let areaCode = decimalString.substring(with: NSMakeRange(index, 2))
+            formattedString.appendFormat("(%@) ", areaCode)
+            index += 2
+        }
+        
+        if length - index > 4 {
+            let prefix = decimalString.substring(with: NSMakeRange(index, 4))
+            formattedString.appendFormat("%@-", prefix)
+            index += 4
+        }
+        
+        let remainder = decimalString.substring(from: index)
+        formattedString.append(remainder)
+        var newString = formattedString as String
+        if length == 11 {
+            //(11) 9502-01647
+            newString.swapAt(9, 10)
+            //(11) 95020-1647
+            textField.text = newString
+        } else {
+            textField.text = newString
+        }
+        
+        return false
     }
 }

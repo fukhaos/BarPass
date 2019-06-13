@@ -41,6 +41,12 @@ extension String {
         return matches != nil
     }
     
+    mutating func swapAt(_ index1: Int, _ index2: Int) {
+        var characters = Array(self)
+        characters.swapAt(index1, index2)
+        self = String(characters)
+    }
+    
     func onlyDigits() -> String {
         let filtredUnicodeScalars = unicodeScalars.filter{CharacterSet.decimalDigits.contains($0)}
         return String(String.UnicodeScalarView(filtredUnicodeScalars))
