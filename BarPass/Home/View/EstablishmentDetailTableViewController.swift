@@ -11,6 +11,7 @@ import iCarousel
 import Spring
 import GoogleMaps
 import MessageUI
+import MapKit
 
 class EstablishmentDetailTableViewController: UITableViewController {
     
@@ -70,7 +71,9 @@ class EstablishmentDetailTableViewController: UITableViewController {
     }
     
     @IBAction func directions(_ sender: Any) {
-        let alert = PazNavigationApp.directionsAlertController(coordinate: RootViewController.locationManager.location!.coordinate, name: "Destino", title: "Selecione o aplicativo de GPS",
+        let barCoordinate = CLLocationCoordinate2D(latitude: bar.latitude ?? 0.0,
+                                                   longitude: bar.longitude ?? 0.0)
+        let alert = PazNavigationApp.directionsAlertController(coordinate: barCoordinate, name: "Destino", title: "Selecione o aplicativo de GPS",
                                                                nameTitle: "") { (completed) in
                                                                 
         }
