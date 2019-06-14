@@ -35,6 +35,7 @@ struct Establishment: Codable {
     let cnpj, phone, email: String?
     let photo: [String]?
     let fullAddress: String?
+    let neighborhood: String?
     let reason: String?
     let distance: Double?
     let discount: Int?
@@ -46,5 +47,6 @@ struct Establishment: Codable {
         case description = "description"
         case latitude, longitude
         case contactName, type, cnpj, phone, email, photo, fullAddress, reason, distance, blocked, id, discount
+        case neighborhood
     }
 }

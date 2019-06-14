@@ -15,6 +15,7 @@ class EstablishmentTableViewCell: UITableViewCell {
     @IBOutlet weak var imageIndicator: UIActivityIndicatorView!
     @IBOutlet weak var estabNameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var neighborhood: UILabel!
     @IBOutlet weak var shortLocationLabel: UILabel!
     @IBOutlet weak var discountLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -41,6 +42,7 @@ class EstablishmentTableViewCell: UITableViewCell {
         estabNameLabel.text = bar.name ?? ""
         locationLabel.text = bar.fullAddress ?? ""
         shortLocationLabel.text = location
+        neighborhood.text = bar.neighborhood ?? ""
         discountLabel.text = " -\(bar.discount ?? 0) % "
         distanceLabel.text = "\(bar.distance?.rounded() ?? 0.0) km"
     }

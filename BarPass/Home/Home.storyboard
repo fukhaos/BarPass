@@ -413,10 +413,8 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="hez-Ee-EhK">
-                                                            <rect key="frame" x="123" y="40" width="243" height="29"/>
-                                                            <string key="text">Rua Dr. James Ferraz Alvim, 271
-Bairro: Itaim Bibi</string>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rua Dr. James Ferraz Alvim, 271" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="hez-Ee-EhK">
+                                                            <rect key="frame" x="123" y="38" width="243" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -437,7 +435,7 @@ Bairro: Itaim Bibi</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLocal" translatesAutoresizingMaskIntoConstraints="NO" id="bIV-33-56j">
-                                                            <rect key="frame" x="123" y="74" width="9" height="16"/>
+                                                            <rect key="frame" x="123" y="74.5" width="9" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="9" id="rAP-2r-Sh4"/>
                                                             </constraints>
@@ -451,9 +449,6 @@ Bairro: Itaim Bibi</string>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" -15% " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nok-8a-Wuc">
                                                             <rect key="frame" x="123" y="97" width="41" height="17"/>
                                                             <color key="backgroundColor" red="0.99215686274509807" green="0.45882352941176469" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="17" id="dXf-hM-TKh"/>
-                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -463,30 +458,38 @@ Bairro: Itaim Bibi</string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rua Dr. James Ferraz Alvim, 271" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="XTk-kp-9wG">
+                                                            <rect key="frame" x="123" y="55" width="243" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="TsF-mR-S7m" firstAttribute="leading" secondItem="bIV-33-56j" secondAttribute="trailing" constant="6" id="4aj-En-KwD"/>
                                                         <constraint firstItem="UeL-Bt-F8X" firstAttribute="centerY" secondItem="NuC-lc-fSL" secondAttribute="centerY" id="6AL-mp-C0E"/>
-                                                        <constraint firstItem="TsF-mR-S7m" firstAttribute="top" secondItem="hez-Ee-EhK" secondAttribute="bottom" constant="5.5" id="Gzq-Mg-1ct"/>
+                                                        <constraint firstAttribute="trailing" secondItem="XTk-kp-9wG" secondAttribute="trailing" constant="8" id="BKS-HG-Ukk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hez-Ee-EhK" secondAttribute="trailing" constant="8" id="Ccd-xG-58J"/>
+                                                        <constraint firstItem="EPF-FW-j4E" firstAttribute="top" secondItem="NuC-lc-fSL" secondAttribute="top" constant="18" id="D27-av-E3b"/>
+                                                        <constraint firstItem="hez-Ee-EhK" firstAttribute="top" secondItem="EPF-FW-j4E" secondAttribute="bottom" constant="3" id="EwG-0P-6UQ"/>
+                                                        <constraint firstItem="hez-Ee-EhK" firstAttribute="leading" secondItem="UeL-Bt-F8X" secondAttribute="trailing" constant="26" id="GFk-RB-GLY"/>
+                                                        <constraint firstItem="TsF-mR-S7m" firstAttribute="top" secondItem="XTk-kp-9wG" secondAttribute="bottom" constant="5" id="HwH-YT-gIn"/>
                                                         <constraint firstAttribute="trailing" secondItem="hma-9J-was" secondAttribute="trailing" constant="17" id="IzI-sp-oCL"/>
-                                                        <constraint firstItem="TsF-mR-S7m" firstAttribute="centerY" secondItem="bIV-33-56j" secondAttribute="centerY" id="Je4-UR-rwb"/>
-                                                        <constraint firstItem="bIV-33-56j" firstAttribute="leading" secondItem="hez-Ee-EhK" secondAttribute="leading" id="Lbu-K1-CtH"/>
                                                         <constraint firstItem="cu0-uJ-BYb" firstAttribute="centerX" secondItem="UeL-Bt-F8X" secondAttribute="centerX" id="Oye-Jy-nPX"/>
-                                                        <constraint firstAttribute="trailing" secondItem="EPF-FW-j4E" secondAttribute="trailing" constant="10" id="PBo-4j-q0f"/>
-                                                        <constraint firstItem="EPF-FW-j4E" firstAttribute="top" secondItem="NuC-lc-fSL" secondAttribute="top" constant="18" id="Pff-Vv-Pre"/>
-                                                        <constraint firstItem="hez-Ee-EhK" firstAttribute="leading" secondItem="EPF-FW-j4E" secondAttribute="leading" id="Tft-Vr-Wuy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="EPF-FW-j4E" secondAttribute="trailing" constant="10" id="QzI-IX-MLV"/>
+                                                        <constraint firstItem="Nok-8a-Wuc" firstAttribute="top" secondItem="TsF-mR-S7m" secondAttribute="bottom" constant="8" id="Smc-rI-Uq3"/>
                                                         <constraint firstItem="cu0-uJ-BYb" firstAttribute="centerY" secondItem="UeL-Bt-F8X" secondAttribute="centerY" id="Tpe-4c-FOv"/>
-                                                        <constraint firstAttribute="trailing" secondItem="hez-Ee-EhK" secondAttribute="trailing" constant="8" id="VnY-BS-2GL"/>
-                                                        <constraint firstItem="EPF-FW-j4E" firstAttribute="top" secondItem="UeL-Bt-F8X" secondAttribute="top" id="YkX-wS-Gd7"/>
-                                                        <constraint firstItem="Nok-8a-Wuc" firstAttribute="top" secondItem="TsF-mR-S7m" secondAttribute="bottom" constant="8" id="aA1-CL-JpU"/>
-                                                        <constraint firstAttribute="trailing" secondItem="TsF-mR-S7m" secondAttribute="trailing" constant="8" id="ao9-yb-sQ7"/>
-                                                        <constraint firstItem="EPF-FW-j4E" firstAttribute="leading" secondItem="UeL-Bt-F8X" secondAttribute="trailing" constant="26" id="b75-k8-HdE"/>
-                                                        <constraint firstItem="hma-9J-was" firstAttribute="centerY" secondItem="Nok-8a-Wuc" secondAttribute="centerY" id="g2j-Xr-ofA"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Nok-8a-Wuc" secondAttribute="bottom" constant="10" id="hfF-gg-PRS"/>
+                                                        <constraint firstItem="bIV-33-56j" firstAttribute="top" secondItem="TsF-mR-S7m" secondAttribute="top" id="ZyB-Zo-Znf"/>
+                                                        <constraint firstItem="TsF-mR-S7m" firstAttribute="leading" secondItem="bIV-33-56j" secondAttribute="trailing" constant="6" id="bIR-Nt-Ywd"/>
+                                                        <constraint firstItem="XTk-kp-9wG" firstAttribute="leading" secondItem="UeL-Bt-F8X" secondAttribute="trailing" constant="26" id="bUX-Sc-4B3"/>
+                                                        <constraint firstItem="hma-9J-was" firstAttribute="centerY" secondItem="Nok-8a-Wuc" secondAttribute="centerY" id="bjv-CH-zHa"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Nok-8a-Wuc" secondAttribute="bottom" constant="10" id="ewt-3A-9ZQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TsF-mR-S7m" secondAttribute="trailing" constant="8" id="fYb-0J-iMD"/>
+                                                        <constraint firstItem="Nok-8a-Wuc" firstAttribute="leading" secondItem="UeL-Bt-F8X" secondAttribute="trailing" constant="26" id="hBB-a2-56I"/>
+                                                        <constraint firstItem="XTk-kp-9wG" firstAttribute="top" secondItem="hez-Ee-EhK" secondAttribute="bottom" constant="2.5" id="mKD-Js-vAg"/>
                                                         <constraint firstItem="UeL-Bt-F8X" firstAttribute="leading" secondItem="NuC-lc-fSL" secondAttribute="leading" constant="9" id="nGM-6t-jqC"/>
-                                                        <constraint firstItem="Nok-8a-Wuc" firstAttribute="leading" secondItem="bIV-33-56j" secondAttribute="leading" id="spC-oB-H0b"/>
-                                                        <constraint firstItem="hez-Ee-EhK" firstAttribute="top" secondItem="EPF-FW-j4E" secondAttribute="bottom" constant="5" id="uZn-63-MBn"/>
+                                                        <constraint firstItem="bIV-33-56j" firstAttribute="leading" secondItem="UeL-Bt-F8X" secondAttribute="trailing" constant="26" id="tOv-Nr-nI8"/>
+                                                        <constraint firstItem="EPF-FW-j4E" firstAttribute="leading" secondItem="UeL-Bt-F8X" secondAttribute="trailing" constant="26" id="tdi-7n-cqb"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -511,6 +514,7 @@ Bairro: Itaim Bibi</string>
                                             <outlet property="estabNameLabel" destination="EPF-FW-j4E" id="V31-RC-JFN"/>
                                             <outlet property="imageIndicator" destination="cu0-uJ-BYb" id="Xi2-PM-dup"/>
                                             <outlet property="locationLabel" destination="hez-Ee-EhK" id="N6k-tx-WS6"/>
+                                            <outlet property="neighborhood" destination="XTk-kp-9wG" id="2kb-Dn-ETp"/>
                                             <outlet property="shortLocationLabel" destination="TsF-mR-S7m" id="lKN-YS-INN"/>
                                         </connections>
                                     </tableViewCell>
