@@ -120,10 +120,6 @@ extension EstablishmentListViewController: UISearchBarDelegate {
         filteredEstabs = estabs
         dismissKeyboard()
     }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        dismissKeyboard()
-    }
 }
 
 
