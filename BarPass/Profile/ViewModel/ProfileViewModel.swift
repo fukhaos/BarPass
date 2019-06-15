@@ -140,7 +140,7 @@ class ProfileViewModel: ProfileViewModelProtocol {
             "email": user.email ?? "",
         ]
         
-        if !user.linkedAccount && user.photo != "" {
+        if !user.linkedAccount && user.photo != "" && user.photo?.contains(".jpg") ?? false {
             parameters["photo"] = user.photo?.fullFileName()
         }
         

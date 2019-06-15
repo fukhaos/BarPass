@@ -38,13 +38,14 @@ class ProfileDetailTableViewController: UITableViewController {
         hideKeyboardWhenTappedAround()
         imagePicker.delegate = self
         viewModel = ProfileViewModel()
+        picButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.tabBarController?.tabBar.isHidden = true
         user = RealmUtils().getUser()
+        self.tabBarController?.tabBar.isHidden = true
         
         picButton.sd_setImage(with: URL(string: user.photo ?? ""),
                               for: .normal, completed: nil)
@@ -68,7 +69,7 @@ class ProfileDetailTableViewController: UITableViewController {
             saveButton.isHidden = true
             nameField.isEnabled = false
             
-            try! user.realm?.write {
+            try! user.realm?.safeWrite {
                 user.fullName = nameField.text
                 user.sendSMS = self.sendSMS
                 user.sendEmail = self.sendEmail
@@ -79,6 +80,7 @@ class ProfileDetailTableViewController: UITableViewController {
                                  onComplete: {
                                     GlobalAlert(with: self,
                                                 msg: "Informações atualizadas com sucesso!").showAlert()
+                                    self.user = RealmUtils().getUser()
             }) { [unowned self] msg in
                 GlobalAlert(with: self, msg: msg).showAlert()
             }
