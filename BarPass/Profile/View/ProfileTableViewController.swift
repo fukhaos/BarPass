@@ -83,7 +83,7 @@ class ProfileTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if indexPath.row == 1 {
-            let alert = UIAlertController(title: "Atenção", message: "Tem certeza que deseja deslogar?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Atenção", message: "Tem certeza que deseja sair?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Sim", style: .destructive, handler: { (action) in
                 UserDefaults.standard.set(false, forKey: "logged")
                self.dismiss(animated: true, completion: nil)
