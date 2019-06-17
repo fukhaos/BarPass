@@ -140,10 +140,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        if url.absoluteString.contains("facebook") {
+            return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+        }
+        
         return GIDSignIn.sharedInstance().handle(url as URL?,
                                                  sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
                                                  annotation: options[UIApplication.OpenURLOptionsKey.annotation])
     }
-
+    
 }
 
