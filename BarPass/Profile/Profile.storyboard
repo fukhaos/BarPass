@@ -270,7 +270,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-vB-9C3" customClass="SpringButton" customModule="Spring">
-                                    <rect key="frame" x="0.0" y="51.5" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="62.5" width="414" height="22"/>
                                     <state key="normal" image="indicateButton"/>
                                     <connections>
                                         <action selector="indicate:" destination="qxD-kX-6y4" eventType="touchUpInside" id="ati-bF-hQZ"/>
@@ -807,7 +807,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcM-3P-ohO" customClass="SpringButton" customModule="Spring">
-                                    <rect key="frame" x="0.0" y="51.5" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="62.5" width="414" height="22"/>
                                     <state key="normal" image="confirmButton"/>
                                     <connections>
                                         <action selector="changePassword:" destination="VhG-V2-gRu" eventType="touchUpInside" id="e2p-d1-UVN"/>
