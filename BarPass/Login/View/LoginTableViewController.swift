@@ -92,6 +92,7 @@ class LoginTableViewController: UITableViewController {
         signInFaceButton.animate()
 
         let loginManager = LoginManager()
+        loginManager.loginBehavior = LoginBehavior.web
         loginManager.logIn(readPermissions: [.publicProfile, .email, .userFriends],
                            viewController: self) { (loginResult) in
             switch loginResult {

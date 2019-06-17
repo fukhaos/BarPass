@@ -35,6 +35,8 @@ class EstablishmentDetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        carouselView.bounces = false
+        
         nameLabel.text = bar.name
         discountLabel.text = "\(bar.discount ?? 0)% de Desconto"
         distanceLabel.text = "\(bar.distance?.rounded() ?? 0.0) Km de você"
