@@ -611,8 +611,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar do Cofre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cha-Mj-t5M">
-                                                    <rect key="frame" x="20" y="70" width="134" height="26.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar do Cofre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="cha-Mj-t5M">
+                                                    <rect key="frame" x="20" y="70" width="374" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                                     <color key="textColor" red="0.9882352941176471" green="0.5607843137254902" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -802,6 +802,7 @@
                                                 <constraint firstItem="hzD-SM-P8b" firstAttribute="top" secondItem="OZr-6a-QKQ" secondAttribute="bottom" constant="30" id="tNL-0n-mbv"/>
                                                 <constraint firstItem="N8q-bP-FGW" firstAttribute="leading" secondItem="6Nn-eh-M3n" secondAttribute="leading" constant="23" id="upP-wx-GsN"/>
                                                 <constraint firstItem="LyH-M4-w11" firstAttribute="leading" secondItem="6Nn-eh-M3n" secondAttribute="leadingMargin" id="wXf-f0-uAJ"/>
+                                                <constraint firstItem="cha-Mj-t5M" firstAttribute="trailing" secondItem="6Nn-eh-M3n" secondAttribute="trailingMargin" id="xdK-A2-UOb"/>
                                                 <constraint firstItem="LyH-M4-w11" firstAttribute="top" secondItem="8l7-vC-WNJ" secondAttribute="bottom" constant="8" id="yBl-kj-pqN"/>
                                                 <constraint firstItem="bfR-bX-lq4" firstAttribute="leading" secondItem="hzD-SM-P8b" secondAttribute="trailing" constant="10" id="yL5-zN-hoW"/>
                                             </constraints>
