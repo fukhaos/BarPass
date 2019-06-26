@@ -17,10 +17,10 @@ protocol EstablishmentViewModelProtocol {
 }
 
 class EstablishmentViewModel: EstablishmentViewModelProtocol {
-    
+ 
     func getStabs(onComplete: @escaping ([Establishment]) -> Void,
                   onError: @escaping (String) -> Void) {
-        let userLocation = RootViewController.locationManager.location?.coordinate
+        let userLocation = LocationService.sharedInstance.locationManager?.location?.coordinate
         
         let params: [String: Any] = [
             "latitude": userLocation?.latitude ?? 0.0,
@@ -49,7 +49,7 @@ class EstablishmentViewModel: EstablishmentViewModelProtocol {
     func getStabDetail(with id: String, onComplete: @escaping (Establishment) -> Void,
                        onError: @escaping (String) -> Void) {
         
-        let userLocation = RootViewController.locationManager.location?.coordinate
+        let userLocation = LocationService.sharedInstance.locationManager?.location?.coordinate
         
         let params: [String: Any] = [
             "latitude": userLocation?.latitude ?? 0.0,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EstablishmentListViewController: RootViewController {
+class EstablishmentListViewController: UIViewController {
 
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -42,10 +42,12 @@ class EstablishmentListViewController: RootViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        LocationService.sharedInstance.checkAuthorization()
+        
         navigationController?.setNavigationBarHidden(true, animated: true)
         searchBar.backgroundImage = UIImage()
         self.tabBarController?.tabBar.isHidden = false
-        if let userLocation = RootViewController.locationManager.location?.coordinate {
+        if let userLocation = LocationService.sharedInstance.locationManager?.location?.coordinate {
             let lat = userLocation.latitude
             let lon = userLocation.longitude
             
