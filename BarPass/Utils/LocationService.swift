@@ -123,8 +123,8 @@ class LocationService: NSObject, CLLocationManagerDelegate {
     
     func checkAuthorization() {
         if CLLocationManager.authorizationStatus().rawValue == 2 {
-            let Alerta = UIAlertController(title: "Permissao de localizacao", message: "Necessario permissao para acesso a" +
-                " sua localizacao!! por favor habilite", preferredStyle: UIAlertController.Style.alert)
+            let Alerta = UIAlertController(title: "Permissão de localização", message: "Necessário permissão para acesso a" +
+                " sua localizacao!! por favor habilite.", preferredStyle: UIAlertController.Style.alert)
             
             let acoesConfiguracoes = UIAlertAction(title: "Abrir configuracoes", style: UIAlertAction.Style.default,
                                                    handler: { (alertaConfiguracoes) in
