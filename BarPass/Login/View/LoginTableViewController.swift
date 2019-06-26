@@ -45,7 +45,7 @@ class LoginTableViewController: UITableViewController {
         //i only want the user gmail data, not necessary staying logged in
         GIDSignIn.sharedInstance()?.signOut()
         
-//        LocationService.sharedInstance.startUpdatingLocation()
+        LocationService.sharedInstance.locationManager?.requestWhenInUseAuthorization()
         
         let logged = UserDefaults.standard.bool(forKey: "logged")
         if logged {
