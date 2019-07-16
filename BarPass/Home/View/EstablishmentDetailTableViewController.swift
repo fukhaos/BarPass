@@ -128,14 +128,14 @@ extension EstablishmentDetailTableViewController: iCarouselDelegate, iCarouselDa
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         
         //create the UIView
-        let tempView = UIView(frame: CGRect(x: 0, y: 0, width: carouselView.bounds.width, height: 200))
+        let tempView = UIView(frame: CGRect(x: 0, y: 0, width: carouselView.bounds.width, height: 240))
         
         //crate a UIImageView
-        let frame = CGRect(x: 0, y: 0, width: carouselView.bounds.width, height: 200)
+        let frame = CGRect(x: 0, y: 0, width: carouselView.bounds.width, height: carouselView.bounds.height)
         let imageView = UIImageView()
         imageView.frame = frame
-        imageView.contentMode = .scaleToFill
         imageView.sd_setImage(with: URL(string: pics[index]), completed: nil)
+        imageView.contentMode = .scaleToFill
         tempView.addSubview(imageView)
         
         return tempView
