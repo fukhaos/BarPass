@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ArZ-SP-dvL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ArZ-SP-dvL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -366,23 +366,16 @@
         <scene sceneID="8Ph-4a-MtQ">
             <objects>
                 <tableViewController storyboardIdentifier="SignUpTableViewController" id="feG-iT-aJG" customClass="SignUpTableViewController" customModule="BarPass" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0x9-KZ-FbG">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0x9-KZ-FbG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="wl9-L5-lks">
-                            <rect key="frame" x="0.0" y="333" width="375" height="260"/>
+                            <rect key="frame" x="0.0" y="377" width="375" height="260"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9q-yq-d0X">
-                                    <rect key="frame" x="44" y="194" width="288" height="52"/>
-                                    <state key="normal" image="concludeButton"/>
-                                    <connections>
-                                        <action selector="concludeSignup:" destination="feG-iT-aJG" eventType="touchUpInside" id="MsS-gO-Zah"/>
-                                    </connections>
-                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VL-uL-gA5" customClass="SpringButton" customModule="Spring">
-                                    <rect key="frame" x="24" y="40" width="44" height="44"/>
+                                    <rect key="frame" x="32" y="0.0" width="44" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="44" id="ZpU-Dr-b1i"/>
                                         <constraint firstAttribute="height" constant="44" id="gnL-hy-W0V"/>
@@ -398,7 +391,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmj-vc-yz4">
-                                    <rect key="frame" x="76" y="47.5" width="259" height="29"/>
+                                    <rect key="frame" x="84" y="7" width="259" height="29"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <state key="normal" title="Eu li e concordo com os Termos de Uso.">
                                         <color key="titleColor" red="0.28627450980000002" green="0.31764705879999999" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
@@ -407,16 +400,23 @@
                                         <segue destination="qwU-tA-Er2" kind="show" id="ikb-RX-elc"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9q-yq-d0X">
+                                    <rect key="frame" x="43" y="104" width="288" height="52"/>
+                                    <state key="normal" image="concludeButton"/>
+                                    <connections>
+                                        <action selector="concludeSignup:" destination="feG-iT-aJG" eventType="touchUpInside" id="MsS-gO-Zah"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="5VL-uL-gA5" firstAttribute="top" secondItem="wl9-L5-lks" secondAttribute="top" constant="40" id="D8C-1I-uGI"/>
-                                <constraint firstAttribute="bottom" secondItem="T9q-yq-d0X" secondAttribute="bottom" constant="14" id="Gee-tb-F9P"/>
+                                <constraint firstItem="5VL-uL-gA5" firstAttribute="top" secondItem="wl9-L5-lks" secondAttribute="top" id="D8C-1I-uGI"/>
+                                <constraint firstAttribute="bottom" secondItem="T9q-yq-d0X" secondAttribute="bottom" constant="104" id="Gee-tb-F9P"/>
                                 <constraint firstItem="Kmj-vc-yz4" firstAttribute="centerY" secondItem="5VL-uL-gA5" secondAttribute="centerY" id="GgI-5o-Bok"/>
                                 <constraint firstItem="Kmj-vc-yz4" firstAttribute="leading" secondItem="5VL-uL-gA5" secondAttribute="trailing" constant="8" id="QQP-kC-Dp3"/>
-                                <constraint firstAttribute="trailing" secondItem="T9q-yq-d0X" secondAttribute="trailing" constant="43" id="WrJ-lX-5iP"/>
-                                <constraint firstItem="5VL-uL-gA5" firstAttribute="leading" secondItem="wl9-L5-lks" secondAttribute="leading" constant="24" id="cyW-XZ-JOo"/>
-                                <constraint firstItem="T9q-yq-d0X" firstAttribute="leading" secondItem="wl9-L5-lks" secondAttribute="leading" constant="44" id="gBk-gI-cM2"/>
+                                <constraint firstAttribute="trailing" secondItem="T9q-yq-d0X" secondAttribute="trailing" constant="44" id="WrJ-lX-5iP"/>
+                                <constraint firstItem="5VL-uL-gA5" firstAttribute="leading" secondItem="wl9-L5-lks" secondAttribute="leading" constant="32" id="cyW-XZ-JOo"/>
+                                <constraint firstItem="T9q-yq-d0X" firstAttribute="leading" secondItem="wl9-L5-lks" secondAttribute="leading" constant="43" id="gBk-gI-cM2"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kmj-vc-yz4" secondAttribute="trailing" constant="10" id="qmJ-Xd-KxJ"/>
                             </constraints>
                         </view>
@@ -488,7 +488,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eZt-B1-yRR">
-                                                    <rect key="frame" x="20" y="11" width="355" height="40"/>
+                                                    <rect key="frame" x="20" y="11.5" width="355" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="LMz-IS-w24"/>
                                                     </constraints>
@@ -533,6 +533,14 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="seL-E9-gHh" id="2GB-2I-krH">
                                             <rect key="frame" x="0.0" y="-0.5" width="375" height="0.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XCy-HZ-rov">
+                                        <rect key="frame" x="0.0" y="333" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XCy-HZ-rov" id="YPr-CU-Nn8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -602,14 +610,14 @@
     <resources>
         <image name="concludeButton" width="327" height="52"/>
         <image name="emailTextField" width="375" height="100"/>
-        <image name="eyeIcon" width="24.5" height="15.5"/>
-        <image name="eyeIconClosed" width="25.5" height="17"/>
+        <image name="eyeIcon" width="24" height="15"/>
+        <image name="eyeIconClosed" width="25" height="17"/>
         <image name="iconCheckOn" width="23" height="23"/>
         <image name="iconCheckoff" width="23" height="23"/>
         <image name="loginButton" width="327" height="52"/>
         <image name="loginFace" width="60" height="60"/>
         <image name="loginGoogle" width="60" height="60"/>
-        <image name="logoLogin" width="270" height="77.5"/>
+        <image name="logoLogin" width="270" height="77"/>
         <image name="passwordTextFieldImage" width="375" height="100"/>
         <image name="sendButton" width="331" height="51"/>
     </resources>
