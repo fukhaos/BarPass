@@ -13,7 +13,7 @@ class UserTermViewController: UIViewController, WKNavigationDelegate {
     
     var webView: WKWebView!
     var progressView: UIProgressView!
-    var url: URL = URL(string: "http://api.barpass.dev.megaleios.com/content/termos-de-uso.html")!
+    var url: URL = URL(string: " http://apibarpass.megaleios.com/content/termos-de-uso.html")!
     var useTerm: Bool = false
     
     override func loadView() {

@@ -9,7 +9,7 @@
 import Foundation
 
 enum URLs {
-    static let baseUrl = "http://api.barpass.dev.megaleios.com"
+    static let baseUrl = " http://apibarpass.megaleios.com"
     
     static var apiEndPoint : String {
         get {
