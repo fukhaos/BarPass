@@ -401,7 +401,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9q-yq-d0X">
-                                    <rect key="frame" x="43" y="104" width="288" height="52"/>
+                                    <rect key="frame" x="43" y="134" width="288" height="22"/>
                                     <state key="normal" image="concludeButton"/>
                                     <connections>
                                         <action selector="concludeSignup:" destination="feG-iT-aJG" eventType="touchUpInside" id="MsS-gO-Zah"/>
