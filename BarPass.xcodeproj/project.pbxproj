@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		082CD49104A78C6F34E55E5E /* Pods_BarPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CA98659D4C46758E0A69D0 /* Pods_BarPass.framework */; };
+		79AE90C623030CC300F4840E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE90BA23030CC200F4840E /* LoginViewModel.swift */; };
+		79AE90C723030CC300F4840E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AE90BB23030CC200F4840E /* Login.storyboard */; };
+		79AE90C823030CC300F4840E /* RegisterReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE90BD23030CC200F4840E /* RegisterReturn.swift */; };
+		79AE90C923030CC300F4840E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE90BE23030CC200F4840E /* UserModel.swift */; };
+		79AE90CA23030CC300F4840E /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE90C023030CC300F4840E /* ForgotPassViewController.swift */; };
+		79AE90CB23030CC300F4840E /* UserTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE90C123030CC300F4840E /* UserTermViewController.swift */; };
+		79AE90CC23030CC300F4840E /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE90C223030CC300F4840E /* SignUpTableViewController.swift */; };
+		79AE90CD23030CC300F4840E /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE90C323030CC300F4840E /* LogoAnimationView.swift */; };
+		79AE90CE23030CC300F4840E /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE90C423030CC300F4840E /* InitialViewController.swift */; };
+		79AE90CF23030CC300F4840E /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE90C523030CC300F4840E /* LoginTableViewController.swift */; };
 		9E94A9F6229ECB8A00A302FE /* RegisterReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F5229ECB8A00A302FE /* RegisterReturn.swift */; };
 		9E94A9F8229ED26400A302FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F7229ED26400A302FE /* UserModel.swift */; };
 		9E94A9FA229EE5EF00A302FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94A9F9229EE5EF00A302FE /* LoginViewModel.swift */; };
@@ -120,6 +130,16 @@
 		3FE1AB7B1D6940A2F9FFF284 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		66069568C3440D2F0F386101 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ABCB4D94C3F026F76E8AC74 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		79AE90BA23030CC200F4840E /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		79AE90BB23030CC200F4840E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		79AE90BD23030CC200F4840E /* RegisterReturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterReturn.swift; sourceTree = "<group>"; };
+		79AE90BE23030CC200F4840E /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		79AE90C023030CC300F4840E /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
+		79AE90C123030CC300F4840E /* UserTermViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTermViewController.swift; sourceTree = "<group>"; };
+		79AE90C223030CC300F4840E /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		79AE90C323030CC300F4840E /* LogoAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
+		79AE90C423030CC300F4840E /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		79AE90C523030CC300F4840E /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		98C817F77E0F5D23153A28F2 /* Pods-BarPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarPass.debug.xcconfig"; path = "Target Support Files/Pods-BarPass/Pods-BarPass.debug.xcconfig"; sourceTree = "<group>"; };
 		9E94A9F5229ECB8A00A302FE /* RegisterReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReturn.swift; sourceTree = "<group>"; };
 		9E94A9F7229ED26400A302FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -237,6 +257,47 @@
 				66069568C3440D2F0F386101 /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79AE90B823030CC200F4840E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				79AE90B923030CC200F4840E /* ViewModel */,
+				79AE90BB23030CC200F4840E /* Login.storyboard */,
+				79AE90BC23030CC200F4840E /* Model */,
+				79AE90BF23030CC200F4840E /* View */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		79AE90B923030CC200F4840E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				79AE90BA23030CC200F4840E /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		79AE90BC23030CC200F4840E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79AE90BD23030CC200F4840E /* RegisterReturn.swift */,
+				79AE90BE23030CC200F4840E /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		79AE90BF23030CC200F4840E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79AE90C023030CC300F4840E /* ForgotPassViewController.swift */,
+				79AE90C123030CC300F4840E /* UserTermViewController.swift */,
+				79AE90C223030CC300F4840E /* SignUpTableViewController.swift */,
+				79AE90C323030CC300F4840E /* LogoAnimationView.swift */,
+				79AE90C423030CC300F4840E /* InitialViewController.swift */,
+				79AE90C523030CC300F4840E /* LoginTableViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9E94A9F3229ECB7600A302FE /* ViewModel */ = {
@@ -405,6 +466,7 @@
 				9E94A9F4229ECB7E00A302FE /* Model */,
 				BE06A11722980C7200A746CA /* View */,
 				BEED9AD822972D8E009FAF89 /* Login.storyboard */,
+				79AE90B823030CC200F4840E /* Login */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -673,6 +735,7 @@
 				9E977CE9229D664800E0CE52 /* logo.gif in Resources */,
 				BE5F327C229C7A7B000EEA63 /* Dashboard.storyboard in Resources */,
 				9E977D09229DB10300E0CE52 /* Favorites.storyboard in Resources */,
+				79AE90C723030CC300F4840E /* Login.storyboard in Resources */,
 				BEA24242228B1A5F00D641C9 /* LaunchScreen.storyboard in Resources */,
 				BE5F3276229C79C1000EEA63 /* Tutorial.storyboard in Resources */,
 				BEA2423F228B1A5F00D641C9 /* Assets.xcassets in Resources */,
@@ -800,6 +863,7 @@
 				BE968FA822AB057F00B6E181 /* UpdatePassTableViewController.swift in Sources */,
 				BE1F76A422A03D86000BFD33 /* Realm.swift in Sources */,
 				BEA2427C228B1BFC00D641C9 /* UIApplication.swift in Sources */,
+				79AE90C923030CC300F4840E /* UserModel.swift in Sources */,
 				BEA24278228B1BFC00D641C9 /* GradientView.swift in Sources */,
 				BE06A11B22980C9700A746CA /* LoginTableViewController.swift in Sources */,
 				BE71BCE122A19F4400799D1D /* IndicatePubViewController.swift in Sources */,
@@ -812,6 +876,7 @@
 				9E977CEE229D78E500E0CE52 /* TutorialViewController.swift in Sources */,
 				BE71BCE322A1A3B700799D1D /* IndicatePubChildTableViewController.swift in Sources */,
 				BE5F3273229C68C4000EEA63 /* UserTermViewController.swift in Sources */,
+				79AE90CF23030CC300F4840E /* LoginTableViewController.swift in Sources */,
 				BEA24280228B1BFC00D641C9 /* UINavigationController.swift in Sources */,
 				BEA24275228B1BFC00D641C9 /* Date.swift in Sources */,
 				BEA24273228B1BFC00D641C9 /* Utils.swift in Sources */,
@@ -831,12 +896,17 @@
 				BEA2426A228B1BFC00D641C9 /* Methods.swift in Sources */,
 				BE31DFA022A5583B001C4714 /* HomeTableViewController.swift in Sources */,
 				BEA24271228B1BFC00D641C9 /* PazMapDirections.swift in Sources */,
+				79AE90CA23030CC300F4840E /* ForgotPassViewController.swift in Sources */,
 				BE1F76A922A05A63000BFD33 /* ProfileViewModel.swift in Sources */,
+				79AE90CD23030CC300F4840E /* LogoAnimationView.swift in Sources */,
 				9E977CEB229D768D00E0CE52 /* ForgotPassViewController.swift in Sources */,
 				BEA2427D228B1BFC00D641C9 /* UIColor.swift in Sources */,
+				79AE90CE23030CC300F4840E /* InitialViewController.swift in Sources */,
 				BE5F3271229C572F000EEA63 /* UINavigationItem.swift in Sources */,
 				BEA2427B228B1BFC00D641C9 /* String.swift in Sources */,
+				79AE90C623030CC300F4840E /* LoginViewModel.swift in Sources */,
 				BE1F76AB22A05BCA000BFD33 /* InfoReturn.swift in Sources */,
+				79AE90C823030CC300F4840E /* RegisterReturn.swift in Sources */,
 				BE1F769D22A00FD4000BFD33 /* RealmUtils.swift in Sources */,
 				BE5F326F229C3E05000EEA63 /* UINavigationBar.swift in Sources */,
 				BEA2426D228B1BFC00D641C9 /* CopyableLabel.swift in Sources */,
@@ -857,8 +927,10 @@
 				BEA2426F228B1BFC00D641C9 /* GlobalAlert.swift in Sources */,
 				BE5F326D229C3DD9000EEA63 /* CAGradientLayer.swift in Sources */,
 				BEA2427A228B1BFC00D641C9 /* Storyboarded.swift in Sources */,
+				79AE90CB23030CC300F4840E /* UserTermViewController.swift in Sources */,
 				BE96D7CD22C3E4220072EA23 /* LocationService.swift in Sources */,
 				BEFC9E6E22A69EBE0090E90B /* EstablishmentListViewController.swift in Sources */,
+				79AE90CC23030CC300F4840E /* SignUpTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
