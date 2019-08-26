@@ -16,6 +16,7 @@ import GoogleSignIn
 
 protocol DidCompleteSignupDelegate: class {
     func login()
+    
 }
 
 class LoginTableViewController: UITableViewController {
